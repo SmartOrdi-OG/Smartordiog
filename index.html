@@ -2517,16 +2517,22 @@
     <div style="display:flex;align-items:center;gap:0.75rem;">
       <div class="logo-img"></div><span class="logo-text"><span>Smartordi</span> OG</span>
     </div>
-    <button onclick="hideImpressum()" style="display:flex;align-items:center;gap:0.5rem;background:var(--frost);border:1px solid rgba(61,43,107,0.12);color:var(--navy);padding:0.55rem 1.2rem;border-radius:8px;font-size:0.88rem;font-weight:500;cursor:pointer;transition:all 0.2s;">← Zurück</button>
+    <div style="display:flex;align-items:center;gap:0.75rem;">
+      <div class="lang-toggle">
+        <button type="button" class="active" data-setlang="de" onclick="setSiteLang('de')">DE</button>
+        <button type="button" data-setlang="en" onclick="setSiteLang('en')">EN</button>
+      </div>
+      <button onclick="hideImpressum()" style="display:flex;align-items:center;gap:0.5rem;background:var(--frost);border:1px solid rgba(61,43,107,0.12);color:var(--navy);padding:0.55rem 1.2rem;border-radius:8px;font-size:0.88rem;font-weight:500;cursor:pointer;transition:all 0.2s;" data-de="← Zurück" data-en="← Back">← Zurück</button>
+    </div>
   </div>
 
   <!-- IMPRESSUM HERO -->
   <div style="background:#2A2013;padding:4rem;text-align:center;position:relative;overflow:hidden;">
     <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 50%, rgba(232,185,77,0.15) 0%, transparent 70%);"></div>
     <div style="position:relative;">
-      <div style="font-size:0.75rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#E0B04D;margin-bottom:1rem;">Rechtliches</div>
+      <div style="font-size:0.75rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#E0B04D;margin-bottom:1rem;" data-de="Rechtliches" data-en="Legal">Rechtliches</div>
       <h1 style="font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:900;color:#fff;margin-bottom:0.75rem;">Impressum</h1>
-      <p style="color:rgba(255,255,255,0.5);font-size:0.9rem;">Offenlegung gemäß § 5 ECG &amp; § 25 MedienG</p>
+      <p style="color:rgba(255,255,255,0.5);font-size:0.9rem;" data-de="Offenlegung gemäß § 5 ECG &amp; § 25 MedienG" data-en="Disclosure pursuant to § 5 ECG &amp; § 25 MedienG (Austrian E-Commerce &amp; Media Acts)">Offenlegung gemäß § 5 ECG &amp; § 25 MedienG</p>
     </div>
   </div>
 
@@ -2535,14 +2541,14 @@
 
     <!-- Contact Info Bar -->
     <div style="background:var(--frost);border-radius:12px;padding:1rem 1.5rem;margin-bottom:2rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center;font-size:0.85rem;color:var(--blue);">
-      <span>📍 Steingasse 6a, 4020 Linz, Österreich</span>
+      <span data-de="📍 Steingasse 6a, 4020 Linz, Österreich" data-en="📍 Steingasse 6a, 4020 Linz, Austria">📍 Steingasse 6a, 4020 Linz, Österreich</span>
       <span>✉️ <a href="mailto:team@smartordi.eu" style="color:var(--sky);text-decoration:none;">team@smartordi.eu</a></span>
       <span>📞 <a href="tel:+43667762439293" style="color:var(--sky);text-decoration:none;">+43 667 762439293</a></span>
     </div>
 
     <div class="agb-card" style="background:#fff;border-radius:16px;border:1px solid rgba(61,43,107,0.08);padding:1.8rem;margin-bottom:1.2rem;">
-      <h3 style="font-family:'Manrope',sans-serif;font-size:1.1rem;color:var(--navy);margin-bottom:1rem;">Unternehmensangaben</h3>
-      <div style="font-size:0.9rem;color:var(--muted);line-height:2.1;">
+      <h3 style="font-family:'Manrope',sans-serif;font-size:1.1rem;color:var(--navy);margin-bottom:1rem;" data-de="Unternehmensangaben" data-en="Company Information">Unternehmensangaben</h3>
+      <div style="font-size:0.9rem;color:var(--muted);line-height:2.1;" data-de-html="&lt;strong style=&quot;color:var(--navy);&quot;&gt;Firma:&lt;/strong&gt; Smartordi OG&lt;br&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Rechtsform:&lt;/strong&gt; Offene Gesellschaft (OG)&lt;br&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Sitz:&lt;/strong&gt; 4020 Linz, Österreich&lt;br&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Geschäftsanschrift:&lt;/strong&gt; Steingasse 6a, 4020 Linz, Österreich&lt;br&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Firmenbuchnummer:&lt;/strong&gt; FN 675586 i&lt;br&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Firmenbuchgericht:&lt;/strong&gt; Landesgericht Linz&lt;br&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Unternehmensgegenstand:&lt;/strong&gt; IT-Dienstleistungen" data-en-html="&lt;strong style=&quot;color:var(--navy);&quot;&gt;Company:&lt;/strong&gt; Smartordi OG&lt;br&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Legal form:&lt;/strong&gt; General partnership (OG)&lt;br&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Registered seat:&lt;/strong&gt; 4020 Linz, Austria&lt;br&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Business address:&lt;/strong&gt; Steingasse 6a, 4020 Linz, Austria&lt;br&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Company register number:&lt;/strong&gt; FN 675586 i&lt;br&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Company register court:&lt;/strong&gt; Linz Regional Court&lt;br&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Business purpose:&lt;/strong&gt; IT services">
         <strong style="color:var(--navy);">Firma:</strong> Smartordi OG<br>
         <strong style="color:var(--navy);">Rechtsform:</strong> Offene Gesellschaft (OG)<br>
         <strong style="color:var(--navy);">Sitz:</strong> 4020 Linz, Österreich<br>
@@ -2554,23 +2560,23 @@
     </div>
 
     <div class="agb-card" style="background:#fff;border-radius:16px;border:1px solid rgba(61,43,107,0.08);padding:1.8rem;margin-bottom:1.2rem;">
-      <h3 style="font-family:'Manrope',sans-serif;font-size:1.1rem;color:var(--navy);margin-bottom:1rem;">Vertretungsbefugte Gesellschafter</h3>
+      <h3 style="font-family:'Manrope',sans-serif;font-size:1.1rem;color:var(--navy);margin-bottom:1rem;" data-de="Vertretungsbefugte Gesellschafter" data-en="Authorized Representatives">Vertretungsbefugte Gesellschafter</h3>
       <p style="font-size:0.9rem;color:var(--muted);line-height:1.8;">Abdelrhman Ezzat Abdelmoaty Elsayed<br>Ahmad Saadat</p>
     </div>
 
     <div class="agb-card" style="background:#fff;border-radius:16px;border:1px solid rgba(61,43,107,0.08);padding:1.8rem;margin-bottom:1.2rem;">
-      <h3 style="font-family:'Manrope',sans-serif;font-size:1.1rem;color:var(--navy);margin-bottom:1rem;">Kontakt</h3>
-      <p style="font-size:0.9rem;color:var(--muted);line-height:1.8;">E-Mail: <a href="mailto:team@smartordi.eu" style="color:var(--sky);">team@smartordi.eu</a><br>Telefon: <a href="tel:+43667762439293" style="color:var(--sky);">+43 667 762439293</a></p>
+      <h3 style="font-family:'Manrope',sans-serif;font-size:1.1rem;color:var(--navy);margin-bottom:1rem;" data-de="Kontakt" data-en="Contact">Kontakt</h3>
+      <p style="font-size:0.9rem;color:var(--muted);line-height:1.8;" data-de-html="E-Mail: &lt;a href=&quot;mailto:team@smartordi.eu&quot; style=&quot;color:var(--sky);&quot;&gt;team@smartordi.eu&lt;/a&gt;&lt;br&gt;Telefon: &lt;a href=&quot;tel:+43667762439293&quot; style=&quot;color:var(--sky);&quot;&gt;+43 667 762439293&lt;/a&gt;" data-en-html="Email: &lt;a href=&quot;mailto:team@smartordi.eu&quot; style=&quot;color:var(--sky);&quot;&gt;team@smartordi.eu&lt;/a&gt;&lt;br&gt;Phone: &lt;a href=&quot;tel:+43667762439293&quot; style=&quot;color:var(--sky);&quot;&gt;+43 667 762439293&lt;/a&gt;">E-Mail: <a href="mailto:team@smartordi.eu" style="color:var(--sky);">team@smartordi.eu</a><br>Telefon: <a href="tel:+43667762439293" style="color:var(--sky);">+43 667 762439293</a></p>
     </div>
 
     <div class="agb-card" style="background:#fff;border-radius:16px;border:1px solid rgba(61,43,107,0.08);padding:1.8rem;margin-bottom:1.2rem;">
-      <h3 style="font-family:'Manrope',sans-serif;font-size:1.1rem;color:var(--navy);margin-bottom:1rem;">Online-Streitbeilegung</h3>
-      <p style="font-size:0.9rem;color:var(--muted);line-height:1.8;">Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit, abrufbar unter <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" style="color:var(--sky);">https://ec.europa.eu/consumers/odr</a>.</p>
+      <h3 style="font-family:'Manrope',sans-serif;font-size:1.1rem;color:var(--navy);margin-bottom:1rem;" data-de="Online-Streitbeilegung" data-en="Online Dispute Resolution">Online-Streitbeilegung</h3>
+      <p style="font-size:0.9rem;color:var(--muted);line-height:1.8;" data-de-html="Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit, abrufbar unter &lt;a href=&quot;https://ec.europa.eu/consumers/odr&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; style=&quot;color:var(--sky);&quot;&gt;https://ec.europa.eu/consumers/odr&lt;/a&gt;." data-en-html="The European Commission provides a platform for online dispute resolution (ODR), available at &lt;a href=&quot;https://ec.europa.eu/consumers/odr&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; style=&quot;color:var(--sky);&quot;&gt;https://ec.europa.eu/consumers/odr&lt;/a&gt;.">Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit, abrufbar unter <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" style="color:var(--sky);">https://ec.europa.eu/consumers/odr</a>.</p>
     </div>
 
     <div class="agb-card" style="background:#fff;border-radius:16px;border:1px solid rgba(61,43,107,0.08);padding:1.8rem;">
-      <h3 style="font-family:'Manrope',sans-serif;font-size:1.1rem;color:var(--navy);margin-bottom:1rem;">Haftung für Inhalte</h3>
-      <p style="font-size:0.9rem;color:var(--muted);line-height:1.8;">Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Für Inhalte externer Links sind ausschließlich deren Betreiber verantwortlich.</p>
+      <h3 style="font-family:'Manrope',sans-serif;font-size:1.1rem;color:var(--navy);margin-bottom:1rem;" data-de="Haftung für Inhalte" data-en="Liability for Content">Haftung für Inhalte</h3>
+      <p style="font-size:0.9rem;color:var(--muted);line-height:1.8;" data-de="Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Für Inhalte externer Links sind ausschließlich deren Betreiber verantwortlich." data-en="The content of this website has been created with the greatest care. However, we cannot guarantee the accuracy, completeness, or timeliness of the content. The operators of external links are solely responsible for their content.">Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Für Inhalte externer Links sind ausschließlich deren Betreiber verantwortlich.</p>
     </div>
   </div>
 </div>
@@ -2583,16 +2589,22 @@
     <div style="display:flex;align-items:center;gap:0.75rem;">
       <div class="logo-img"></div><span class="logo-text"><span>Smartordi</span> OG</span>
     </div>
-    <button onclick="hideAgb()" style="display:flex;align-items:center;gap:0.5rem;background:var(--frost);border:1px solid rgba(61,43,107,0.12);color:var(--navy);padding:0.55rem 1.2rem;border-radius:8px;font-size:0.88rem;font-weight:500;cursor:pointer;transition:all 0.2s;">← Zurück</button>
+    <div style="display:flex;align-items:center;gap:0.75rem;">
+      <div class="lang-toggle">
+        <button type="button" class="active" data-setlang="de" onclick="setSiteLang('de')">DE</button>
+        <button type="button" data-setlang="en" onclick="setSiteLang('en')">EN</button>
+      </div>
+      <button onclick="hideAgb()" style="display:flex;align-items:center;gap:0.5rem;background:var(--frost);border:1px solid rgba(61,43,107,0.12);color:var(--navy);padding:0.55rem 1.2rem;border-radius:8px;font-size:0.88rem;font-weight:500;cursor:pointer;transition:all 0.2s;" data-de="← Zurück" data-en="← Back">← Zurück</button>
+    </div>
   </div>
 
   <!-- AGB HERO -->
   <div style="background:#2A2013;padding:4rem;text-align:center;position:relative;overflow:hidden;">
     <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 50%, rgba(232,185,77,0.15) 0%, transparent 70%);"></div>
     <div style="position:relative;">
-      <div style="font-size:0.75rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#E0B04D;margin-bottom:1rem;">Rechtliches</div>
-      <h1 style="font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:900;color:#fff;margin-bottom:0.75rem;">Allgemeine Geschäftsbedingungen</h1>
-      <p style="color:rgba(255,255,255,0.5);font-size:0.9rem;">SmartOrdi OG · Steingasse 6a, 4020 Linz · Stand: Mai 2026</p>
+      <div style="font-size:0.75rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#E0B04D;margin-bottom:1rem;" data-de="Rechtliches" data-en="Legal">Rechtliches</div>
+      <h1 style="font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:900;color:#fff;margin-bottom:0.75rem;" data-de="Allgemeine Geschäftsbedingungen" data-en="General Terms and Conditions">Allgemeine Geschäftsbedingungen</h1>
+      <p style="color:rgba(255,255,255,0.5);font-size:0.9rem;" data-de="SmartOrdi OG · Steingasse 6a, 4020 Linz · Stand: Mai 2026" data-en="SmartOrdi OG · Steingasse 6a, 4020 Linz · Last updated: May 2026">SmartOrdi OG · Steingasse 6a, 4020 Linz · Stand: Mai 2026</p>
     </div>
   </div>
 
@@ -2601,7 +2613,7 @@
 
     <!-- Contact Info Bar -->
     <div style="background:var(--frost);border-radius:12px;padding:1rem 1.5rem;margin-bottom:2rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center;font-size:0.85rem;color:var(--blue);">
-      <span>📍 Steingasse 6a, 4020 Linz, Österreich</span>
+      <span data-de="📍 Steingasse 6a, 4020 Linz, Österreich" data-en="📍 Steingasse 6a, 4020 Linz, Austria">📍 Steingasse 6a, 4020 Linz, Österreich</span>
       <span>✉️ <a href="mailto:team@smartordi.eu" style="color:var(--sky);text-decoration:none;">team@smartordi.eu</a></span>
       <span>🌐 <a href="https://www.smartordi.eu" target="_blank" rel="noopener noreferrer" style="color:var(--sky);text-decoration:none;">www.smartordi.eu</a></span>
       <span>📞 <a href="tel:+43667762439293" style="color:var(--sky);text-decoration:none;">+43 667 762439293</a></span>
@@ -2610,11 +2622,19 @@
     <!-- § 1 -->
     <div class="agb-card" style="background:#fff;border-radius:16px;border:1px solid rgba(61,43,107,0.08);overflow:hidden;margin-bottom:0.75rem;">
       <button onclick="toggleAgb(this)" style="width:100%;padding:1.4rem 1.8rem;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;text-align:left;">
-        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);">§ 1 Geltungsbereich</span>
+        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);" data-de="§ 1 Geltungsbereich" data-en="§ 1 Scope">§ 1 Geltungsbereich</span>
         <span class="agb-icon" style="font-size:1.3rem;color:var(--sky);transition:transform 0.3s;display:inline-block;">+</span>
       </button>
       <div class="agb-ans" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease;">
-        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;">
+        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;" data-de-html="
+          &lt;p&gt;1.1 Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen der SmartOrdi OG (nachfolgend „SmartOrdi&quot; oder „Anbieter&quot;) und ihren Kunden (nachfolgend „Auftraggeber&quot; oder „Ordination&quot;) über die Nutzung der digitalen Plattform SmartOrdi.&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;1.2 Abweichende, entgegenstehende oder ergänzende Bedingungen des Auftraggebers werden nur dann Vertragsbestandteil, wenn SmartOrdi ihrer Geltung ausdrücklich schriftlich zugestimmt hat.&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;1.3 Diese AGB gelten ausschließlich gegenüber Unternehmern im Sinne des § 1 UGB.&lt;/p&gt;
+        " data-en-html="
+          &lt;p&gt;1.1 These General Terms and Conditions (GTC) apply to all contracts between SmartOrdi OG (hereinafter &quot;SmartOrdi&quot; or &quot;Provider&quot;) and its customers (hereinafter &quot;Client&quot; or &quot;Practice&quot;) regarding the use of the digital SmartOrdi platform.&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;1.2 Deviating, conflicting, or supplementary terms of the Client shall only become part of the contract if SmartOrdi has expressly agreed to their validity in writing.&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;1.3 These GTC apply exclusively to entrepreneurs within the meaning of § 1 UGB (Austrian Commercial Code).&lt;/p&gt;
+        ">
           <p>1.1 Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen der SmartOrdi OG (nachfolgend „SmartOrdi" oder „Anbieter") und ihren Kunden (nachfolgend „Auftraggeber" oder „Ordination") über die Nutzung der digitalen Plattform SmartOrdi.</p>
           <p style="margin-top:0.6rem;">1.2 Abweichende, entgegenstehende oder ergänzende Bedingungen des Auftraggebers werden nur dann Vertragsbestandteil, wenn SmartOrdi ihrer Geltung ausdrücklich schriftlich zugestimmt hat.</p>
           <p style="margin-top:0.6rem;">1.3 Diese AGB gelten ausschließlich gegenüber Unternehmern im Sinne des § 1 UGB.</p>
@@ -2625,11 +2645,35 @@
     <!-- § 2 -->
     <div class="agb-card" style="background:#fff;border-radius:16px;border:1px solid rgba(61,43,107,0.08);overflow:hidden;margin-bottom:0.75rem;">
       <button onclick="toggleAgb(this)" style="width:100%;padding:1.4rem 1.8rem;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;text-align:left;">
-        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);">§ 2 Leistungsbeschreibung</span>
+        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);" data-de="§ 2 Leistungsbeschreibung" data-en="§ 2 Description of Services">§ 2 Leistungsbeschreibung</span>
         <span class="agb-icon" style="font-size:1.3rem;color:var(--sky);transition:transform 0.3s;display:inline-block;">+</span>
       </button>
       <div class="agb-ans" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease;">
-        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;">
+        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;" data-de-html="
+          &lt;p&gt;2.1 SmartOrdi stellt eine digitale Kommunikationsplattform für Arztordinationen bereit. Der Leistungsumfang umfasst insbesondere:&lt;/p&gt;
+          &lt;ul style=&quot;margin:0.6rem 0 0.6rem 1.2rem;display:flex;flex-direction:column;gap:0.4rem;&quot;&gt;
+            &lt;li&gt;Mehrsprachige digitale Patientenanamnese (Arabisch, Türkisch, Bosnisch, Englisch, Deutsch)&lt;/li&gt;
+            &lt;li&gt;Automatische Übersetzung der Patientendaten ins Deutsche&lt;/li&gt;
+            &lt;li&gt;Online-Terminbuchungssystem&lt;/li&gt;
+            &lt;li&gt;Arzt-Dashboard zur Verwaltung von Patientendaten&lt;/li&gt;
+            &lt;li&gt;PDF-Export der Patientenzusammenfassung&lt;/li&gt;
+            &lt;li&gt;Upload-Funktion für Laborbefunde, Röntgenbilder und sonstige Dokumente&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;2.2 SmartOrdi ist eine Kommunikations- und Organisationsplattform. Sie ersetzt keine medizinische Diagnose oder ärztliche Behandlung. Für medizinische Entscheidungen ist ausschließlich der behandelnde Arzt verantwortlich.&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;2.3 SmartOrdi behält sich das Recht vor, den Leistungsumfang jederzeit zu erweitern oder technische Anpassungen vorzunehmen, sofern die Kernfunktionalität nicht wesentlich beeinträchtigt wird.&lt;/p&gt;
+        " data-en-html="
+          &lt;p&gt;2.1 SmartOrdi provides a digital communication platform for medical practices. The scope of services includes in particular:&lt;/p&gt;
+          &lt;ul style=&quot;margin:0.6rem 0 0.6rem 1.2rem;display:flex;flex-direction:column;gap:0.4rem;&quot;&gt;
+            &lt;li&gt;Multilingual digital patient intake (Arabic, Turkish, Bosnian, English, German)&lt;/li&gt;
+            &lt;li&gt;Automatic translation of patient data into German&lt;/li&gt;
+            &lt;li&gt;Online appointment booking system&lt;/li&gt;
+            &lt;li&gt;Doctor dashboard for managing patient data&lt;/li&gt;
+            &lt;li&gt;PDF export of the patient summary&lt;/li&gt;
+            &lt;li&gt;Upload function for lab results, X-rays, and other documents&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;2.2 SmartOrdi is a communication and organization platform. It does not replace medical diagnosis or treatment. The treating physician is solely responsible for medical decisions.&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;2.3 SmartOrdi reserves the right to expand the scope of services or make technical adjustments at any time, provided the core functionality is not materially impaired.&lt;/p&gt;
+        ">
           <p>2.1 SmartOrdi stellt eine digitale Kommunikationsplattform für Arztordinationen bereit. Der Leistungsumfang umfasst insbesondere:</p>
           <ul style="margin:0.6rem 0 0.6rem 1.2rem;display:flex;flex-direction:column;gap:0.4rem;">
             <li>Mehrsprachige digitale Patientenanamnese (Arabisch, Türkisch, Bosnisch, Englisch, Deutsch)</li>
@@ -2648,11 +2692,19 @@
     <!-- § 3 -->
     <div class="agb-card" style="background:#fff;border-radius:16px;border:1px solid rgba(61,43,107,0.08);overflow:hidden;margin-bottom:0.75rem;">
       <button onclick="toggleAgb(this)" style="width:100%;padding:1.4rem 1.8rem;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;text-align:left;">
-        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);">§ 3 Vertragsabschluss und Pilotphase</span>
+        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);" data-de="§ 3 Vertragsabschluss und Pilotphase" data-en="§ 3 Conclusion of Contract and Pilot Phase">§ 3 Vertragsabschluss und Pilotphase</span>
         <span class="agb-icon" style="font-size:1.3rem;color:var(--sky);transition:transform 0.3s;display:inline-block;">+</span>
       </button>
       <div class="agb-ans" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease;">
-        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;">
+        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;" data-de-html="
+          &lt;p&gt;3.1 Der Vertrag kommt durch schriftliche Bestätigung (per E-Mail) seitens SmartOrdi oder durch Freischaltung des Zugangs zustande.&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;3.2 Neukunden erhalten eine kostenlose Pilotphase von 2 bis 3 Monaten ohne Vertragsbindung. In dieser Phase stehen alle Funktionen des gebuchten Tarifs zur Verfügung.&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;3.3 Nach Ablauf der Pilotphase geht das Vertragsverhältnis automatisch in ein kostenpflichtiges Abonnement über, sofern nicht spätestens 14 Tage vor Ablauf eine Kündigung per E-Mail an &lt;a href=&quot;mailto:team@smartordi.eu&quot; style=&quot;color:var(--sky);&quot;&gt;team@smartordi.eu&lt;/a&gt; erfolgt.&lt;/p&gt;
+        " data-en-html="
+          &lt;p&gt;3.1 The contract is concluded through written confirmation (by email) from SmartOrdi or by activation of access.&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;3.2 New customers receive a free pilot phase of 2 to 3 months with no contractual commitment. All features of the booked plan are available during this phase.&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;3.3 After the pilot phase ends, the contractual relationship automatically converts into a paid subscription unless cancelled by email to &lt;a href=&quot;mailto:team@smartordi.eu&quot; style=&quot;color:var(--sky);&quot;&gt;team@smartordi.eu&lt;/a&gt; at least 14 days before expiry.&lt;/p&gt;
+        ">
           <p>3.1 Der Vertrag kommt durch schriftliche Bestätigung (per E-Mail) seitens SmartOrdi oder durch Freischaltung des Zugangs zustande.</p>
           <p style="margin-top:0.6rem;">3.2 Neukunden erhalten eine kostenlose Pilotphase von 2 bis 3 Monaten ohne Vertragsbindung. In dieser Phase stehen alle Funktionen des gebuchten Tarifs zur Verfügung.</p>
           <p style="margin-top:0.6rem;">3.3 Nach Ablauf der Pilotphase geht das Vertragsverhältnis automatisch in ein kostenpflichtiges Abonnement über, sofern nicht spätestens 14 Tage vor Ablauf eine Kündigung per E-Mail an <a href="mailto:team@smartordi.eu" style="color:var(--sky);">team@smartordi.eu</a> erfolgt.</p>
@@ -2663,11 +2715,21 @@
     <!-- § 4 -->
     <div class="agb-card" style="background:#fff;border-radius:16px;border:1px solid rgba(61,43,107,0.08);overflow:hidden;margin-bottom:0.75rem;">
       <button onclick="toggleAgb(this)" style="width:100%;padding:1.4rem 1.8rem;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;text-align:left;">
-        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);">§ 4 Preise und Zahlungsbedingungen</span>
+        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);" data-de="§ 4 Preise und Zahlungsbedingungen" data-en="§ 4 Prices and Payment Terms">§ 4 Preise und Zahlungsbedingungen</span>
         <span class="agb-icon" style="font-size:1.3rem;color:var(--sky);transition:transform 0.3s;display:inline-block;">+</span>
       </button>
       <div class="agb-ans" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease;">
-        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;">
+        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;" data-de-html="
+          &lt;p&gt;4.1 Die aktuellen Preise sind auf &lt;a href=&quot;https://www.smartordi.eu&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; style=&quot;color:var(--sky);&quot;&gt;www.smartordi.eu&lt;/a&gt; veröffentlicht und verstehen sich zuzüglich der gesetzlichen Umsatzsteuer.&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;4.2 Die Abonnementgebühr ist monatlich im Voraus fällig und wird per Banküberweisung oder SEPA-Lastschrift beglichen.&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;4.3 Bei Zahlungsverzug von mehr als 14 Tagen ist SmartOrdi berechtigt, den Zugang zur Plattform bis zur vollständigen Begleichung der offenen Beträge zu sperren.&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;4.4 SmartOrdi behält sich vor, Preisanpassungen mit einer Ankündigungsfrist von 4 Wochen per E-Mail mitzuteilen. Bei Nichteinverständnis steht dem Auftraggeber ein Sonderkündigungsrecht zu.&lt;/p&gt;
+        " data-en-html="
+          &lt;p&gt;4.1 Current prices are published at &lt;a href=&quot;https://www.smartordi.eu&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; style=&quot;color:var(--sky);&quot;&gt;www.smartordi.eu&lt;/a&gt; and are exclusive of statutory VAT.&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;4.2 The subscription fee is due monthly in advance and is paid by bank transfer or SEPA direct debit.&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;4.3 In the event of payment default of more than 14 days, SmartOrdi is entitled to suspend access to the platform until outstanding amounts are paid in full.&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;4.4 SmartOrdi reserves the right to announce price adjustments by email with 4 weeks&#x27; notice. If the Client does not agree, they are entitled to a special right of termination.&lt;/p&gt;
+        ">
           <p>4.1 Die aktuellen Preise sind auf <a href="https://www.smartordi.eu" target="_blank" rel="noopener noreferrer" style="color:var(--sky);">www.smartordi.eu</a> veröffentlicht und verstehen sich zuzüglich der gesetzlichen Umsatzsteuer.</p>
           <p style="margin-top:0.6rem;">4.2 Die Abonnementgebühr ist monatlich im Voraus fällig und wird per Banküberweisung oder SEPA-Lastschrift beglichen.</p>
           <p style="margin-top:0.6rem;">4.3 Bei Zahlungsverzug von mehr als 14 Tagen ist SmartOrdi berechtigt, den Zugang zur Plattform bis zur vollständigen Begleichung der offenen Beträge zu sperren.</p>
@@ -2679,11 +2741,19 @@
     <!-- § 5 -->
     <div class="agb-card" style="background:#fff;border-radius:16px;border:1px solid rgba(61,43,107,0.08);overflow:hidden;margin-bottom:0.75rem;">
       <button onclick="toggleAgb(this)" style="width:100%;padding:1.4rem 1.8rem;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;text-align:left;">
-        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);">§ 5 Vertragsdauer und Kündigung</span>
+        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);" data-de="§ 5 Vertragsdauer und Kündigung" data-en="§ 5 Contract Term and Termination">§ 5 Vertragsdauer und Kündigung</span>
         <span class="agb-icon" style="font-size:1.3rem;color:var(--sky);transition:transform 0.3s;display:inline-block;">+</span>
       </button>
       <div class="agb-ans" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease;">
-        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;">
+        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;" data-de-html="
+          &lt;p&gt;5.1 Nach der Pilotphase wird der Vertrag auf unbestimmte Zeit geschlossen und ist monatlich kündbar.&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;5.2 Die Kündigung hat schriftlich per E-Mail an &lt;a href=&quot;mailto:team@smartordi.eu&quot; style=&quot;color:var(--sky);&quot;&gt;team@smartordi.eu&lt;/a&gt; zu erfolgen. Die Kündigungsfrist beträgt 14 Tage zum Monatsende.&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;5.3 Das Recht zur außerordentlichen Kündigung aus wichtigem Grund bleibt unberührt. Ein wichtiger Grund liegt insbesondere vor, wenn der Auftraggeber gegen datenschutzrechtliche Verpflichtungen verstößt.&lt;/p&gt;
+        " data-en-html="
+          &lt;p&gt;5.1 After the pilot phase, the contract is concluded for an indefinite period and can be terminated monthly.&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;5.2 Termination must be made in writing by email to &lt;a href=&quot;mailto:team@smartordi.eu&quot; style=&quot;color:var(--sky);&quot;&gt;team@smartordi.eu&lt;/a&gt;. The notice period is 14 days to the end of the month.&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;5.3 The right to extraordinary termination for good cause remains unaffected. Good cause exists in particular if the Client violates data protection obligations.&lt;/p&gt;
+        ">
           <p>5.1 Nach der Pilotphase wird der Vertrag auf unbestimmte Zeit geschlossen und ist monatlich kündbar.</p>
           <p style="margin-top:0.6rem;">5.2 Die Kündigung hat schriftlich per E-Mail an <a href="mailto:team@smartordi.eu" style="color:var(--sky);">team@smartordi.eu</a> zu erfolgen. Die Kündigungsfrist beträgt 14 Tage zum Monatsende.</p>
           <p style="margin-top:0.6rem;">5.3 Das Recht zur außerordentlichen Kündigung aus wichtigem Grund bleibt unberührt. Ein wichtiger Grund liegt insbesondere vor, wenn der Auftraggeber gegen datenschutzrechtliche Verpflichtungen verstößt.</p>
@@ -2694,11 +2764,23 @@
     <!-- § 6 -->
     <div class="agb-card" style="background:#fff;border-radius:16px;border:1px solid rgba(61,43,107,0.08);overflow:hidden;margin-bottom:0.75rem;">
       <button onclick="toggleAgb(this)" style="width:100%;padding:1.4rem 1.8rem;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;text-align:left;">
-        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);">§ 6 Datenschutz und DSGVO</span>
+        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);" data-de="§ 6 Datenschutz und DSGVO" data-en="§ 6 Data Protection and GDPR">§ 6 Datenschutz und DSGVO</span>
         <span class="agb-icon" style="font-size:1.3rem;color:var(--sky);transition:transform 0.3s;display:inline-block;">+</span>
       </button>
       <div class="agb-ans" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease;">
-        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;">
+        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;" data-de-html="
+          &lt;p&gt;6.1 SmartOrdi verarbeitet personenbezogene Daten ausschließlich im Einklang mit der Datenschutz-Grundverordnung (DSGVO) und dem österreichischen Datenschutzgesetz (DSG).&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;6.2 Zwischen SmartOrdi und dem Auftraggeber wird ein Auftragsverarbeitungsvertrag (AVV) gemäß Art. 28 DSGVO abgeschlossen. Der AVV ist Bestandteil des Vertragsverhältnisses.&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;6.3 Der Auftraggeber ist als Verantwortlicher im Sinne der DSGVO für die rechtmäßige Erhebung und Verarbeitung der Patientendaten verantwortlich. SmartOrdi agiert als Auftragsverarbeiter.&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;6.4 Die Datenspeicherung erfolgt ausschließlich auf Servern innerhalb der Europäischen Union (Hetzner Online GmbH, Deutschland/Österreich).&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;6.5 Patienten erteilen ihre ausdrückliche Einwilligung zur Datenverarbeitung vor Nutzung der Plattform. Die Einwilligungserklärung ist auf der Plattform abrufbar.&lt;/p&gt;
+        " data-en-html="
+          &lt;p&gt;6.1 SmartOrdi processes personal data exclusively in accordance with the General Data Protection Regulation (GDPR) and the Austrian Data Protection Act (DSG).&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;6.2 A data processing agreement (DPA) pursuant to Art. 28 GDPR is concluded between SmartOrdi and the Client. The DPA forms part of the contractual relationship.&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;6.3 The Client is the controller within the meaning of the GDPR and is responsible for the lawful collection and processing of patient data. SmartOrdi acts as processor.&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;6.4 Data is stored exclusively on servers within the European Union (Hetzner Online GmbH, Germany/Austria).&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;6.5 Patients give their explicit consent to data processing before using the platform. The consent declaration is available on the platform.&lt;/p&gt;
+        ">
           <p>6.1 SmartOrdi verarbeitet personenbezogene Daten ausschließlich im Einklang mit der Datenschutz-Grundverordnung (DSGVO) und dem österreichischen Datenschutzgesetz (DSG).</p>
           <p style="margin-top:0.6rem;">6.2 Zwischen SmartOrdi und dem Auftraggeber wird ein Auftragsverarbeitungsvertrag (AVV) gemäß Art. 28 DSGVO abgeschlossen. Der AVV ist Bestandteil des Vertragsverhältnisses.</p>
           <p style="margin-top:0.6rem;">6.3 Der Auftraggeber ist als Verantwortlicher im Sinne der DSGVO für die rechtmäßige Erhebung und Verarbeitung der Patientendaten verantwortlich. SmartOrdi agiert als Auftragsverarbeiter.</p>
@@ -2711,11 +2793,27 @@
     <!-- § 7 -->
     <div class="agb-card" style="background:#fff;border-radius:16px;border:1px solid rgba(61,43,107,0.08);overflow:hidden;margin-bottom:0.75rem;">
       <button onclick="toggleAgb(this)" style="width:100%;padding:1.4rem 1.8rem;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;text-align:left;">
-        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);">§ 7 Pflichten des Auftraggebers</span>
+        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);" data-de="§ 7 Pflichten des Auftraggebers" data-en="§ 7 Obligations of the Client">§ 7 Pflichten des Auftraggebers</span>
         <span class="agb-icon" style="font-size:1.3rem;color:var(--sky);transition:transform 0.3s;display:inline-block;">+</span>
       </button>
       <div class="agb-ans" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease;">
-        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;">
+        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;" data-de-html="
+          &lt;p&gt;7.1 Der Auftraggeber verpflichtet sich:&lt;/p&gt;
+          &lt;ul style=&quot;margin:0.6rem 0 0 1.2rem;display:flex;flex-direction:column;gap:0.5rem;&quot;&gt;
+            &lt;li&gt;Die Zugangsdaten zur Plattform sicher aufzubewahren und nicht an Dritte weiterzugeben.&lt;/li&gt;
+            &lt;li&gt;Patienten über die Nutzung der Plattform und die damit verbundene Datenverarbeitung zu informieren.&lt;/li&gt;
+            &lt;li&gt;Die Plattform nicht für rechtswidrige Zwecke zu verwenden.&lt;/li&gt;
+            &lt;li&gt;SmartOrdi unverzüglich über Sicherheitsvorfälle oder Datenschutzverletzungen zu informieren.&lt;/li&gt;
+          &lt;/ul&gt;
+        " data-en-html="
+          &lt;p&gt;7.1 The Client undertakes to:&lt;/p&gt;
+          &lt;ul style=&quot;margin:0.6rem 0 0 1.2rem;display:flex;flex-direction:column;gap:0.5rem;&quot;&gt;
+            &lt;li&gt;Keep the platform access credentials secure and not share them with third parties.&lt;/li&gt;
+            &lt;li&gt;Inform patients about the use of the platform and the associated data processing.&lt;/li&gt;
+            &lt;li&gt;Not use the platform for unlawful purposes.&lt;/li&gt;
+            &lt;li&gt;Inform SmartOrdi immediately of any security incidents or data protection breaches.&lt;/li&gt;
+          &lt;/ul&gt;
+        ">
           <p>7.1 Der Auftraggeber verpflichtet sich:</p>
           <ul style="margin:0.6rem 0 0 1.2rem;display:flex;flex-direction:column;gap:0.5rem;">
             <li>Die Zugangsdaten zur Plattform sicher aufzubewahren und nicht an Dritte weiterzugeben.</li>
@@ -2730,11 +2828,21 @@
     <!-- § 8 -->
     <div class="agb-card" style="background:#fff;border-radius:16px;border:1px solid rgba(61,43,107,0.08);overflow:hidden;margin-bottom:0.75rem;">
       <button onclick="toggleAgb(this)" style="width:100%;padding:1.4rem 1.8rem;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;text-align:left;">
-        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);">§ 8 Haftung und Gewährleistung</span>
+        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);" data-de="§ 8 Haftung und Gewährleistung" data-en="§ 8 Liability and Warranty">§ 8 Haftung und Gewährleistung</span>
         <span class="agb-icon" style="font-size:1.3rem;color:var(--sky);transition:transform 0.3s;display:inline-block;">+</span>
       </button>
       <div class="agb-ans" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease;">
-        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;">
+        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;" data-de-html="
+          &lt;p&gt;8.1 SmartOrdi haftet für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit unbegrenzt. Für sonstige Schäden haftet SmartOrdi nur bei Vorsatz oder grober Fahrlässigkeit.&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;8.2 SmartOrdi übernimmt keine Haftung für die medizinische Richtigkeit der von Patienten eingegebenen Daten sowie für Übersetzungsfehler, die zu medizinischen Fehlentscheidungen führen könnten. Die endgültige Verantwortung für medizinische Entscheidungen liegt beim behandelnden Arzt.&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;8.3 SmartOrdi gewährleistet eine Systemverfügbarkeit von mindestens 99 % im Jahresdurchschnitt, ausgenommen geplante Wartungsarbeiten.&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;8.4 Die Haftung für mittelbare Schäden, Folgeschäden oder entgangenen Gewinn ist ausgeschlossen, soweit gesetzlich zulässig.&lt;/p&gt;
+        " data-en-html="
+          &lt;p&gt;8.1 SmartOrdi is liable without limitation for damages resulting from injury to life, body, or health. For other damages, SmartOrdi is only liable in cases of intent or gross negligence.&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;8.2 SmartOrdi assumes no liability for the medical accuracy of data entered by patients, or for translation errors that could lead to incorrect medical decisions. Final responsibility for medical decisions lies with the treating physician.&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;8.3 SmartOrdi guarantees system availability of at least 99% on a yearly average, excluding scheduled maintenance.&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;8.4 Liability for indirect damages, consequential damages, or lost profits is excluded to the extent permitted by law.&lt;/p&gt;
+        ">
           <p>8.1 SmartOrdi haftet für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit unbegrenzt. Für sonstige Schäden haftet SmartOrdi nur bei Vorsatz oder grober Fahrlässigkeit.</p>
           <p style="margin-top:0.6rem;">8.2 SmartOrdi übernimmt keine Haftung für die medizinische Richtigkeit der von Patienten eingegebenen Daten sowie für Übersetzungsfehler, die zu medizinischen Fehlentscheidungen führen könnten. Die endgültige Verantwortung für medizinische Entscheidungen liegt beim behandelnden Arzt.</p>
           <p style="margin-top:0.6rem;">8.3 SmartOrdi gewährleistet eine Systemverfügbarkeit von mindestens 99 % im Jahresdurchschnitt, ausgenommen geplante Wartungsarbeiten.</p>
@@ -2746,11 +2854,17 @@
     <!-- § 9 -->
     <div class="agb-card" style="background:#fff;border-radius:16px;border:1px solid rgba(61,43,107,0.08);overflow:hidden;margin-bottom:0.75rem;">
       <button onclick="toggleAgb(this)" style="width:100%;padding:1.4rem 1.8rem;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;text-align:left;">
-        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);">§ 9 Geistiges Eigentum</span>
+        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);" data-de="§ 9 Geistiges Eigentum" data-en="§ 9 Intellectual Property">§ 9 Geistiges Eigentum</span>
         <span class="agb-icon" style="font-size:1.3rem;color:var(--sky);transition:transform 0.3s;display:inline-block;">+</span>
       </button>
       <div class="agb-ans" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease;">
-        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;">
+        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;" data-de-html="
+          &lt;p&gt;9.1 Alle Rechte an der Plattform SmartOrdi, einschließlich Software, Design, Marken und Inhalten, verbleiben ausschließlich bei SmartOrdi OG.&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;9.2 Dem Auftraggeber wird ein nicht-exklusives, nicht übertragbares Nutzungsrecht für die Dauer des Vertragsverhältnisses eingeräumt.&lt;/p&gt;
+        " data-en-html="
+          &lt;p&gt;9.1 All rights to the SmartOrdi platform, including software, design, trademarks, and content, remain exclusively with SmartOrdi OG.&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;9.2 The Client is granted a non-exclusive, non-transferable right of use for the duration of the contractual relationship.&lt;/p&gt;
+        ">
           <p>9.1 Alle Rechte an der Plattform SmartOrdi, einschließlich Software, Design, Marken und Inhalten, verbleiben ausschließlich bei SmartOrdi OG.</p>
           <p style="margin-top:0.6rem;">9.2 Dem Auftraggeber wird ein nicht-exklusives, nicht übertragbares Nutzungsrecht für die Dauer des Vertragsverhältnisses eingeräumt.</p>
         </div>
@@ -2760,11 +2874,17 @@
     <!-- § 10 -->
     <div class="agb-card" style="background:#fff;border-radius:16px;border:1px solid rgba(61,43,107,0.08);overflow:hidden;margin-bottom:0.75rem;">
       <button onclick="toggleAgb(this)" style="width:100%;padding:1.4rem 1.8rem;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;text-align:left;">
-        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);">§ 10 Änderungen der AGB</span>
+        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);" data-de="§ 10 Änderungen der AGB" data-en="§ 10 Changes to the GTC">§ 10 Änderungen der AGB</span>
         <span class="agb-icon" style="font-size:1.3rem;color:var(--sky);transition:transform 0.3s;display:inline-block;">+</span>
       </button>
       <div class="agb-ans" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease;">
-        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;">
+        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;" data-de-html="
+          &lt;p&gt;10.1 SmartOrdi behält sich vor, diese AGB jederzeit zu ändern. Änderungen werden dem Auftraggeber per E-Mail mit einer Frist von 4 Wochen vor Inkrafttreten mitgeteilt.&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;10.2 Widerspricht der Auftraggeber der Änderung nicht innerhalb von 2 Wochen nach Mitteilung, gelten die geänderten AGB als akzeptiert. Bei Widerspruch steht dem Auftraggeber ein Sonderkündigungsrecht zu.&lt;/p&gt;
+        " data-en-html="
+          &lt;p&gt;10.1 SmartOrdi reserves the right to amend these GTC at any time. Changes will be communicated to the Client by email with 4 weeks&#x27; notice before they take effect.&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;10.2 If the Client does not object to the change within 2 weeks of notification, the amended GTC are deemed accepted. In the event of an objection, the Client is entitled to a special right of termination.&lt;/p&gt;
+        ">
           <p>10.1 SmartOrdi behält sich vor, diese AGB jederzeit zu ändern. Änderungen werden dem Auftraggeber per E-Mail mit einer Frist von 4 Wochen vor Inkrafttreten mitgeteilt.</p>
           <p style="margin-top:0.6rem;">10.2 Widerspricht der Auftraggeber der Änderung nicht innerhalb von 2 Wochen nach Mitteilung, gelten die geänderten AGB als akzeptiert. Bei Widerspruch steht dem Auftraggeber ein Sonderkündigungsrecht zu.</p>
         </div>
@@ -2774,11 +2894,17 @@
     <!-- § 11 -->
     <div class="agb-card" style="background:#fff;border-radius:16px;border:1px solid rgba(61,43,107,0.08);overflow:hidden;margin-bottom:0.75rem;">
       <button onclick="toggleAgb(this)" style="width:100%;padding:1.4rem 1.8rem;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;text-align:left;">
-        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);">§ 11 Anwendbares Recht und Gerichtsstand</span>
+        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);" data-de="§ 11 Anwendbares Recht und Gerichtsstand" data-en="§ 11 Applicable Law and Jurisdiction">§ 11 Anwendbares Recht und Gerichtsstand</span>
         <span class="agb-icon" style="font-size:1.3rem;color:var(--sky);transition:transform 0.3s;display:inline-block;">+</span>
       </button>
       <div class="agb-ans" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease;">
-        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;">
+        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;" data-de-html="
+          &lt;p&gt;11.1 Es gilt ausschließlich österreichisches Recht unter Ausschluss des UN-Kaufrechts (CISG).&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;11.2 Ausschließlicher Gerichtsstand für alle Streitigkeiten aus oder im Zusammenhang mit diesem Vertrag ist Linz, Österreich.&lt;/p&gt;
+        " data-en-html="
+          &lt;p&gt;11.1 Austrian law applies exclusively, excluding the UN Convention on Contracts for the International Sale of Goods (CISG).&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;11.2 The exclusive place of jurisdiction for all disputes arising from or in connection with this contract is Linz, Austria.&lt;/p&gt;
+        ">
           <p>11.1 Es gilt ausschließlich österreichisches Recht unter Ausschluss des UN-Kaufrechts (CISG).</p>
           <p style="margin-top:0.6rem;">11.2 Ausschließlicher Gerichtsstand für alle Streitigkeiten aus oder im Zusammenhang mit diesem Vertrag ist Linz, Österreich.</p>
         </div>
@@ -2788,11 +2914,17 @@
     <!-- § 12 -->
     <div class="agb-card" style="background:#fff;border-radius:16px;border:1px solid rgba(61,43,107,0.08);overflow:hidden;margin-bottom:0.75rem;">
       <button onclick="toggleAgb(this)" style="width:100%;padding:1.4rem 1.8rem;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;text-align:left;">
-        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);">§ 12 Salvatorische Klausel</span>
+        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);" data-de="§ 12 Salvatorische Klausel" data-en="§ 12 Severability Clause">§ 12 Salvatorische Klausel</span>
         <span class="agb-icon" style="font-size:1.3rem;color:var(--sky);transition:transform 0.3s;display:inline-block;">+</span>
       </button>
       <div class="agb-ans" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease;">
-        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;">
+        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;" data-de-html="
+          &lt;p&gt;Sollten einzelne Bestimmungen dieser AGB ganz oder teilweise unwirksam sein oder werden, berührt dies die Wirksamkeit der übrigen Bestimmungen nicht. Die unwirksame Bestimmung ist durch eine wirksame zu ersetzen, die dem wirtschaftlichen Zweck der unwirksamen Bestimmung am nächsten kommt.&lt;/p&gt;
+          &lt;div style=&quot;margin-top:1rem;background:var(--frost);padding:0.8rem 1rem;border-radius:8px;color:var(--blue);font-style:italic;font-size:0.82rem;&quot;&gt;⚠️ Diese AGB wurden als Mustervorlage erstellt. Eine Überprüfung durch einen österreichischen Rechtsanwalt (IT-Recht) wird empfohlen.&lt;/div&gt;
+        " data-en-html="
+          &lt;p&gt;Should individual provisions of these GTC be or become invalid in whole or in part, this shall not affect the validity of the remaining provisions. The invalid provision shall be replaced by a valid one that comes closest to the economic purpose of the invalid provision.&lt;/p&gt;
+          &lt;div style=&quot;margin-top:1rem;background:var(--frost);padding:0.8rem 1rem;border-radius:8px;color:var(--blue);font-style:italic;font-size:0.82rem;&quot;&gt;⚠️ These GTC were created as a template. A review by an Austrian lawyer (IT law) is recommended.&lt;/div&gt;
+        ">
           <p>Sollten einzelne Bestimmungen dieser AGB ganz oder teilweise unwirksam sein oder werden, berührt dies die Wirksamkeit der übrigen Bestimmungen nicht. Die unwirksame Bestimmung ist durch eine wirksame zu ersetzen, die dem wirtschaftlichen Zweck der unwirksamen Bestimmung am nächsten kommt.</p>
           <div style="margin-top:1rem;background:var(--frost);padding:0.8rem 1rem;border-radius:8px;color:var(--blue);font-style:italic;font-size:0.82rem;">⚠️ Diese AGB wurden als Mustervorlage erstellt. Eine Überprüfung durch einen österreichischen Rechtsanwalt (IT-Recht) wird empfohlen.</div>
         </div>
@@ -2800,7 +2932,7 @@
     </div>
 
     <!-- Footer info -->
-    <div style="text-align:center;margin-top:2rem;font-size:0.82rem;color:var(--muted);">
+    <div style="text-align:center;margin-top:2rem;font-size:0.82rem;color:var(--muted);" data-de-html="SmartOrdi OG · Steingasse 6a, 4020 Linz · &lt;a href=&quot;mailto:team@smartordi.eu&quot; style=&quot;color:var(--sky);&quot;&gt;team@smartordi.eu&lt;/a&gt; · &lt;a href=&quot;https://www.smartordi.eu&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; style=&quot;color:var(--sky);&quot;&gt;www.smartordi.eu&lt;/a&gt;" data-en-html="SmartOrdi OG · Steingasse 6a, 4020 Linz, Austria · &lt;a href=&quot;mailto:team@smartordi.eu&quot; style=&quot;color:var(--sky);&quot;&gt;team@smartordi.eu&lt;/a&gt; · &lt;a href=&quot;https://www.smartordi.eu&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; style=&quot;color:var(--sky);&quot;&gt;www.smartordi.eu&lt;/a&gt;">
       SmartOrdi OG · Steingasse 6a, 4020 Linz · <a href="mailto:team@smartordi.eu" style="color:var(--sky);">team@smartordi.eu</a> · <a href="https://www.smartordi.eu" target="_blank" rel="noopener noreferrer" style="color:var(--sky);">www.smartordi.eu</a>
     </div>
 
