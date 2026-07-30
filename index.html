@@ -2949,16 +2949,22 @@
     <div style="display:flex;align-items:center;gap:0.75rem;">
       <div class="logo-img"></div><span class="logo-text"><span>Smartordi</span> OG</span>
     </div>
-    <button onclick="hideDatenschutz()" style="display:flex;align-items:center;gap:0.5rem;background:var(--frost);border:1px solid rgba(61,43,107,0.12);color:var(--navy);padding:0.55rem 1.2rem;border-radius:8px;font-size:0.88rem;font-weight:500;cursor:pointer;transition:all 0.2s;">← Zurück</button>
+    <div style="display:flex;align-items:center;gap:0.75rem;">
+      <div class="lang-toggle">
+        <button type="button" class="active" data-setlang="de" onclick="setSiteLang('de')">DE</button>
+        <button type="button" data-setlang="en" onclick="setSiteLang('en')">EN</button>
+      </div>
+      <button onclick="hideDatenschutz()" style="display:flex;align-items:center;gap:0.5rem;background:var(--frost);border:1px solid rgba(61,43,107,0.12);color:var(--navy);padding:0.55rem 1.2rem;border-radius:8px;font-size:0.88rem;font-weight:500;cursor:pointer;transition:all 0.2s;" data-de="← Zurück" data-en="← Back">← Zurück</button>
+    </div>
   </div>
 
   <!-- HERO -->
   <div style="background:#2A2013;padding:4rem;text-align:center;position:relative;overflow:hidden;">
     <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 50%, rgba(232,185,77,0.15) 0%, transparent 70%);"></div>
     <div style="position:relative;">
-      <div style="font-size:0.75rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#E0B04D;margin-bottom:1rem;">Rechtliches</div>
-      <h1 style="font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:900;color:#fff;margin-bottom:0.75rem;">Datenschutzerklärung</h1>
-      <p style="color:rgba(255,255,255,0.5);font-size:0.9rem;">SmartOrdi OG · Steingasse 6a, 4020 Linz · Stand: Mai 2026 · Version 2.0</p>
+      <div style="font-size:0.75rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#E0B04D;margin-bottom:1rem;" data-de="Rechtliches" data-en="Legal">Rechtliches</div>
+      <h1 style="font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:900;color:#fff;margin-bottom:0.75rem;" data-de="Datenschutzerklärung" data-en="Privacy Policy">Datenschutzerklärung</h1>
+      <p style="color:rgba(255,255,255,0.5);font-size:0.9rem;" data-de="SmartOrdi OG · Steingasse 6a, 4020 Linz · Stand: Mai 2026 · Version 2.0" data-en="SmartOrdi OG · Steingasse 6a, 4020 Linz · Last updated: May 2026 · Version 2.0">SmartOrdi OG · Steingasse 6a, 4020 Linz · Stand: Mai 2026 · Version 2.0</p>
     </div>
   </div>
 
@@ -2967,7 +2973,7 @@
 
     <!-- Contact Bar -->
     <div style="background:var(--frost);border-radius:12px;padding:1rem 1.5rem;margin-bottom:2rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center;font-size:0.85rem;color:var(--blue);">
-      <span>📍 Steingasse 6a, 4020 Linz, Österreich</span>
+      <span data-de="📍 Steingasse 6a, 4020 Linz, Österreich" data-en="📍 Steingasse 6a, 4020 Linz, Austria">📍 Steingasse 6a, 4020 Linz, Österreich</span>
       <span>✉️ <a href="mailto:team@smartordi.eu" style="color:var(--sky);text-decoration:none;">team@smartordi.eu</a></span>
       <span>🌐 <a href="https://www.smartordi.eu" target="_blank" rel="noopener noreferrer" style="color:var(--sky);text-decoration:none;">www.smartordi.eu</a></span>
       <span>📞 <a href="tel:+43667762439293" style="color:var(--sky);text-decoration:none;">+43 667 762439293</a></span>
@@ -2976,11 +2982,15 @@
     <!-- 1 -->
     <div class="agb-card" style="background:#fff;border-radius:16px;border:1px solid rgba(61,43,107,0.08);overflow:hidden;margin-bottom:0.75rem;">
       <button onclick="toggleAgb(this)" style="width:100%;padding:1.4rem 1.8rem;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;text-align:left;">
-        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);">1. Allgemeine Informationen</span>
+        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);" data-de="1. Allgemeine Informationen" data-en="1. General Information">1. Allgemeine Informationen</span>
         <span class="agb-icon" style="font-size:1.3rem;color:var(--sky);transition:transform 0.3s;display:inline-block;">+</span>
       </button>
       <div class="agb-ans" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease;">
-        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;">
+        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;" data-de-html="
+          &lt;p&gt;Der Schutz Ihrer persönlichen Daten ist uns ein besonderes Anliegen. Wir verarbeiten Ihre Daten ausschließlich auf Grundlage der gesetzlichen Bestimmungen der Datenschutz-Grundverordnung (DSGVO) sowie des österreichischen Datenschutzgesetzes (DSG). In dieser Datenschutzerklärung informieren wir Sie über die wichtigsten Aspekte der Datenverarbeitung im Rahmen unserer digitalen Plattform SmartOrdi.&lt;/p&gt;
+        " data-en-html="
+          &lt;p&gt;The protection of your personal data is very important to us. We process your data exclusively on the basis of the statutory provisions of the General Data Protection Regulation (GDPR) and the Austrian Data Protection Act (DSG). In this privacy policy, we inform you about the key aspects of data processing within our digital SmartOrdi platform.&lt;/p&gt;
+        ">
           <p>Der Schutz Ihrer persönlichen Daten ist uns ein besonderes Anliegen. Wir verarbeiten Ihre Daten ausschließlich auf Grundlage der gesetzlichen Bestimmungen der Datenschutz-Grundverordnung (DSGVO) sowie des österreichischen Datenschutzgesetzes (DSG). In dieser Datenschutzerklärung informieren wir Sie über die wichtigsten Aspekte der Datenverarbeitung im Rahmen unserer digitalen Plattform SmartOrdi.</p>
         </div>
       </div>
@@ -2989,11 +2999,33 @@
     <!-- 2 -->
     <div class="agb-card" style="background:#fff;border-radius:16px;border:1px solid rgba(61,43,107,0.08);overflow:hidden;margin-bottom:0.75rem;">
       <button onclick="toggleAgb(this)" style="width:100%;padding:1.4rem 1.8rem;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;text-align:left;">
-        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);">2. Verantwortliche Stelle und Kontakt</span>
+        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);" data-de="2. Verantwortliche Stelle und Kontakt" data-en="2. Data Controller and Contact">2. Verantwortliche Stelle und Kontakt</span>
         <span class="agb-icon" style="font-size:1.3rem;color:var(--sky);transition:transform 0.3s;display:inline-block;">+</span>
       </button>
       <div class="agb-ans" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease;">
-        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;">
+        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;" data-de-html="
+          &lt;p&gt;Verantwortlicher im Sinne der DSGVO ist die jeweilige Arztpraxis (Ordination), die unsere Dienste nutzt. SmartOrdi OG agiert ausschließlich als Auftragsverarbeiter gemäß Art. 28 DSGVO.&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.8rem;font-weight:600;color:var(--navy);&quot;&gt;Auftragsverarbeiter (Anbieter der Plattform):&lt;/p&gt;
+          &lt;ul style=&quot;margin:0.5rem 0 0 1.2rem;display:flex;flex-direction:column;gap:0.4rem;&quot;&gt;
+            &lt;li&gt;Unternehmen: SmartOrdi OG&lt;/li&gt;
+            &lt;li&gt;Adresse: Steingasse 6a, 4020 Linz, Österreich&lt;/li&gt;
+            &lt;li&gt;E-Mail: &lt;a href=&quot;mailto:team@smartordi.eu&quot; style=&quot;color:var(--sky);&quot;&gt;team@smartordi.eu&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;Telefon: &lt;a href=&quot;tel:+43667762439293&quot; style=&quot;color:var(--sky);&quot;&gt;+43 667 762439293&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;Website: &lt;a href=&quot;https://www.smartordi.eu&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; style=&quot;color:var(--sky);&quot;&gt;www.smartordi.eu&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;p style=&quot;margin-top:0.8rem;&quot;&gt;Für Anfragen zum Datenschutz wenden Sie sich bitte direkt an: &lt;a href=&quot;mailto:team@smartordi.eu&quot; style=&quot;color:var(--sky);&quot;&gt;team@smartordi.eu&lt;/a&gt;&lt;/p&gt;
+        " data-en-html="
+          &lt;p&gt;The controller within the meaning of the GDPR is the respective medical practice using our services. SmartOrdi OG acts exclusively as a processor pursuant to Art. 28 GDPR.&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.8rem;font-weight:600;color:var(--navy);&quot;&gt;Processor (platform provider):&lt;/p&gt;
+          &lt;ul style=&quot;margin:0.5rem 0 0 1.2rem;display:flex;flex-direction:column;gap:0.4rem;&quot;&gt;
+            &lt;li&gt;Company: SmartOrdi OG&lt;/li&gt;
+            &lt;li&gt;Address: Steingasse 6a, 4020 Linz, Austria&lt;/li&gt;
+            &lt;li&gt;Email: &lt;a href=&quot;mailto:team@smartordi.eu&quot; style=&quot;color:var(--sky);&quot;&gt;team@smartordi.eu&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;Phone: &lt;a href=&quot;tel:+43667762439293&quot; style=&quot;color:var(--sky);&quot;&gt;+43 667 762439293&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;Website: &lt;a href=&quot;https://www.smartordi.eu&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; style=&quot;color:var(--sky);&quot;&gt;www.smartordi.eu&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;p style=&quot;margin-top:0.8rem;&quot;&gt;For data protection inquiries, please contact us directly at: &lt;a href=&quot;mailto:team@smartordi.eu&quot; style=&quot;color:var(--sky);&quot;&gt;team@smartordi.eu&lt;/a&gt;&lt;/p&gt;
+        ">
           <p>Verantwortlicher im Sinne der DSGVO ist die jeweilige Arztpraxis (Ordination), die unsere Dienste nutzt. SmartOrdi OG agiert ausschließlich als Auftragsverarbeiter gemäß Art. 28 DSGVO.</p>
           <p style="margin-top:0.8rem;font-weight:600;color:var(--navy);">Auftragsverarbeiter (Anbieter der Plattform):</p>
           <ul style="margin:0.5rem 0 0 1.2rem;display:flex;flex-direction:column;gap:0.4rem;">
@@ -3011,11 +3043,35 @@
     <!-- 3 -->
     <div class="agb-card" style="background:#fff;border-radius:16px;border:1px solid rgba(61,43,107,0.08);overflow:hidden;margin-bottom:0.75rem;">
       <button onclick="toggleAgb(this)" style="width:100%;padding:1.4rem 1.8rem;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;text-align:left;">
-        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);">3. Art und Zweck der Datenverarbeitung</span>
+        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);" data-de="3. Art und Zweck der Datenverarbeitung" data-en="3. Type and Purpose of Data Processing">3. Art und Zweck der Datenverarbeitung</span>
         <span class="agb-icon" style="font-size:1.3rem;color:var(--sky);transition:transform 0.3s;display:inline-block;">+</span>
       </button>
       <div class="agb-ans" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease;">
-        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;">
+        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;" data-de-html="
+          &lt;p&gt;SmartOrdi unterstützt Ordinationen bei der strukturierten digitalen Vorbereitung von Arztterminen. Im Rahmen dieser Tätigkeit werden folgende Datenkategorien erhoben:&lt;/p&gt;
+          &lt;ul style=&quot;margin:0.6rem 0 0.6rem 1.2rem;display:flex;flex-direction:column;gap:0.4rem;&quot;&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Stammdaten:&lt;/strong&gt; Name, Geburtsdatum, Sprache, Wohnadresse&lt;/li&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Identifikationsdaten:&lt;/strong&gt; Sozialversicherungsnummer (SVNR) — ausschließlich zur eindeutigen Patientenidentifikation gemäß § 51 ÄrzteG, auf ausdrücklichen Wunsch der Ordination&lt;/li&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Gesundheitsdaten:&lt;/strong&gt; Beschwerden, aktuelle Medikation, Allergien, Vorerkrankungen (freiwillige Angaben gemäß Art. 9 DSGVO)&lt;/li&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Kontaktdaten:&lt;/strong&gt; E-Mail-Adresse oder Telefonnummer (falls freiwillig angegeben)&lt;/li&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Hochgeladene Dokumente:&lt;/strong&gt; Laborbefunde, Röntgenbilder und sonstige medizinische Unterlagen (freiwillig)&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;div style=&quot;background:var(--frost);border-radius:8px;padding:0.8rem 1rem;margin-top:0.6rem;color:var(--blue);font-size:0.85rem;&quot;&gt;
+            🔒 &lt;strong&gt;Hinweis zur SVNR:&lt;/strong&gt; Die Sozialversicherungsnummer wird verschlüsselt gespeichert, ist im PDF-Bericht nicht im Klartext sichtbar und wird nach Beendigung des Behandlungsverhältnisses gelöscht.
+          &lt;/div&gt;
+        " data-en-html="
+          &lt;p&gt;SmartOrdi helps medical practices with the structured digital preparation of appointments. As part of this activity, the following categories of data are collected:&lt;/p&gt;
+          &lt;ul style=&quot;margin:0.6rem 0 0.6rem 1.2rem;display:flex;flex-direction:column;gap:0.4rem;&quot;&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Master data:&lt;/strong&gt; Name, date of birth, language, residential address&lt;/li&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Identification data:&lt;/strong&gt; Social insurance number (SVNR) — used exclusively for unambiguous patient identification pursuant to § 51 ÄrzteG (Austrian Physicians Act), at the explicit request of the practice&lt;/li&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Health data:&lt;/strong&gt; Symptoms, current medication, allergies, pre-existing conditions (voluntary information pursuant to Art. 9 GDPR)&lt;/li&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Contact data:&lt;/strong&gt; Email address or phone number (if voluntarily provided)&lt;/li&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Uploaded documents:&lt;/strong&gt; Lab results, X-rays, and other medical records (voluntary)&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;div style=&quot;background:var(--frost);border-radius:8px;padding:0.8rem 1rem;margin-top:0.6rem;color:var(--blue);font-size:0.85rem;&quot;&gt;
+            🔒 &lt;strong&gt;Note on the SVNR:&lt;/strong&gt; The social insurance number is stored encrypted, is not visible in plain text in the PDF report, and is deleted once the treatment relationship ends.
+          &lt;/div&gt;
+        ">
           <p>SmartOrdi unterstützt Ordinationen bei der strukturierten digitalen Vorbereitung von Arztterminen. Im Rahmen dieser Tätigkeit werden folgende Datenkategorien erhoben:</p>
           <ul style="margin:0.6rem 0 0.6rem 1.2rem;display:flex;flex-direction:column;gap:0.4rem;">
             <li><strong style="color:var(--navy);">Stammdaten:</strong> Name, Geburtsdatum, Sprache, Wohnadresse</li>
@@ -3034,11 +3090,27 @@
     <!-- 4 -->
     <div class="agb-card" style="background:#fff;border-radius:16px;border:1px solid rgba(61,43,107,0.08);overflow:hidden;margin-bottom:0.75rem;">
       <button onclick="toggleAgb(this)" style="width:100%;padding:1.4rem 1.8rem;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;text-align:left;">
-        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);">4. Rechtsgrundlage der Verarbeitung</span>
+        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);" data-de="4. Rechtsgrundlage der Verarbeitung" data-en="4. Legal Basis for Processing">4. Rechtsgrundlage der Verarbeitung</span>
         <span class="agb-icon" style="font-size:1.3rem;color:var(--sky);transition:transform 0.3s;display:inline-block;">+</span>
       </button>
       <div class="agb-ans" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease;">
-        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;">
+        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;" data-de-html="
+          &lt;ul style=&quot;margin:0 0 0 1.2rem;display:flex;flex-direction:column;gap:0.5rem;&quot;&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Art. 6 Abs. 1 lit. a DSGVO:&lt;/strong&gt; Ausdrückliche Einwilligung des Patienten vor Nutzung der Plattform&lt;/li&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Art. 9 Abs. 2 lit. a DSGVO:&lt;/strong&gt; Ausdrückliche Einwilligung für die Verarbeitung besonderer Kategorien personenbezogener Daten (Gesundheitsdaten)&lt;/li&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Art. 6 Abs. 1 lit. c DSGVO i.V.m. § 51 ÄrzteG:&lt;/strong&gt; Verarbeitung der Sozialversicherungsnummer zur gesetzlich vorgesehenen eindeutigen Patientenidentifikation&lt;/li&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Art. 6 Abs. 1 lit. b DSGVO:&lt;/strong&gt; Vertragserfüllung gegenüber der nutzenden Ordination&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;p style=&quot;margin-top:0.8rem;&quot;&gt;Patienten können ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen. Der Widerruf berührt nicht die Rechtmäßigkeit der bis dahin erfolgten Verarbeitung.&lt;/p&gt;
+        " data-en-html="
+          &lt;ul style=&quot;margin:0 0 0 1.2rem;display:flex;flex-direction:column;gap:0.5rem;&quot;&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Art. 6(1)(a) GDPR:&lt;/strong&gt; Explicit consent of the patient before using the platform&lt;/li&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Art. 9(2)(a) GDPR:&lt;/strong&gt; Explicit consent for the processing of special categories of personal data (health data)&lt;/li&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Art. 6(1)(c) GDPR in conjunction with § 51 ÄrzteG:&lt;/strong&gt; Processing of the social insurance number for the legally required unambiguous patient identification&lt;/li&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Art. 6(1)(b) GDPR:&lt;/strong&gt; Performance of the contract with the using practice&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;p style=&quot;margin-top:0.8rem;&quot;&gt;Patients may withdraw their consent at any time with effect for the future. The withdrawal does not affect the lawfulness of processing carried out before the withdrawal.&lt;/p&gt;
+        ">
           <ul style="margin:0 0 0 1.2rem;display:flex;flex-direction:column;gap:0.5rem;">
             <li><strong style="color:var(--navy);">Art. 6 Abs. 1 lit. a DSGVO:</strong> Ausdrückliche Einwilligung des Patienten vor Nutzung der Plattform</li>
             <li><strong style="color:var(--navy);">Art. 9 Abs. 2 lit. a DSGVO:</strong> Ausdrückliche Einwilligung für die Verarbeitung besonderer Kategorien personenbezogener Daten (Gesundheitsdaten)</li>
@@ -3053,11 +3125,29 @@
     <!-- 5 -->
     <div class="agb-card" style="background:#fff;border-radius:16px;border:1px solid rgba(61,43,107,0.08);overflow:hidden;margin-bottom:0.75rem;">
       <button onclick="toggleAgb(this)" style="width:100%;padding:1.4rem 1.8rem;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;text-align:left;">
-        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);">5. Technische und organisatorische Maßnahmen (TOMs)</span>
+        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);" data-de="5. Technische und organisatorische Maßnahmen (TOMs)" data-en="5. Technical and Organizational Measures (TOMs)">5. Technische und organisatorische Maßnahmen (TOMs)</span>
         <span class="agb-icon" style="font-size:1.3rem;color:var(--sky);transition:transform 0.3s;display:inline-block;">+</span>
       </button>
       <div class="agb-ans" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease;">
-        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;">
+        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;" data-de-html="
+          &lt;ul style=&quot;margin:0 0 0 1.2rem;display:flex;flex-direction:column;gap:0.5rem;&quot;&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Verschlüsselung:&lt;/strong&gt; Alle Datenübertragungen erfolgen ausschließlich über gesicherte SSL/TLS-Verbindungen (HTTPS)&lt;/li&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Datenspeicherung:&lt;/strong&gt; Alle Daten werden verschlüsselt auf Servern innerhalb der Europäischen Union gespeichert&lt;/li&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Hosting:&lt;/strong&gt; Hetzner Online GmbH, Industriestraße 25, 91710 Gunzenhausen, Deutschland (EU-Server)&lt;/li&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Zugriffskontrolle:&lt;/strong&gt; Zugriff auf personenbezogene Daten nur durch autorisiertes Personal unter strikten Vertraulichkeitsvereinbarungen&lt;/li&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Datensparsamkeit:&lt;/strong&gt; Es werden nur die für den jeweiligen Zweck notwendigen Daten erhoben&lt;/li&gt;
+            &lt;li&gt;Regelmäßige Sicherheitsupdates und Penetrationstests der Plattform&lt;/li&gt;
+          &lt;/ul&gt;
+        " data-en-html="
+          &lt;ul style=&quot;margin:0 0 0 1.2rem;display:flex;flex-direction:column;gap:0.5rem;&quot;&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Encryption:&lt;/strong&gt; All data transfers take place exclusively via secure SSL/TLS connections (HTTPS)&lt;/li&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Data storage:&lt;/strong&gt; All data is stored encrypted on servers within the European Union&lt;/li&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Hosting:&lt;/strong&gt; Hetzner Online GmbH, Industriestraße 25, 91710 Gunzenhausen, Germany (EU servers)&lt;/li&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Access control:&lt;/strong&gt; Access to personal data only by authorized personnel under strict confidentiality agreements&lt;/li&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Data minimization:&lt;/strong&gt; Only the data necessary for the respective purpose is collected&lt;/li&gt;
+            &lt;li&gt;Regular security updates and penetration testing of the platform&lt;/li&gt;
+          &lt;/ul&gt;
+        ">
           <ul style="margin:0 0 0 1.2rem;display:flex;flex-direction:column;gap:0.5rem;">
             <li><strong style="color:var(--navy);">Verschlüsselung:</strong> Alle Datenübertragungen erfolgen ausschließlich über gesicherte SSL/TLS-Verbindungen (HTTPS)</li>
             <li><strong style="color:var(--navy);">Datenspeicherung:</strong> Alle Daten werden verschlüsselt auf Servern innerhalb der Europäischen Union gespeichert</li>
@@ -3073,11 +3163,25 @@
     <!-- 6 -->
     <div class="agb-card" style="background:#fff;border-radius:16px;border:1px solid rgba(61,43,107,0.08);overflow:hidden;margin-bottom:0.75rem;">
       <button onclick="toggleAgb(this)" style="width:100%;padding:1.4rem 1.8rem;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;text-align:left;">
-        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);">6. Weitergabe an Dritte und Sub-Auftragsverarbeiter</span>
+        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);" data-de="6. Weitergabe an Dritte und Sub-Auftragsverarbeiter" data-en="6. Disclosure to Third Parties and Sub-Processors">6. Weitergabe an Dritte und Sub-Auftragsverarbeiter</span>
         <span class="agb-icon" style="font-size:1.3rem;color:var(--sky);transition:transform 0.3s;display:inline-block;">+</span>
       </button>
       <div class="agb-ans" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease;">
-        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;">
+        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;" data-de-html="
+          &lt;p&gt;Eine Weitergabe personenbezogener Daten an unbeteiligte Dritte erfolgt nicht. SmartOrdi setzt folgende Sub-Auftragsverarbeiter ein:&lt;/p&gt;
+          &lt;ul style=&quot;margin:0.6rem 0 0.6rem 1.2rem;display:flex;flex-direction:column;gap:0.4rem;&quot;&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Hetzner Online GmbH&lt;/strong&gt; (Deutschland) — Hosting und Serverinfrastruktur&lt;/li&gt;
+            &lt;li&gt;Weitere Sub-Auftragsverarbeiter können auf Anfrage unter &lt;a href=&quot;mailto:team@smartordi.eu&quot; style=&quot;color:var(--sky);&quot;&gt;team@smartordi.eu&lt;/a&gt; mitgeteilt werden&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;p&gt;Alle Sub-Auftragsverarbeiter sind vertraglich zur Einhaltung der DSGVO verpflichtet. Eine Datenübermittlung in Drittländer außerhalb der EU/EWR findet nicht statt.&lt;/p&gt;
+        " data-en-html="
+          &lt;p&gt;Personal data is not disclosed to uninvolved third parties. SmartOrdi uses the following sub-processors:&lt;/p&gt;
+          &lt;ul style=&quot;margin:0.6rem 0 0.6rem 1.2rem;display:flex;flex-direction:column;gap:0.4rem;&quot;&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Hetzner Online GmbH&lt;/strong&gt; (Germany) — hosting and server infrastructure&lt;/li&gt;
+            &lt;li&gt;Additional sub-processors can be disclosed on request at &lt;a href=&quot;mailto:team@smartordi.eu&quot; style=&quot;color:var(--sky);&quot;&gt;team@smartordi.eu&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;p&gt;All sub-processors are contractually obligated to comply with the GDPR. No data is transferred to third countries outside the EU/EEA.&lt;/p&gt;
+        ">
           <p>Eine Weitergabe personenbezogener Daten an unbeteiligte Dritte erfolgt nicht. SmartOrdi setzt folgende Sub-Auftragsverarbeiter ein:</p>
           <ul style="margin:0.6rem 0 0.6rem 1.2rem;display:flex;flex-direction:column;gap:0.4rem;">
             <li><strong style="color:var(--navy);">Hetzner Online GmbH</strong> (Deutschland) — Hosting und Serverinfrastruktur</li>
@@ -3091,11 +3195,17 @@
     <!-- 7 -->
     <div class="agb-card" style="background:#fff;border-radius:16px;border:1px solid rgba(61,43,107,0.08);overflow:hidden;margin-bottom:0.75rem;">
       <button onclick="toggleAgb(this)" style="width:100%;padding:1.4rem 1.8rem;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;text-align:left;">
-        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);">7. Speicherdauer und Löschung</span>
+        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);" data-de="7. Speicherdauer und Löschung" data-en="7. Storage Period and Deletion">7. Speicherdauer und Löschung</span>
         <span class="agb-icon" style="font-size:1.3rem;color:var(--sky);transition:transform 0.3s;display:inline-block;">+</span>
       </button>
       <div class="agb-ans" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease;">
-        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;">
+        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;" data-de-html="
+          &lt;p&gt;Personenbezogene Daten werden nur so lange gespeichert, wie dies für den jeweiligen Verarbeitungszweck erforderlich ist oder gesetzliche Aufbewahrungsfristen (insbesondere ärztliche Dokumentationspflichten gemäß § 51 ÄrzteG) bestehen.&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;Nach Ablauf der Speicherdauer oder auf ausdrücklichen Wunsch des Patienten werden die Daten unwiderruflich gelöscht oder anonymisiert. Löschanfragen können per E-Mail an &lt;a href=&quot;mailto:team@smartordi.eu&quot; style=&quot;color:var(--sky);&quot;&gt;team@smartordi.eu&lt;/a&gt; gestellt werden.&lt;/p&gt;
+        " data-en-html="
+          &lt;p&gt;Personal data is only stored for as long as necessary for the respective processing purpose or as required by statutory retention periods (in particular medical documentation obligations pursuant to § 51 ÄrzteG).&lt;/p&gt;
+          &lt;p style=&quot;margin-top:0.6rem;&quot;&gt;After the storage period expires or at the explicit request of the patient, the data is irrevocably deleted or anonymized. Deletion requests can be submitted by email to &lt;a href=&quot;mailto:team@smartordi.eu&quot; style=&quot;color:var(--sky);&quot;&gt;team@smartordi.eu&lt;/a&gt;.&lt;/p&gt;
+        ">
           <p>Personenbezogene Daten werden nur so lange gespeichert, wie dies für den jeweiligen Verarbeitungszweck erforderlich ist oder gesetzliche Aufbewahrungsfristen (insbesondere ärztliche Dokumentationspflichten gemäß § 51 ÄrzteG) bestehen.</p>
           <p style="margin-top:0.6rem;">Nach Ablauf der Speicherdauer oder auf ausdrücklichen Wunsch des Patienten werden die Daten unwiderruflich gelöscht oder anonymisiert. Löschanfragen können per E-Mail an <a href="mailto:team@smartordi.eu" style="color:var(--sky);">team@smartordi.eu</a> gestellt werden.</p>
         </div>
@@ -3105,11 +3215,25 @@
     <!-- 8 -->
     <div class="agb-card" style="background:#fff;border-radius:16px;border:1px solid rgba(61,43,107,0.08);overflow:hidden;margin-bottom:0.75rem;">
       <button onclick="toggleAgb(this)" style="width:100%;padding:1.4rem 1.8rem;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;text-align:left;">
-        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);">8. Meldung von Datenschutzverletzungen</span>
+        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);" data-de="8. Meldung von Datenschutzverletzungen" data-en="8. Reporting Data Breaches">8. Meldung von Datenschutzverletzungen</span>
         <span class="agb-icon" style="font-size:1.3rem;color:var(--sky);transition:transform 0.3s;display:inline-block;">+</span>
       </button>
       <div class="agb-ans" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease;">
-        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;">
+        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;" data-de-html="
+          &lt;p&gt;Im Falle einer Datenpanne (Data Breach) verpflichtet sich SmartOrdi:&lt;/p&gt;
+          &lt;ul style=&quot;margin:0.6rem 0 0 1.2rem;display:flex;flex-direction:column;gap:0.5rem;&quot;&gt;
+            &lt;li&gt;Die betroffene Ordination unverzüglich, spätestens innerhalb von &lt;strong style=&quot;color:var(--navy);&quot;&gt;24 Stunden&lt;/strong&gt; nach Bekanntwerden zu informieren&lt;/li&gt;
+            &lt;li&gt;Die Ordination damit in die Lage zu versetzen, ihre gesetzliche Meldepflicht gegenüber der österreichischen Datenschutzbehörde (DSB) innerhalb der vorgeschriebenen Frist von &lt;strong style=&quot;color:var(--navy);&quot;&gt;72 Stunden&lt;/strong&gt; (Art. 33 DSGVO) einzuhalten&lt;/li&gt;
+            &lt;li&gt;Eine vollständige Dokumentation des Vorfalls sowie der getroffenen Gegenmaßnahmen bereitzustellen&lt;/li&gt;
+          &lt;/ul&gt;
+        " data-en-html="
+          &lt;p&gt;In the event of a data breach, SmartOrdi undertakes to:&lt;/p&gt;
+          &lt;ul style=&quot;margin:0.6rem 0 0 1.2rem;display:flex;flex-direction:column;gap:0.5rem;&quot;&gt;
+            &lt;li&gt;Inform the affected practice without delay, at the latest within &lt;strong style=&quot;color:var(--navy);&quot;&gt;24 hours&lt;/strong&gt; of becoming aware of it&lt;/li&gt;
+            &lt;li&gt;Enable the practice to meet its statutory reporting obligation to the Austrian Data Protection Authority (DSB) within the prescribed &lt;strong style=&quot;color:var(--navy);&quot;&gt;72-hour&lt;/strong&gt; period (Art. 33 GDPR)&lt;/li&gt;
+            &lt;li&gt;Provide complete documentation of the incident and the countermeasures taken&lt;/li&gt;
+          &lt;/ul&gt;
+        ">
           <p>Im Falle einer Datenpanne (Data Breach) verpflichtet sich SmartOrdi:</p>
           <ul style="margin:0.6rem 0 0 1.2rem;display:flex;flex-direction:column;gap:0.5rem;">
             <li>Die betroffene Ordination unverzüglich, spätestens innerhalb von <strong style="color:var(--navy);">24 Stunden</strong> nach Bekanntwerden zu informieren</li>
@@ -3123,11 +3247,41 @@
     <!-- 9 -->
     <div class="agb-card" style="background:#fff;border-radius:16px;border:1px solid rgba(61,43,107,0.08);overflow:hidden;margin-bottom:0.75rem;">
       <button onclick="toggleAgb(this)" style="width:100%;padding:1.4rem 1.8rem;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;text-align:left;">
-        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);">9. Ihre Rechte als betroffene Person</span>
+        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);" data-de="9. Ihre Rechte als betroffene Person" data-en="9. Your Rights as a Data Subject">9. Ihre Rechte als betroffene Person</span>
         <span class="agb-icon" style="font-size:1.3rem;color:var(--sky);transition:transform 0.3s;display:inline-block;">+</span>
       </button>
       <div class="agb-ans" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease;">
-        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;">
+        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;" data-de-html="
+          &lt;ul style=&quot;margin:0 0 0.8rem 1.2rem;display:flex;flex-direction:column;gap:0.5rem;&quot;&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Recht auf Auskunft&lt;/strong&gt; (Art. 15 DSGVO): Sie haben das Recht zu erfahren, welche Daten über Sie verarbeitet werden&lt;/li&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Recht auf Berichtigung&lt;/strong&gt; (Art. 16 DSGVO): Unrichtige Daten können Sie jederzeit korrigieren lassen&lt;/li&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Recht auf Löschung&lt;/strong&gt; (Art. 17 DSGVO): Sie können die Löschung Ihrer Daten verlangen&lt;/li&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Recht auf Einschränkung&lt;/strong&gt; (Art. 18 DSGVO)&lt;/li&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Recht auf Datenübertragbarkeit&lt;/strong&gt; (Art. 20 DSGVO)&lt;/li&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Recht auf Widerspruch&lt;/strong&gt; (Art. 21 DSGVO)&lt;/li&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Recht auf Widerruf der Einwilligung&lt;/strong&gt; (Art. 7 Abs. 3 DSGVO)&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;p&gt;Zur Ausübung Ihrer Rechte: &lt;a href=&quot;mailto:team@smartordi.eu&quot; style=&quot;color:var(--sky);&quot;&gt;team@smartordi.eu&lt;/a&gt;&lt;/p&gt;
+          &lt;div style=&quot;margin-top:0.8rem;background:var(--frost);border-radius:8px;padding:0.8rem 1rem;color:var(--blue);font-size:0.85rem;&quot;&gt;
+            &lt;strong&gt;Österreichische Datenschutzbehörde (DSB)&lt;/strong&gt;&lt;br&gt;
+            Barichgasse 40-42, 1030 Wien · &lt;a href=&quot;https://www.dsb.gv.at&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; style=&quot;color:var(--sky);&quot;&gt;www.dsb.gv.at&lt;/a&gt; · &lt;a href=&quot;mailto:dsb@dsb.gv.at&quot; style=&quot;color:var(--sky);&quot;&gt;dsb@dsb.gv.at&lt;/a&gt;
+          &lt;/div&gt;
+        " data-en-html="
+          &lt;ul style=&quot;margin:0 0 0.8rem 1.2rem;display:flex;flex-direction:column;gap:0.5rem;&quot;&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Right to access&lt;/strong&gt; (Art. 15 GDPR): You have the right to find out what data is processed about you&lt;/li&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Right to rectification&lt;/strong&gt; (Art. 16 GDPR): You may have incorrect data corrected at any time&lt;/li&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Right to erasure&lt;/strong&gt; (Art. 17 GDPR): You may request the deletion of your data&lt;/li&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Right to restriction of processing&lt;/strong&gt; (Art. 18 GDPR)&lt;/li&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Right to data portability&lt;/strong&gt; (Art. 20 GDPR)&lt;/li&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Right to object&lt;/strong&gt; (Art. 21 GDPR)&lt;/li&gt;
+            &lt;li&gt;&lt;strong style=&quot;color:var(--navy);&quot;&gt;Right to withdraw consent&lt;/strong&gt; (Art. 7(3) GDPR)&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;p&gt;To exercise your rights: &lt;a href=&quot;mailto:team@smartordi.eu&quot; style=&quot;color:var(--sky);&quot;&gt;team@smartordi.eu&lt;/a&gt;&lt;/p&gt;
+          &lt;div style=&quot;margin-top:0.8rem;background:var(--frost);border-radius:8px;padding:0.8rem 1rem;color:var(--blue);font-size:0.85rem;&quot;&gt;
+            &lt;strong&gt;Austrian Data Protection Authority (DSB)&lt;/strong&gt;&lt;br&gt;
+            Barichgasse 40-42, 1030 Vienna · &lt;a href=&quot;https://www.dsb.gv.at&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; style=&quot;color:var(--sky);&quot;&gt;www.dsb.gv.at&lt;/a&gt; · &lt;a href=&quot;mailto:dsb@dsb.gv.at&quot; style=&quot;color:var(--sky);&quot;&gt;dsb@dsb.gv.at&lt;/a&gt;
+          &lt;/div&gt;
+        ">
           <ul style="margin:0 0 0.8rem 1.2rem;display:flex;flex-direction:column;gap:0.5rem;">
             <li><strong style="color:var(--navy);">Recht auf Auskunft</strong> (Art. 15 DSGVO): Sie haben das Recht zu erfahren, welche Daten über Sie verarbeitet werden</li>
             <li><strong style="color:var(--navy);">Recht auf Berichtigung</strong> (Art. 16 DSGVO): Unrichtige Daten können Sie jederzeit korrigieren lassen</li>
@@ -3149,11 +3303,15 @@
     <!-- 10 -->
     <div class="agb-card" style="background:#fff;border-radius:16px;border:1px solid rgba(61,43,107,0.08);overflow:hidden;margin-bottom:0.75rem;">
       <button onclick="toggleAgb(this)" style="width:100%;padding:1.4rem 1.8rem;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;text-align:left;">
-        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);">10. Cookies und Tracking</span>
+        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);" data-de="10. Cookies und Tracking" data-en="10. Cookies and Tracking">10. Cookies und Tracking</span>
         <span class="agb-icon" style="font-size:1.3rem;color:var(--sky);transition:transform 0.3s;display:inline-block;">+</span>
       </button>
       <div class="agb-ans" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease;">
-        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;">
+        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;" data-de-html="
+          &lt;p&gt;Die SmartOrdi-Plattform verwendet ausschließlich technisch notwendige Cookies, die für den Betrieb der Plattform erforderlich sind. Es werden keine Tracking- oder Analyse-Cookies eingesetzt. Eine Einwilligung für Cookies ist daher nicht erforderlich.&lt;/p&gt;
+        " data-en-html="
+          &lt;p&gt;The SmartOrdi platform only uses technically necessary cookies required for the platform&#x27;s operation. No tracking or analytics cookies are used. Consent for cookies is therefore not required.&lt;/p&gt;
+        ">
           <p>Die SmartOrdi-Plattform verwendet ausschließlich technisch notwendige Cookies, die für den Betrieb der Plattform erforderlich sind. Es werden keine Tracking- oder Analyse-Cookies eingesetzt. Eine Einwilligung für Cookies ist daher nicht erforderlich.</p>
         </div>
       </div>
@@ -3162,11 +3320,17 @@
     <!-- 11 -->
     <div class="agb-card" style="background:#fff;border-radius:16px;border:1px solid rgba(61,43,107,0.08);overflow:hidden;margin-bottom:0.75rem;">
       <button onclick="toggleAgb(this)" style="width:100%;padding:1.4rem 1.8rem;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;text-align:left;">
-        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);">11. Änderungen dieser Datenschutzerklärung</span>
+        <span style="font-weight:700;font-size:0.95rem;color:var(--navy);" data-de="11. Änderungen dieser Datenschutzerklärung" data-en="11. Changes to this Privacy Policy">11. Änderungen dieser Datenschutzerklärung</span>
         <span class="agb-icon" style="font-size:1.3rem;color:var(--sky);transition:transform 0.3s;display:inline-block;">+</span>
       </button>
       <div class="agb-ans" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease;">
-        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;">
+        <div style="padding:0 1.8rem 1.4rem;font-size:0.88rem;color:var(--muted);line-height:1.85;" data-de-html="
+          &lt;p&gt;SmartOrdi behält sich vor, diese Datenschutzerklärung bei Bedarf anzupassen, um sie an aktuelle rechtliche oder technische Entwicklungen anzupassen. Die jeweils aktuelle Version ist stets auf &lt;a href=&quot;https://www.smartordi.eu/datenschutz&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; style=&quot;color:var(--sky);&quot;&gt;www.smartordi.eu/datenschutz&lt;/a&gt; abrufbar. Bei wesentlichen Änderungen werden registrierte Nutzer per E-Mail informiert.&lt;/p&gt;
+          &lt;div style=&quot;margin-top:1rem;background:var(--frost);padding:0.8rem 1rem;border-radius:8px;color:var(--blue);font-style:italic;font-size:0.82rem;&quot;&gt;⚠️ Diese Datenschutzerklärung wurde als Mustervorlage erstellt. Eine Überprüfung durch einen österreichischen Datenschutzexperten oder Rechtsanwalt wird empfohlen.&lt;/div&gt;
+        " data-en-html="
+          &lt;p&gt;SmartOrdi reserves the right to amend this privacy policy as needed to reflect current legal or technical developments. The current version is always available at &lt;a href=&quot;https://www.smartordi.eu/datenschutz&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; style=&quot;color:var(--sky);&quot;&gt;www.smartordi.eu/datenschutz&lt;/a&gt;. Registered users will be notified by email of any material changes.&lt;/p&gt;
+          &lt;div style=&quot;margin-top:1rem;background:var(--frost);padding:0.8rem 1rem;border-radius:8px;color:var(--blue);font-style:italic;font-size:0.82rem;&quot;&gt;⚠️ This privacy policy was created as a template. A review by an Austrian data protection expert or lawyer is recommended.&lt;/div&gt;
+        ">
           <p>SmartOrdi behält sich vor, diese Datenschutzerklärung bei Bedarf anzupassen, um sie an aktuelle rechtliche oder technische Entwicklungen anzupassen. Die jeweils aktuelle Version ist stets auf <a href="https://www.smartordi.eu/datenschutz" target="_blank" rel="noopener noreferrer" style="color:var(--sky);">www.smartordi.eu/datenschutz</a> abrufbar. Bei wesentlichen Änderungen werden registrierte Nutzer per E-Mail informiert.</p>
           <div style="margin-top:1rem;background:var(--frost);padding:0.8rem 1rem;border-radius:8px;color:var(--blue);font-style:italic;font-size:0.82rem;">⚠️ Diese Datenschutzerklärung wurde als Mustervorlage erstellt. Eine Überprüfung durch einen österreichischen Datenschutzexperten oder Rechtsanwalt wird empfohlen.</div>
         </div>
@@ -3174,7 +3338,7 @@
     </div>
 
     <!-- Footer -->
-    <div style="text-align:center;margin-top:2rem;font-size:0.82rem;color:var(--muted);">
+    <div style="text-align:center;margin-top:2rem;font-size:0.82rem;color:var(--muted);" data-de-html="SmartOrdi OG · Steingasse 6a, 4020 Linz · &lt;a href=&quot;mailto:team@smartordi.eu&quot; style=&quot;color:var(--sky);&quot;&gt;team@smartordi.eu&lt;/a&gt; · Stand: Mai 2026" data-en-html="SmartOrdi OG · Steingasse 6a, 4020 Linz, Austria · &lt;a href=&quot;mailto:team@smartordi.eu&quot; style=&quot;color:var(--sky);&quot;&gt;team@smartordi.eu&lt;/a&gt; · Last updated: May 2026">
       SmartOrdi OG · Steingasse 6a, 4020 Linz · <a href="mailto:team@smartordi.eu" style="color:var(--sky);">team@smartordi.eu</a> · Stand: Mai 2026
     </div>
 
