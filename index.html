@@ -82,7 +82,7 @@
     body.dark .pricing-card.featured {
       background: var(--sky) !important;
     }
-    body.dark footer { background: #07050F; }
+    body.dark footer { background: #1C140A; }
     body.dark #kontakt > div > div:last-child {
       background: #1C1535 !important;
       border-color: rgba(255,255,255,0.07) !important;
@@ -109,6 +109,22 @@
     body.dark #programm-3-page > div:first-child {
       background: rgba(15,11,30,0.95) !important;
       border-bottom-color: rgba(255,255,255,0.06) !important;
+    }
+    body.dark #agb-page > div:first-child .logo-text,
+    body.dark #datenschutz-page > div:first-child .logo-text,
+    body.dark #impressum-page > div:first-child .logo-text,
+    body.dark #programm-smartordi-page > div:first-child .logo-text,
+    body.dark #programm-2-page > div:first-child .logo-text,
+    body.dark #programm-3-page > div:first-child .logo-text {
+      color: #E8C879;
+    }
+    body.dark #agb-page > div:first-child .logo-text span,
+    body.dark #datenschutz-page > div:first-child .logo-text span,
+    body.dark #impressum-page > div:first-child .logo-text span,
+    body.dark #programm-smartordi-page > div:first-child .logo-text span,
+    body.dark #programm-2-page > div:first-child .logo-text span,
+    body.dark #programm-3-page > div:first-child .logo-text span {
+      color: #F0D078;
     }
 
     /* ===== RESET ===== */
@@ -146,17 +162,17 @@
       padding: 1.1rem 4rem;
       background: rgba(250,250,252,0.92);
       backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(61,43,107,0.08);
+      border-bottom: 1px solid rgba(184,134,11,0.18);
     }
     .nav-logo { display:flex; align-items:center; gap:0.75rem; text-decoration:none; }
     .logo-text {
       font-family: 'Manrope', sans-serif;
       font-weight: 800;
       font-size: 1.25rem;
-      color: var(--navy);
+      color: #6B4A17;
       letter-spacing: -0.02em;
     }
-    .logo-text span { color: var(--sky); }
+    .logo-text span { color: #C9962C; }
     .nav-links { display:flex; gap:2.2rem; list-style:none; }
     .nav-links a {
       text-decoration: none;
@@ -165,18 +181,18 @@
       font-weight: 500;
       transition: color 0.2s;
     }
-    .nav-links a:hover { color: var(--navy); }
+    .nav-links a:hover { color: #6B4A17; }
     .nav-cta {
-      background: var(--sky) !important;
+      background: #C9962C !important;
       color: #fff !important;
       padding: 0.5rem 1.3rem;
       border-radius: 8px;
       transition: all 0.2s !important;
     }
-    .nav-cta:hover { background: var(--blue) !important; transform: scale(1.02); }
+    .nav-cta:hover { background: #B8860B !important; transform: scale(1.02); }
     .nav-actions { display:flex; gap:0.6rem; align-items:center; }
     #theme-toggle {
-      background: var(--frost);
+      background: #FBF0D9;
       border: none;
       border-radius: 8px;
       width: 38px; height: 38px;
@@ -184,7 +200,12 @@
       cursor: pointer;
       transition: background 0.2s;
     }
-    #theme-toggle:hover { background: var(--warm); }
+    #theme-toggle:hover { background: #F6E4BC; }
+    body.dark nav .logo-text { color: #E8C879; }
+    body.dark nav .logo-text span { color: #F0D078; }
+    body.dark .nav-links a:hover { color: #E8C879; }
+    body.dark #theme-toggle { background: rgba(232,185,77,0.14); }
+    body.dark #theme-toggle:hover { background: rgba(232,185,77,0.22); }
 
     /* ===== HAMBURGER ===== */
     .hamburger {
@@ -200,11 +221,12 @@
     .hamburger span {
       display: block;
       height: 2px;
-      background: var(--navy);
+      background: #6B4A17;
       border-radius: 2px;
       transition: all 0.3s;
       transform-origin: center;
     }
+    body.dark .hamburger span { background: #E8C879; }
     .hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
     .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
     .hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
@@ -214,7 +236,7 @@
       position: fixed;
       top: 70px; left: 0; right: 0;
       background: var(--cream);
-      border-bottom: 1px solid rgba(61,43,107,0.08);
+      border-bottom: 1px solid rgba(184,134,11,0.18);
       padding: 1.5rem 2rem;
       z-index: 99;
       display: flex;
@@ -232,7 +254,7 @@
       font-size: 1rem;
       font-weight: 500;
       padding: 0.5rem 0;
-      border-bottom: 1px solid rgba(61,43,107,0.06);
+      border-bottom: 1px solid rgba(184,134,11,0.12);
     }
 
     /* ===== PAGE TRANSITIONS ===== */
@@ -1098,7 +1120,7 @@
 
     /* ===== FOOTER ===== */
     footer {
-      background: var(--navy);
+      background: #2A2013;
       padding: 2.5rem 4rem;
       display: flex;
       flex-direction: column;
@@ -1108,16 +1130,16 @@
     }
     footer .nav-logo { text-decoration: none; }
     footer .logo-text { color: #fff; }
-    footer .logo-text span { color: var(--sky); }
+    footer .logo-text span { color: #E8C879; }
     .footer-links p { color: rgba(255,255,255,0.45); font-size: 0.8rem; margin-bottom: 0.4rem; }
     .footer-links div { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
     .footer-links a {
-      color: rgba(255,255,255,0.4);
+      color: rgba(255,255,255,0.45);
       font-size: 0.78rem;
       text-decoration: none;
       transition: color 0.2s;
     }
-    .footer-links a:hover { color: rgba(255,255,255,0.8); }
+    .footer-links a:hover { color: #E8C879; }
 
     /* ===== SCROLL TO TOP ===== */
     #scroll-top {
@@ -1309,7 +1331,7 @@
   </a>
   <ul class="nav-links">
     <li><a href="#kontakt" class="nav-cta">Kontakt</a></li>
-    <li><a href="#hero-programs" style="display:flex;align-items:center;gap:0.4rem;color:var(--gold);font-weight:600;border:1px solid rgba(94,201,194,0.4);padding:0.35rem 0.9rem;border-radius:6px;transition:all 0.2s;" onmouseover="this.style.background='var(--gold)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--gold)'">&#10024; Unsere Apps</a></li>
+    <li><a href="#hero-programs" style="display:flex;align-items:center;gap:0.4rem;color:#B8860B;font-weight:600;border:1px solid rgba(184,134,11,0.4);padding:0.35rem 0.9rem;border-radius:6px;transition:all 0.2s;" onmouseover="this.style.background='#C9962C';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='#B8860B'">&#10024; Unsere Apps</a></li>
   </ul>
   <div class="nav-actions">
     <button id="theme-toggle" onclick="toggleTheme()" aria-label="Theme umschalten">&#127769;</button>
@@ -1322,7 +1344,7 @@
 <!-- MOBILE NAV -->
 <div class="mobile-nav" id="mobile-nav">
   <a href="#hero-programs" onclick="closeMobileNav()">Unsere Programme</a>
-  <a href="#kontakt" onclick="closeMobileNav()" style="color:var(--sky);font-weight:600;">Kontakt</a>
+  <a href="#kontakt" onclick="closeMobileNav()" style="color:#B8860B;font-weight:600;">Kontakt</a>
 </div>
 
 <!-- ① HERO -->
