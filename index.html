@@ -83,16 +83,6 @@
       background: var(--sky) !important;
     }
     body.dark footer { background: #1C140A; }
-    body.dark #kontakt > div > div:last-child {
-      background: #1C1535 !important;
-      border-color: rgba(255,255,255,0.07) !important;
-    }
-    body.dark #kontakt input,
-    body.dark #kontakt textarea {
-      background: #0F0B1E !important;
-      color: var(--text) !important;
-      border-color: rgba(255,255,255,0.12) !important;
-    }
     body.dark .agb-card,
     body.dark #agb-page .agb-card,
     body.dark #datenschutz-page .agb-card,
@@ -1029,16 +1019,24 @@
     .contact-item:hover { transform: translateX(5px); }
     .contact-icon {
       width: 48px; height: 48px;
-      background: var(--frost);
+      background: #FBF0D9;
       border-radius: 12px;
       display: flex; align-items: center; justify-content: center;
       font-size: 1.3rem;
       flex-shrink: 0;
     }
     .contact-icon.wa { background: #e8f5e9; }
-    .contact-label { font-size: 0.75rem; color: var(--muted); font-weight: 500; margin-bottom: 0.1rem; }
-    .contact-value { font-weight: 600; color: var(--navy); font-size: 0.95rem; }
+    .contact-label { font-size: 0.75rem; color: #8A7250; font-weight: 500; margin-bottom: 0.1rem; }
+    .contact-value { font-weight: 600; color: #6B4A17; font-size: 0.95rem; }
     .contact-wa { color: #2e7d32 !important; }
+    #kontakt .section-label { color: #B8860B; }
+    #kontakt .section-title { color: #6B4A17; }
+    body.dark #kontakt .section-label { color: #E0B04D; }
+    body.dark #kontakt .section-title { color: #E8C879; }
+    body.dark .contact-icon { background: rgba(232,185,77,0.12); }
+    body.dark .contact-icon.wa { background: #17301c; }
+    body.dark .contact-label { color: #C9AE85; }
+    body.dark .contact-value { color: #E8C879; }
     .contact-form-card {
       background: #fff;
       border-radius: 20px;
