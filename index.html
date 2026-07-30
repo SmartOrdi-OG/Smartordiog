@@ -1709,39 +1709,45 @@
     <div style="display:flex;align-items:center;gap:0.75rem;">
       <div class="logo-img"></div><span class="logo-text"><span>Smartordi</span> OG</span>
     </div>
-    <button onclick="hideProgramSmartordi()" style="display:flex;align-items:center;gap:0.5rem;background:#fff;border:1px solid rgba(14,94,86,0.15);color:#0A4A44;padding:0.55rem 1.2rem;border-radius:8px;font-size:0.88rem;font-weight:500;cursor:pointer;transition:all 0.2s;">← Zurück</button>
+    <div style="display:flex;align-items:center;gap:0.75rem;">
+      <div class="lang-toggle">
+        <button type="button" class="active" data-setlang="de" onclick="setSiteLang('de')">DE</button>
+        <button type="button" data-setlang="en" onclick="setSiteLang('en')">EN</button>
+      </div>
+      <button onclick="hideProgramSmartordi()" style="display:flex;align-items:center;gap:0.5rem;background:#fff;border:1px solid rgba(14,94,86,0.15);color:#0A4A44;padding:0.55rem 1.2rem;border-radius:8px;font-size:0.88rem;font-weight:500;cursor:pointer;transition:all 0.2s;" data-de="← Zurück" data-en="← Back">← Zurück</button>
+    </div>
   </div>
 
   <div style="background:#DCEAE6;padding:4rem;text-align:center;position:relative;overflow:hidden;">
     <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 50%, rgba(14,94,86,0.08) 0%, transparent 70%);"></div>
     <div style="position:relative;">
-      <div style="font-size:0.75rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#0E5E56;margin-bottom:1rem;">Unser Programm</div>
+      <div style="font-size:0.75rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#0E5E56;margin-bottom:1rem;" data-de="Unser Programm" data-en="Our Program">Unser Programm</div>
       <h1 style="font-family:'Manrope',sans-serif;font-size:2.5rem;font-weight:900;color:#0A4A44;margin-bottom:0.75rem;display:flex;align-items:center;justify-content:center;gap:0.6rem;"><img src="data:image/png;base64,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" alt="" style="height:1em;width:auto;vertical-align:middle;"> Smartordi.chat</h1>
-      <p style="color:rgba(10,74,68,0.65);font-size:1rem;max-width:560px;margin:0 auto;">Praxisverwaltung und Patientenportal für Arztordinationen – mehrsprachige Bedienung, DSGVO-konform, Ende-zu-Ende verschlüsselt.</p>
+      <p style="color:rgba(10,74,68,0.65);font-size:1rem;max-width:560px;margin:0 auto;" data-de="Praxisverwaltung und Patientenportal für Arztordinationen – mehrsprachige Bedienung, DSGVO-konform, Ende-zu-Ende verschlüsselt." data-en="Practice management and patient portal for medical practices – multilingual, GDPR-compliant, end-to-end encrypted.">Praxisverwaltung und Patientenportal für Arztordinationen – mehrsprachige Bedienung, DSGVO-konform, Ende-zu-Ende verschlüsselt.</p>
     </div>
   </div>
 
 <!-- ② STATS -->
 <div class="stats-row">
   <div class="stat-item">
-    <div class="stat-num"><span class="counter" data-target="30" data-suffix="Tage">0</span><span class="gold">Tage</span></div>
-    <div class="stat-label">Kostenloses Testen</div>
+    <div class="stat-num"><span class="counter" data-target="30" data-suffix="Tage">0</span><span class="gold" data-de="Tage" data-en="days">Tage</span></div>
+    <div class="stat-label" data-de="Kostenloses Testen" data-en="Free Trial">Kostenloses Testen</div>
   </div>
   <div class="stat-item">
     <div class="stat-num"><span class="counter" data-target="100" data-suffix="%">0</span><span class="gold">%</span></div>
-    <div class="stat-label">DSGVO konform</div>
+    <div class="stat-label" data-de="DSGVO konform" data-en="GDPR Compliant">DSGVO konform</div>
   </div>
   <div class="stat-item">
     <div class="stat-num"><span class="counter" data-target="0" data-suffix="€">0</span><span class="gold">€</span></div>
-    <div class="stat-label">Startkosten &amp; kein Risiko</div>
+    <div class="stat-label" data-de="Startkosten &amp; kein Risiko" data-en="Setup Cost &amp; No Risk">Startkosten &amp; kein Risiko</div>
   </div>
 </div>
 <!-- ② NEW: DAS PRODUKT SECTION -->
 <section class="section" id="das-produkt" style="background:#EAF4F1;max-width:100%;padding:6rem 4rem;">
   <div style="max-width:1200px;margin:0 auto;">
-    <div class="section-label">Unsere Lösung</div>
-    <h2 class="section-title">Die Smartordi.chat Plattform</h2>
-    <p class="section-desc">Alles, was Ihre Ordination für die digitale Zukunft braucht – in einer intuitiven Lösung vereint.</p>
+    <div class="section-label" data-de="Unsere Lösung" data-en="Our Solution">Unsere Lösung</div>
+    <h2 class="section-title" data-de="Die Smartordi.chat Plattform" data-en="The Smartordi.chat Platform">Die Smartordi.chat Plattform</h2>
+    <p class="section-desc" data-de="Alles, was Ihre Ordination für die digitale Zukunft braucht – in einer intuitiven Lösung vereint." data-en="Everything your practice needs for a digital future – combined in one intuitive solution.">Alles, was Ihre Ordination für die digitale Zukunft braucht – in einer intuitiven Lösung vereint.</p>
 
     <div class="produkt-grid">
 
@@ -1755,30 +1761,30 @@
           </div>
           <div class="card-header-text">
             <h3>Smartordi.chat</h3>
-            <p>Alle Funktionen im Überblick</p>
+            <p data-de="Alle Funktionen im Überblick" data-en="All features at a glance">Alle Funktionen im Überblick</p>
           </div>
-          <span class="free-badge">Gratis testen</span>
+          <span class="free-badge" data-de="Gratis testen" data-en="Try for free">Gratis testen</span>
         </div>
         <ul class="feature-list">
           <li>
             <div class="check"><svg viewBox="0 0 12 12" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9 10,3"/></svg></div>
-            <div><strong>Online-Terminbuchung</strong> – Direkt buchbar, jederzeit ein- und ausschaltbar</div>
+            <div data-de-html="&lt;strong&gt;Online-Terminbuchung&lt;/strong&gt; – Direkt buchbar, jederzeit ein- und ausschaltbar" data-en-html="&lt;strong&gt;Online appointment booking&lt;/strong&gt; – Directly bookable, can be switched on/off at any time"><strong>Online-Terminbuchung</strong> – Direkt buchbar, jederzeit ein- und ausschaltbar</div>
           </li>
           <li>
             <div class="check"><svg viewBox="0 0 12 12" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9 10,3"/></svg></div>
-            <div><strong>Digitale Patientenakte (Kartei)</strong> – Sicher und übersichtlich</div>
+            <div data-de-html="&lt;strong&gt;Digitale Patientenakte (Kartei)&lt;/strong&gt; – Sicher und übersichtlich" data-en-html="&lt;strong&gt;Digital patient record&lt;/strong&gt; – Secure and organized"><strong>Digitale Patientenakte (Kartei)</strong> – Sicher und übersichtlich</div>
           </li>
           <li>
             <div class="check"><svg viewBox="0 0 12 12" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9 10,3"/></svg></div>
-            <div><strong>Rezepte &amp; Impfpass</strong> – Digital verwaltet und einsehbar</div>
+            <div data-de-html="&lt;strong&gt;Rezepte &amp;amp; Impfpass&lt;/strong&gt; – Digital verwaltet und einsehbar" data-en-html="&lt;strong&gt;Prescriptions &amp;amp; vaccination record&lt;/strong&gt; – Managed and viewable digitally"><strong>Rezepte &amp; Impfpass</strong> – Digital verwaltet und einsehbar</div>
           </li>
           <li>
             <div class="check"><svg viewBox="0 0 12 12" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,6 5,9 10,3"/></svg></div>
-            <div><strong>Direkter Chat</strong> – Ende-zu-Ende verschlüsselt, mit Patient:innen</div>
+            <div data-de-html="&lt;strong&gt;Direkter Chat&lt;/strong&gt; – Ende-zu-Ende verschlüsselt, mit Patient:innen" data-en-html="&lt;strong&gt;Direct chat&lt;/strong&gt; – End-to-end encrypted, with patients"><strong>Direkter Chat</strong> – Ende-zu-Ende verschlüsselt, mit Patient:innen</div>
           </li>
         </ul>
         <div style="margin-top:1.5rem;padding-top:1.2rem;border-top:1px solid rgba(124,92,252,0.1);">
-          <a href="https://smartordi-chat-app.vercel.app/login.html" target="_blank" rel="noopener noreferrer" class="btn-primary" style="display:inline-block;font-size:0.9rem;padding:0.7rem 1.5rem;">Jetzt kostenlos testen →</a>
+          <a href="https://smartordi-chat-app.vercel.app/login.html" target="_blank" rel="noopener noreferrer" class="btn-primary" style="display:inline-block;font-size:0.9rem;padding:0.7rem 1.5rem;" data-de="Jetzt kostenlos testen →" data-en="Try it free now →">Jetzt kostenlos testen →</a>
         </div>
       </div>
 
@@ -1801,34 +1807,34 @@
 <!-- ③ SPRACHEN (Problem: Sprachbarriere) -->
 <div class="lang-section">
   <div class="lang-inner">
-    <div class="section-label" style="color:#1C9184;">Mehrsprachigkeit</div>
-    <h2 class="section-title" style="color:#0A4A44;text-align:center;">Ihre Patienten sprechen<br>ihre Sprache — wir auch</h2>
-    <p class="section-desc" style="color:rgba(10,74,68,0.6);margin:0 auto 3.5rem;text-align:center;">Patient:innen nutzen Smartordi.chat durchgängig in ihrer eigenen Sprache und wählen ihre Beschwerden über eine visuelle Körperauswahl — im Praxis-Dashboard kommt alles einheitlich auf Deutsch an.</p>
+    <div class="section-label" style="color:#1C9184;" data-de="Mehrsprachigkeit" data-en="Multilingual">Mehrsprachigkeit</div>
+    <h2 class="section-title" style="color:#0A4A44;text-align:center;" data-de-html="Ihre Patienten sprechen&lt;br&gt;ihre Sprache — wir auch" data-en-html="Your patients speak&lt;br&gt;their language — so do we">Ihre Patienten sprechen<br>ihre Sprache — wir auch</h2>
+    <p class="section-desc" style="color:rgba(10,74,68,0.6);margin:0 auto 3.5rem;text-align:center;" data-de="Patient:innen nutzen Smartordi.chat durchgängig in ihrer eigenen Sprache und wählen ihre Beschwerden über eine visuelle Körperauswahl — im Praxis-Dashboard kommt alles einheitlich auf Deutsch an." data-en="Patients use Smartordi.chat entirely in their own language and select their symptoms via a visual body-selector — everything arrives uniformly in German on the practice dashboard.">Patient:innen nutzen Smartordi.chat durchgängig in ihrer eigenen Sprache und wählen ihre Beschwerden über eine visuelle Körperauswahl — im Praxis-Dashboard kommt alles einheitlich auf Deutsch an.</p>
 
     <div class="lang-cards">
       <div class="lang-card">
         <div class="lang-flag">&#127465;&#127466;</div>
-        <div class="lang-name">Deutsch</div>
-        <div class="lang-sub">Hauptsprache</div>
+        <div class="lang-name" data-de="Deutsch" data-en="German">Deutsch</div>
+        <div class="lang-sub" data-de="Hauptsprache" data-en="Main language">Hauptsprache</div>
       </div>
       <div class="lang-card">
         <div class="lang-flag">&#127468;&#127463;</div>
-        <div class="lang-name">Englisch</div>
+        <div class="lang-name" data-de="Englisch" data-en="English">Englisch</div>
         <div class="lang-sub">English</div>
       </div>
       <div class="lang-card">
         <div class="lang-flag">&#127480;&#127462;</div>
-        <div class="lang-name">Arabisch</div>
+        <div class="lang-name" data-de="Arabisch" data-en="Arabic">Arabisch</div>
         <div class="lang-sub">&#1593;&#1585;&#1576;&#1610;</div>
       </div>
       <div class="lang-card">
         <div class="lang-flag">&#127481;&#127479;</div>
-        <div class="lang-name">Türkisch</div>
+        <div class="lang-name" data-de="Türkisch" data-en="Turkish">Türkisch</div>
         <div class="lang-sub">Türkçe</div>
       </div>
       <div class="lang-card">
         <div class="lang-flag">&#127463;&#127462;</div>
-        <div class="lang-name">Bosnisch / Serbisch / Kroatisch</div>
+        <div class="lang-name" data-de="Bosnisch / Serbisch / Kroatisch" data-en="Bosnian / Serbian / Croatian">Bosnisch / Serbisch / Kroatisch</div>
         <div class="lang-sub">Bosanski / Srpski / Hrvatski</div>
       </div>
     </div>
@@ -1836,10 +1842,10 @@
     <div class="translation-flow">
       <span>&#127480;&#127462; &#127481;&#127479; &#127468;&#127463; &#127463;&#127462;</span>
       <span style="color:rgba(10,74,68,0.35);font-size:1.2rem;">→</span>
-      <span>Strukturierte Übertragung</span>
+      <span data-de="Strukturierte Übertragung" data-en="Structured transfer">Strukturierte Übertragung</span>
       <span style="color:rgba(10,74,68,0.35);font-size:1.2rem;">→</span>
       <span>&#127465;&#127466;</span>
-      <strong>Deutsch im Dashboard</strong>
+      <strong data-de="Deutsch im Dashboard" data-en="German in the dashboard">Deutsch im Dashboard</strong>
     </div>
   </div>
 </div>
@@ -1847,9 +1853,9 @@
 <!-- ④ WIE ES FUNKTIONIERT -->
 <section class="section" id="angebot">
   <div style="text-align:center;margin-bottom:3.5rem;">
-    <div class="section-label">In 3 einfachen Schritten</div>
-    <h2 class="section-title">Wie es funktioniert</h2>
-    <p class="section-desc" style="margin:0 auto;">Von der Anmeldung bis zum ersten Patiententermin – in wenigen Minuten startklar.</p>
+    <div class="section-label" data-de="In 3 einfachen Schritten" data-en="In 3 simple steps">In 3 einfachen Schritten</div>
+    <h2 class="section-title" data-de="Wie es funktioniert" data-en="How it works">Wie es funktioniert</h2>
+    <p class="section-desc" style="margin:0 auto;" data-de="Von der Anmeldung bis zum ersten Patiententermin – in wenigen Minuten startklar." data-en="From sign-up to your first patient appointment – ready to go in minutes.">Von der Anmeldung bis zum ersten Patiententermin – in wenigen Minuten startklar.</p>
   </div>
 
   <div class="steps-grid">
@@ -1858,70 +1864,70 @@
     <div class="step-card scroll-reveal">
       <div class="step-num purple">1</div>
       <div class="step-emoji">&#128203;</div>
-      <h3>Kostenlos registrieren</h3>
-      <p>Erstellen Sie Ihr Ordinationskonto auf <a href="https://smartordi-chat-app.vercel.app/login.html" target="_blank" rel="noopener noreferrer" style="color:#0E5E56;font-weight:600;text-decoration:none;">smartordi.eu</a> — ohne Kreditkarte, ohne Risiko.</p>
-      <span class="step-tag light">&#8987; ~2 Minuten</span>
+      <h3 data-de="Kostenlos registrieren" data-en="Register for free">Kostenlos registrieren</h3>
+      <p data-de-html="Erstellen Sie Ihr Ordinationskonto auf &lt;a href=&quot;https://smartordi-chat-app.vercel.app/login.html&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; style=&quot;color:#0E5E56;font-weight:600;text-decoration:none;&quot;&gt;smartordi.eu&lt;/a&gt; — ohne Kreditkarte, ohne Risiko." data-en-html="Create your practice account at &lt;a href=&quot;https://smartordi-chat-app.vercel.app/login.html&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; style=&quot;color:#0E5E56;font-weight:600;text-decoration:none;&quot;&gt;smartordi.eu&lt;/a&gt; — no credit card, no risk.">Erstellen Sie Ihr Ordinationskonto auf <a href="https://smartordi-chat-app.vercel.app/login.html" target="_blank" rel="noopener noreferrer" style="color:#0E5E56;font-weight:600;text-decoration:none;">smartordi.eu</a> — ohne Kreditkarte, ohne Risiko.</p>
+      <span class="step-tag light" data-de="⏳ ~2 Minuten" data-en="⏳ ~2 minutes">&#8987; ~2 Minuten</span>
     </div>
 
     <div class="step-card featured scroll-reveal">
       <div class="step-num white">2</div>
       <div class="step-emoji">&#9881;&#65039;</div>
-      <h3>Ordination einrichten</h3>
-      <p>Direkt nach der Registrierung richten Sie Ärzt:innen, Sprechzeiten und die Online-Terminbuchung selbst ein — ganz ohne Wartezeit.</p>
-      <span class="step-tag dark">&#8987; Sofort</span>
+      <h3 data-de="Ordination einrichten" data-en="Set up your practice">Ordination einrichten</h3>
+      <p data-de="Direkt nach der Registrierung richten Sie Ärzt:innen, Sprechzeiten und die Online-Terminbuchung selbst ein — ganz ohne Wartezeit." data-en="Right after registering, set up doctors, office hours, and online appointment booking yourself — with no waiting time.">Direkt nach der Registrierung richten Sie Ärzt:innen, Sprechzeiten und die Online-Terminbuchung selbst ein — ganz ohne Wartezeit.</p>
+      <span class="step-tag dark" data-de="⏳ Sofort" data-en="⏳ Instant">&#8987; Sofort</span>
     </div>
 
     <div class="step-card scroll-reveal">
       <div class="step-num gold">3</div>
       <div class="step-emoji">&#128640;</div>
-      <h3>Sofort loslegen</h3>
-      <p>Ihre Patient:innen registrieren sich selbst oder werden eingeladen und nutzen Chat, Terminbuchung und mehr — jede:r in der eigenen Sprache.</p>
-      <span class="step-tag light">&#9989; Bereit für Patienten</span>
+      <h3 data-de="Sofort loslegen" data-en="Get started right away">Sofort loslegen</h3>
+      <p data-de="Ihre Patient:innen registrieren sich selbst oder werden eingeladen und nutzen Chat, Terminbuchung und mehr — jede:r in der eigenen Sprache." data-en="Your patients register themselves or get invited, and use chat, appointment booking, and more — each in their own language.">Ihre Patient:innen registrieren sich selbst oder werden eingeladen und nutzen Chat, Terminbuchung und mehr — jede:r in der eigenen Sprache.</p>
+      <span class="step-tag light" data-de="✅ Bereit für Patienten" data-en="✅ Ready for patients">&#9989; Bereit für Patienten</span>
     </div>
   </div>
 
   <div style="text-align:center;margin-top:3rem;">
-    <a href="https://smartordi-chat-app.vercel.app/login.html" target="_blank" rel="noopener noreferrer" class="btn-primary">Jetzt kostenlos starten →</a>
+    <a href="https://smartordi-chat-app.vercel.app/login.html" target="_blank" rel="noopener noreferrer" class="btn-primary" data-de="Jetzt kostenlos starten →" data-en="Start for free now →">Jetzt kostenlos starten →</a>
   </div>
 </section>
 
 <!-- ⑤ VORTEILE / FEATURES -->
 <section class="section" id="vorteile" style="background:#EAF4F1;max-width:100%;padding:6rem 4rem;">
   <div style="max-width:1200px;margin:0 auto;">
-    <div class="section-label">Warum Smartordi.chat?</div>
-    <h2 class="section-title">Alles was Ihre Ordination<br>wirklich braucht</h2>
-    <p class="section-desc">Von der Terminplanung bis zur sicheren Datenverarbeitung – alles aus einer Hand.</p>
+    <div class="section-label" data-de="Warum Smartordi.chat?" data-en="Why Smartordi.chat?">Warum Smartordi.chat?</div>
+    <h2 class="section-title" data-de-html="Alles was Ihre Ordination&lt;br&gt;wirklich braucht" data-en-html="Everything your practice&lt;br&gt;really needs">Alles was Ihre Ordination<br>wirklich braucht</h2>
+    <p class="section-desc" data-de="Von der Terminplanung bis zur sicheren Datenverarbeitung – alles aus einer Hand." data-en="From appointment scheduling to secure data processing – all from a single source.">Von der Terminplanung bis zur sicheren Datenverarbeitung – alles aus einer Hand.</p>
 
     <div class="features-grid">
       <div class="feature-card highlight scroll-reveal">
         <div class="fc-icon">&#9889;</div>
-        <h3>Schnellere Prozesse</h3>
-        <p>Automatisierte Abläufe reduzieren den manuellen Aufwand erheblich – mehr Zeit für das Wesentliche.</p>
+        <h3 data-de="Schnellere Prozesse" data-en="Faster processes">Schnellere Prozesse</h3>
+        <p data-de="Automatisierte Abläufe reduzieren den manuellen Aufwand erheblich – mehr Zeit für das Wesentliche." data-en="Automated workflows significantly reduce manual effort – more time for what matters.">Automatisierte Abläufe reduzieren den manuellen Aufwand erheblich – mehr Zeit für das Wesentliche.</p>
       </div>
       <div class="feature-card scroll-reveal">
         <div class="fc-icon">&#128197;</div>
-        <h3>Terminmanagement</h3>
-        <p>Übersichtliche Terminplanung, direkt online buchbar – für Patient:innen und Praxisteam.</p>
+        <h3 data-de="Terminmanagement" data-en="Appointment management">Terminmanagement</h3>
+        <p data-de="Übersichtliche Terminplanung, direkt online buchbar – für Patient:innen und Praxisteam." data-en="Clear appointment scheduling, bookable directly online – for patients and practice staff.">Übersichtliche Terminplanung, direkt online buchbar – für Patient:innen und Praxisteam.</p>
       </div>
       <div class="feature-card scroll-reveal">
         <div class="fc-icon">&#128172;</div>
-        <h3>Mehrsprachige Bedienung</h3>
-        <p>Patient:innen nutzen die App in fünf Sprachen – die Angaben kommen im Dashboard einheitlich auf Deutsch an.</p>
+        <h3 data-de="Mehrsprachige Bedienung" data-en="Multilingual interface">Mehrsprachige Bedienung</h3>
+        <p data-de="Patient:innen nutzen die App in fünf Sprachen – die Angaben kommen im Dashboard einheitlich auf Deutsch an." data-en="Patients use the app in five languages – the information arrives uniformly in German on the dashboard.">Patient:innen nutzen die App in fünf Sprachen – die Angaben kommen im Dashboard einheitlich auf Deutsch an.</p>
       </div>
       <div class="feature-card scroll-reveal">
         <div class="fc-icon">&#128202;</div>
-        <h3>Klares Dashboard</h3>
-        <p>Alle Patientendaten strukturiert auf einen Blick – durchsuchbar und immer aktuell.</p>
+        <h3 data-de="Klares Dashboard" data-en="Clear dashboard">Klares Dashboard</h3>
+        <p data-de="Alle Patientendaten strukturiert auf einen Blick – durchsuchbar und immer aktuell." data-en="All patient data structured at a glance – searchable and always up to date.">Alle Patientendaten strukturiert auf einen Blick – durchsuchbar und immer aktuell.</p>
       </div>
       <div class="feature-card scroll-reveal">
         <div class="fc-icon">&#128274;</div>
-        <h3>DSGVO-konform</h3>
-        <p>Ende-zu-Ende verschlüsselt und auf EU-Servern gehostet nach höchsten Sicherheitsstandards.</p>
+        <h3 data-de="DSGVO-konform" data-en="GDPR compliant">DSGVO-konform</h3>
+        <p data-de="Ende-zu-Ende verschlüsselt und auf EU-Servern gehostet nach höchsten Sicherheitsstandards." data-en="End-to-end encrypted and hosted on EU servers to the highest security standards.">Ende-zu-Ende verschlüsselt und auf EU-Servern gehostet nach höchsten Sicherheitsstandards.</p>
       </div>
       <div class="feature-card scroll-reveal">
         <div class="fc-icon">&#128203;</div>
-        <h3>Weniger Administration</h3>
-        <p>Digitale Patientenakte statt Papier – inklusive Dokumenten-Upload für Befunde und Unterlagen.</p>
+        <h3 data-de="Weniger Administration" data-en="Less administration">Weniger Administration</h3>
+        <p data-de="Digitale Patientenakte statt Papier – inklusive Dokumenten-Upload für Befunde und Unterlagen." data-en="Digital patient records instead of paper – including document upload for reports and records.">Digitale Patientenakte statt Papier – inklusive Dokumenten-Upload für Befunde und Unterlagen.</p>
       </div>
     </div>
   </div>
@@ -1929,53 +1935,53 @@
 
 <!-- ⑥ PREISE -->
 <section class="section" id="preise">
-  <div class="section-label">Preis Detail</div>
-  <h2 class="section-title">Transparente Preise,<br>keine Überraschungen</h2>
-  <p class="section-desc">Keine Einrichtungsgebühr – wählen Sie einfach Ihr monatliches Paket. 30 Tage kostenlos testen, ohne Kreditkarte.</p>
+  <div class="section-label" data-de="Preis Detail" data-en="Pricing Details">Preis Detail</div>
+  <h2 class="section-title" data-de-html="Transparente Preise,&lt;br&gt;keine Überraschungen" data-en-html="Transparent pricing,&lt;br&gt;no surprises">Transparente Preise,<br>keine Überraschungen</h2>
+  <p class="section-desc" data-de="Keine Einrichtungsgebühr – wählen Sie einfach Ihr monatliches Paket. 30 Tage kostenlos testen, ohne Kreditkarte." data-en="No setup fee – simply choose your monthly plan. Try it free for 30 days, no credit card required.">Keine Einrichtungsgebühr – wählen Sie einfach Ihr monatliches Paket. 30 Tage kostenlos testen, ohne Kreditkarte.</p>
 
-  <div class="pricing-badge"><span>&#9989;</span> Unbegrenzte Nutzer – Arzt &amp; Sekretariat ohne Aufpreis</div>
+  <div class="pricing-badge"><span>&#9989;</span> <span data-de-html="Unbegrenzte Nutzer – Arzt &amp;amp; Sekretariat ohne Aufpreis" data-en-html="Unlimited users – doctor &amp;amp; front desk at no extra cost">Unbegrenzte Nutzer – Arzt &amp; Sekretariat ohne Aufpreis</span></div>
 
   <div class="pricing-grid">
     <!-- STANDARD (featured) -->
     <div class="pricing-card featured scroll-reveal">
-      <div class="pricing-recommended">Empfohlen</div>
+      <div class="pricing-recommended" data-de="Empfohlen" data-en="Recommended">Empfohlen</div>
       <div class="plan-emoji">&#11088;</div>
       <div class="plan-name">Standard</div>
-      <div class="plan-price">149€<small>/Monat</small></div>
+      <div class="plan-price">149€<small data-de="/Monat" data-en="/month">/Monat</small></div>
       <ul class="plan-features">
-        <li><span class="yes">&#10003;</span> Ärzte &amp; Sekretär:innen: unbegrenzt</li>
-        <li><span class="yes">&#10003;</span> Bis 500 Patient:innen</li>
-        <li><span class="yes">&#10003;</span> Chat, Kartei, Rezept &amp; Impfpass</li>
-        <li><span class="yes">&#10003;</span> Uploads bis 8 MB</li>
+        <li><span class="yes">&#10003;</span> <span data-de="Ärzte &amp;amp; Sekretär:innen: unbegrenzt" data-en="Doctors &amp;amp; assistants: unlimited">Ärzte &amp; Sekretär:innen: unbegrenzt</span></li>
+        <li><span class="yes">&#10003;</span> <span data-de="Bis 500 Patient:innen" data-en="Up to 500 patients">Bis 500 Patient:innen</span></li>
+        <li><span class="yes">&#10003;</span> <span data-de="Chat, Kartei, Rezept &amp;amp; Impfpass" data-en="Chat, records, prescriptions &amp;amp; vaccination record">Chat, Kartei, Rezept &amp; Impfpass</span></li>
+        <li><span class="yes">&#10003;</span> <span data-de="Uploads bis 8 MB" data-en="Uploads up to 8 MB">Uploads bis 8 MB</span></li>
       </ul>
-      <a href="https://smartordi-chat-app.vercel.app/login.html" target="_blank" rel="noopener noreferrer" class="plan-cta dark">Jetzt starten</a>
+      <a href="https://smartordi-chat-app.vercel.app/login.html" target="_blank" rel="noopener noreferrer" class="plan-cta dark" data-de="Jetzt starten" data-en="Start now">Jetzt starten</a>
     </div>
 
     <!-- ENTERPRISE -->
     <div class="pricing-card scroll-reveal">
       <div class="plan-emoji">&#128142;</div>
       <div class="plan-name">Enterprise</div>
-      <div class="plan-price">349€<small>/Monat</small></div>
+      <div class="plan-price">349€<small data-de="/Monat" data-en="/month">/Monat</small></div>
       <ul class="plan-features">
-        <li><span class="yes">&#10003;</span> Ärzte &amp; Sekretär:innen: unbegrenzt</li>
-        <li><span class="yes">&#10003;</span> Unbegrenzte Patient:innen</li>
-        <li><span class="yes">&#10003;</span> Chat, Kartei, Rezept &amp; Impfpass</li>
-        <li><span class="yes">&#10003;</span> Uploads bis 25 MB</li>
+        <li><span class="yes">&#10003;</span> <span data-de="Ärzte &amp;amp; Sekretär:innen: unbegrenzt" data-en="Doctors &amp;amp; assistants: unlimited">Ärzte &amp; Sekretär:innen: unbegrenzt</span></li>
+        <li><span class="yes">&#10003;</span> <span data-de="Unbegrenzte Patient:innen" data-en="Unlimited patients">Unbegrenzte Patient:innen</span></li>
+        <li><span class="yes">&#10003;</span> <span data-de="Chat, Kartei, Rezept &amp;amp; Impfpass" data-en="Chat, records, prescriptions &amp;amp; vaccination record">Chat, Kartei, Rezept &amp; Impfpass</span></li>
+        <li><span class="yes">&#10003;</span> <span data-de="Uploads bis 25 MB" data-en="Uploads up to 25 MB">Uploads bis 25 MB</span></li>
       </ul>
-      <a href="https://smartordi-chat-app.vercel.app/login.html" target="_blank" rel="noopener noreferrer" class="plan-cta light">Jetzt starten</a>
+      <a href="https://smartordi-chat-app.vercel.app/login.html" target="_blank" rel="noopener noreferrer" class="plan-cta light" data-de="Jetzt starten" data-en="Start now">Jetzt starten</a>
     </div>
 
     <!-- ENTERPRISE JÄHRLICH -->
     <div class="pricing-card scroll-reveal">
       <div class="plan-emoji">&#128176;</div>
-      <div class="plan-name">Enterprise <small style="font-weight:600;">(jährlich)</small></div>
-      <div class="plan-price">3.490€<small>/Jahr</small></div>
+      <div class="plan-name">Enterprise <small style="font-weight:600;" data-de="(jährlich)" data-en="(annual)">(jährlich)</small></div>
+      <div class="plan-price">3.490€<small data-de="/Jahr" data-en="/year">/Jahr</small></div>
       <ul class="plan-features">
-        <li><span class="yes">&#10003;</span> Alles aus Enterprise</li>
-        <li><span class="yes">&#10003;</span> 2 Monate gratis</li>
-        <li><span class="yes">&#10003;</span> Unbegrenzte Patient:innen</li>
+        <li><span class="yes">&#10003;</span> <span data-de="Alles aus Enterprise" data-en="Everything in Enterprise">Alles aus Enterprise</span></li>
+        <li><span class="yes">&#10003;</span> <span data-de="2 Monate gratis" data-en="2 months free">2 Monate gratis</span></li>
+        <li><span class="yes">&#10003;</span> <span data-de="Unbegrenzte Patient:innen" data-en="Unlimited patients">Unbegrenzte Patient:innen</span></li>
       </ul>
-      <a href="https://smartordi-chat-app.vercel.app/login.html" target="_blank" rel="noopener noreferrer" class="plan-cta light">Jetzt starten</a>
+      <a href="https://smartordi-chat-app.vercel.app/login.html" target="_blank" rel="noopener noreferrer" class="plan-cta light" data-de="Jetzt starten" data-en="Start now">Jetzt starten</a>
     </div>
   </div>
 </section>
@@ -1984,53 +1990,53 @@
 <section class="section" id="faq" style="background:#EAF4F1;max-width:100%;padding:6rem 4rem;">
   <div style="max-width:900px;margin:0 auto;">
     <div class="section-label">FAQ</div>
-    <h2 class="section-title">Häufig gestellte Fragen</h2>
-    <p class="section-desc">Alles was Sie über Smartordi OG wissen müssen.</p>
+    <h2 class="section-title" data-de="Häufig gestellte Fragen" data-en="Frequently Asked Questions">Häufig gestellte Fragen</h2>
+    <p class="section-desc" data-de="Alles was Sie über Smartordi OG wissen müssen." data-en="Everything you need to know about Smartordi OG.">Alles was Sie über Smartordi OG wissen müssen.</p>
 
     <div class="faq-list">
       <div class="faq-item scroll-reveal">
         <button onclick="toggleFaq(this)">
-          <span class="faq-q">Was kostet der Einstieg?</span>
+          <span class="faq-q" data-de="Was kostet der Einstieg?" data-en="What does it cost to get started?">Was kostet der Einstieg?</span>
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <p>Es gibt <strong>keine Einrichtungsgebühr</strong>. Sie zahlen je nach Paket 149€ oder 349€ pro Monat (oder 3.490€ jährlich im Enterprise-Paket, mit 2 Monaten gratis). Die ersten <strong>30 Tage</strong> können Sie das System vollständig kostenlos und unverbindlich testen – ohne Kreditkarte.</p>
+          <p data-de-html="Es gibt &lt;strong&gt;keine Einrichtungsgebühr&lt;/strong&gt;. Sie zahlen je nach Paket 149€ oder 349€ pro Monat (oder 3.490€ jährlich im Enterprise-Paket, mit 2 Monaten gratis). Die ersten &lt;strong&gt;30 Tage&lt;/strong&gt; können Sie das System vollständig kostenlos und unverbindlich testen – ohne Kreditkarte." data-en-html="There is &lt;strong&gt;no setup fee&lt;/strong&gt;. Depending on the plan, you pay €149 or €349 per month (or €3,490 annually for the Enterprise plan, with 2 months free). For the first &lt;strong&gt;30 days&lt;/strong&gt; you can try the system completely free and without obligation – no credit card required.">Es gibt <strong>keine Einrichtungsgebühr</strong>. Sie zahlen je nach Paket 149€ oder 349€ pro Monat (oder 3.490€ jährlich im Enterprise-Paket, mit 2 Monaten gratis). Die ersten <strong>30 Tage</strong> können Sie das System vollständig kostenlos und unverbindlich testen – ohne Kreditkarte.</p>
         </div>
       </div>
       <div class="faq-item scroll-reveal">
         <button onclick="toggleFaq(this)">
-          <span class="faq-q">Ist das System DSGVO-konform?</span>
+          <span class="faq-q" data-de="Ist das System DSGVO-konform?" data-en="Is the system GDPR compliant?">Ist das System DSGVO-konform?</span>
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <p>Ja, Smartordi OG ist vollständig DSGVO-konform und erfüllt alle relevanten gesetzlichen Vorgaben in Österreich. Alle Patientendaten werden verschlüsselt gespeichert und verarbeitet.</p>
+          <p data-de="Ja, Smartordi OG ist vollständig DSGVO-konform und erfüllt alle relevanten gesetzlichen Vorgaben in Österreich. Alle Patientendaten werden verschlüsselt gespeichert und verarbeitet." data-en="Yes, Smartordi OG is fully GDPR compliant and meets all relevant legal requirements in Austria. All patient data is stored and processed encrypted.">Ja, Smartordi OG ist vollständig DSGVO-konform und erfüllt alle relevanten gesetzlichen Vorgaben in Österreich. Alle Patientendaten werden verschlüsselt gespeichert und verarbeitet.</p>
         </div>
       </div>
       <div class="faq-item scroll-reveal">
         <button onclick="toggleFaq(this)">
-          <span class="faq-q">Wie viele Nutzer können das System verwenden?</span>
+          <span class="faq-q" data-de="Wie viele Nutzer können das System verwenden?" data-en="How many users can use the system?">Wie viele Nutzer können das System verwenden?</span>
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <p>Es gibt <strong>keine Begrenzung</strong> bei der Anzahl der Nutzer. Arzt, Sekretariat und weiteres Praxispersonal können das System ohne zusätzliche Kosten nutzen.</p>
+          <p data-de-html="Es gibt &lt;strong&gt;keine Begrenzung&lt;/strong&gt; bei der Anzahl der Nutzer. Arzt, Sekretariat und weiteres Praxispersonal können das System ohne zusätzliche Kosten nutzen." data-en-html="There is &lt;strong&gt;no limit&lt;/strong&gt; on the number of users. Doctors, front desk staff, and other practice personnel can use the system at no additional cost.">Es gibt <strong>keine Begrenzung</strong> bei der Anzahl der Nutzer. Arzt, Sekretariat und weiteres Praxispersonal können das System ohne zusätzliche Kosten nutzen.</p>
         </div>
       </div>
       <div class="faq-item scroll-reveal">
         <button onclick="toggleFaq(this)">
-          <span class="faq-q">Welche Sprachen werden unterstützt?</span>
+          <span class="faq-q" data-de="Welche Sprachen werden unterstützt?" data-en="Which languages are supported?">Welche Sprachen werden unterstützt?</span>
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <p>Aktuell werden <strong>Deutsch, Englisch, Arabisch, Türkisch</strong> sowie <strong>Bosnisch/Serbisch/Kroatisch</strong> unterstützt. Patient:innen nutzen die App durchgängig in ihrer eigenen Sprache; im Praxis-Dashboard kommen die Angaben einheitlich auf Deutsch an.</p>
+          <p data-de-html="Aktuell werden &lt;strong&gt;Deutsch, Englisch, Arabisch, Türkisch&lt;/strong&gt; sowie &lt;strong&gt;Bosnisch/Serbisch/Kroatisch&lt;/strong&gt; unterstützt. Patient:innen nutzen die App durchgängig in ihrer eigenen Sprache; im Praxis-Dashboard kommen die Angaben einheitlich auf Deutsch an." data-en-html="Currently &lt;strong&gt;German, English, Arabic, Turkish&lt;/strong&gt;, and &lt;strong&gt;Bosnian/Serbian/Croatian&lt;/strong&gt; are supported. Patients use the app entirely in their own language; the information arrives uniformly in German on the practice dashboard.">Aktuell werden <strong>Deutsch, Englisch, Arabisch, Türkisch</strong> sowie <strong>Bosnisch/Serbisch/Kroatisch</strong> unterstützt. Patient:innen nutzen die App durchgängig in ihrer eigenen Sprache; im Praxis-Dashboard kommen die Angaben einheitlich auf Deutsch an.</p>
         </div>
       </div>
       <div class="faq-item scroll-reveal">
         <button onclick="toggleFaq(this)">
-          <span class="faq-q">Ist das System für Patienten kostenlos?</span>
+          <span class="faq-q" data-de="Ist das System für Patienten kostenlos?" data-en="Is the system free for patients?">Ist das System für Patienten kostenlos?</span>
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <p>Ja, das Patientenportal ist für Patienten vollständig <strong>kostenlos</strong>. Sie können Termine buchen, ihre Daten eingeben und Beschwerden in ihrer eigenen Sprache übermitteln.</p>
+          <p data-de-html="Ja, das Patientenportal ist für Patienten vollständig &lt;strong&gt;kostenlos&lt;/strong&gt;. Sie können Termine buchen, ihre Daten eingeben und Beschwerden in ihrer eigenen Sprache übermitteln." data-en-html="Yes, the patient portal is completely &lt;strong&gt;free&lt;/strong&gt; for patients. They can book appointments, enter their information, and submit symptoms in their own language.">Ja, das Patientenportal ist für Patienten vollständig <strong>kostenlos</strong>. Sie können Termine buchen, ihre Daten eingeben und Beschwerden in ihrer eigenen Sprache übermitteln.</p>
         </div>
       </div>
     </div>
@@ -2041,25 +2047,25 @@
 <!-- ⑨ TRIAL CTA (vor dem Footer) -->
 <section class="trial-section" id="testen">
   <div style="position:relative;z-index:1;">
-    <span class="trial-badge">Kostenlos starten</span>
-    <h2 class="section-title">30 Tage<br>unverbindlich testen</h2>
-    <p class="section-desc">Kein Risiko, keine Verpflichtung. Überzeugen Sie sich selbst von den Möglichkeiten digitaler Ordinationsführung.</p>
-    <a href="https://smartordi-chat-app.vercel.app/login.html" class="btn-primary" target="_blank" rel="noopener noreferrer" style="background:#fff;color:#0A4A44;" onmouseover="this.style.background='#EAF4F1'" onmouseout="this.style.background='#fff'">Jetzt entdecken →</a>
+    <span class="trial-badge" data-de="Kostenlos starten" data-en="Start for free">Kostenlos starten</span>
+    <h2 class="section-title" data-de-html="30 Tage&lt;br&gt;unverbindlich testen" data-en-html="Try free for&lt;br&gt;30 days, no obligation">30 Tage<br>unverbindlich testen</h2>
+    <p class="section-desc" data-de="Kein Risiko, keine Verpflichtung. Überzeugen Sie sich selbst von den Möglichkeiten digitaler Ordinationsführung." data-en="No risk, no obligation. See for yourself what digital practice management can do.">Kein Risiko, keine Verpflichtung. Überzeugen Sie sich selbst von den Möglichkeiten digitaler Ordinationsführung.</p>
+    <a href="https://smartordi-chat-app.vercel.app/login.html" class="btn-primary" target="_blank" rel="noopener noreferrer" style="background:#fff;color:#0A4A44;" onmouseover="this.style.background='#EAF4F1'" onmouseout="this.style.background='#fff'" data-de="Jetzt entdecken →" data-en="Discover it now →">Jetzt entdecken →</a>
   </div>
 
   <div class="trial-visual" style="position:relative;z-index:1;">
     <div class="trial-card">
-      <h3>Ihr Testzeitraum</h3>
-      <p>Vollständiger Zugriff – ohne Kreditkarte</p>
+      <h3 data-de="Ihr Testzeitraum" data-en="Your trial period">Ihr Testzeitraum</h3>
+      <p data-de="Vollständiger Zugriff – ohne Kreditkarte" data-en="Full access – no credit card required">Vollständiger Zugriff – ohne Kreditkarte</p>
       <div class="trial-months">
-        <div class="month-dot active"><span>30</span>Tage</div>
+        <div class="month-dot active"><span>30</span><span data-de="Tage" data-en="days">Tage</span></div>
       </div>
     </div>
     <div class="guarantee-card">
       <div class="guarantee-icon">&#128737;&#65039;</div>
       <div>
-        <h4>Keine versteckten Kosten</h4>
-        <p>Der Testzeitraum ist vollständig kostenlos und unverbindlich. Sie entscheiden danach, ob Sie weitermachen möchten.</p>
+        <h4 data-de="Keine versteckten Kosten" data-en="No hidden costs">Keine versteckten Kosten</h4>
+        <p data-de="Der Testzeitraum ist vollständig kostenlos und unverbindlich. Sie entscheiden danach, ob Sie weitermachen möchten." data-en="The trial period is completely free and non-binding. Afterward, you decide whether to continue.">Der Testzeitraum ist vollständig kostenlos und unverbindlich. Sie entscheiden danach, ob Sie weitermachen möchten.</p>
       </div>
     </div>
   </div>
@@ -2068,41 +2074,41 @@
 <!-- SMART ORDI KONTAKTFORMULAR -->
 <div style="background:#EAF4F1;padding:5rem 2rem;">
   <div class="contact-form-card scroll-reveal" style="max-width:560px;margin:0 auto;">
-    <h3>Fragen zu Smartordi.chat?</h3>
-    <p style="color:#5F8F89;font-size:0.88rem;margin:-0.6rem 0 1.5rem;">Schreiben Sie uns — wir melden uns innerhalb von 24 Stunden bei Ihnen.</p>
+    <h3 data-de="Fragen zu Smartordi.chat?" data-en="Questions about Smartordi.chat?">Fragen zu Smartordi.chat?</h3>
+    <p style="color:#5F8F89;font-size:0.88rem;margin:-0.6rem 0 1.5rem;" data-de="Schreiben Sie uns — wir melden uns innerhalb von 24 Stunden bei Ihnen." data-en="Write to us — we'll get back to you within 24 hours.">Schreiben Sie uns — wir melden uns innerhalb von 24 Stunden bei Ihnen.</p>
     <div id="contact-form">
       <div class="form-row">
         <div class="form-group">
-          <label for="cf-vorname">Vorname *</label>
+          <label for="cf-vorname" data-de="Vorname *" data-en="First name *">Vorname *</label>
           <input id="cf-vorname" type="text" placeholder="Max">
         </div>
         <div class="form-group">
-          <label for="cf-nachname">Nachname *</label>
+          <label for="cf-nachname" data-de="Nachname *" data-en="Last name *">Nachname *</label>
           <input id="cf-nachname" type="text" placeholder="Mustermann">
         </div>
       </div>
       <div class="form-group">
-        <label for="cf-email">E-Mail *</label>
+        <label for="cf-email" data-de="E-Mail *" data-en="Email *">E-Mail *</label>
         <input id="cf-email" type="email" placeholder="arzt@ordination.at">
       </div>
       <div class="form-group">
-        <label for="cf-telefon">Telefon</label>
+        <label for="cf-telefon" data-de="Telefon" data-en="Phone">Telefon</label>
         <input id="cf-telefon" type="tel" placeholder="+43 ...">
       </div>
       <div class="form-group">
-        <label for="cf-nachricht">Ihre Nachricht *</label>
-        <textarea id="cf-nachricht" rows="4" placeholder="Ich interessiere mich für SmartOrdi und möchte mehr erfahren..."></textarea>
+        <label for="cf-nachricht" data-de="Ihre Nachricht *" data-en="Your message *">Ihre Nachricht *</label>
+        <textarea id="cf-nachricht" rows="4" placeholder="Ich interessiere mich für SmartOrdi und möchte mehr erfahren..." data-de-placeholder="Ich interessiere mich für SmartOrdi und möchte mehr erfahren..." data-en-placeholder="I'm interested in SmartOrdi and would like to learn more..."></textarea>
       </div>
       <div class="form-check">
         <input id="cf-datenschutz" type="checkbox">
-        <label for="cf-datenschutz">Ich stimme der Verarbeitung meiner Daten gemäß der <a href="#" onclick="showDatenschutz();return false;">Datenschutzerklärung</a> zu. *</label>
+        <label for="cf-datenschutz" data-de-html="Ich stimme der Verarbeitung meiner Daten gemäß der &lt;a href=&quot;#&quot; onclick=&quot;showDatenschutz();return false;&quot;&gt;Datenschutzerklärung&lt;/a&gt; zu. *" data-en-html="I agree to the processing of my data in accordance with the &lt;a href=&quot;#&quot; onclick=&quot;showDatenschutz();return false;&quot;&gt;Privacy Policy&lt;/a&gt;. *">Ich stimme der Verarbeitung meiner Daten gemäß der <a href="#" onclick="showDatenschutz();return false;">Datenschutzerklärung</a> zu. *</label>
       </div>
-      <button class="btn-submit" onclick="submitContactForm()">Nachricht senden →</button>
+      <button class="btn-submit" onclick="submitContactForm()" data-de="Nachricht senden →" data-en="Send message →">Nachricht senden →</button>
     </div>
     <div id="contact-success" style="display:none;text-align:center;padding:2rem 0;">
       <div style="font-size:3rem;margin-bottom:1rem;">&#9989;</div>
-      <h4 style="font-family:'Manrope',sans-serif;color:#0A4A44;font-size:1.2rem;margin-bottom:0.5rem;">Vielen Dank!</h4>
-      <p style="color:#5F8F89;font-size:0.9rem;">Wir haben Ihre Nachricht erhalten und melden uns innerhalb von 24 Stunden.</p>
+      <h4 style="font-family:'Manrope',sans-serif;color:#0A4A44;font-size:1.2rem;margin-bottom:0.5rem;" data-de="Vielen Dank!" data-en="Thank you!">Vielen Dank!</h4>
+      <p style="color:#5F8F89;font-size:0.9rem;" data-de="Wir haben Ihre Nachricht erhalten und melden uns innerhalb von 24 Stunden." data-en="We have received your message and will get back to you within 24 hours.">Wir haben Ihre Nachricht erhalten und melden uns innerhalb von 24 Stunden.</p>
     </div>
   </div>
 </div>
