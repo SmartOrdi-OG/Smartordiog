@@ -74,7 +74,8 @@
     body.dark .step-card,
     body.dark .faq-item,
     body.dark .pricing-card:not(.featured),
-    body.dark .agb-card {
+    body.dark .agb-card,
+    body.dark .program-btn {
       background: #1C1535 !important;
       border-color: rgba(255,255,255,0.07) !important;
     }
@@ -94,12 +95,16 @@
     }
     body.dark .agb-card,
     body.dark #agb-page .agb-card,
-    body.dark #datenschutz-page .agb-card {
+    body.dark #datenschutz-page .agb-card,
+    body.dark #programm-smartordi-page .agb-card {
       background: #1C1535 !important;
       border-color: rgba(255,255,255,0.07) !important;
     }
     body.dark #agb-page > div:first-child,
-    body.dark #datenschutz-page > div:first-child {
+    body.dark #datenschutz-page > div:first-child,
+    body.dark #programm-smartordi-page > div:first-child,
+    body.dark #programm-2-page > div:first-child,
+    body.dark #programm-3-page > div:first-child {
       background: rgba(15,11,30,0.95) !important;
       border-bottom-color: rgba(255,255,255,0.06) !important;
     }
@@ -323,6 +328,46 @@
       font-weight: 400;
     }
     .hero-actions { display:flex; gap:1rem; flex-wrap:wrap; }
+
+    /* ===== PROGRAM BUTTONS ===== */
+    .program-buttons-wrap { margin-top: 0.4rem; }
+    .program-buttons-label {
+      font-family: 'Manrope', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.9rem;
+    }
+    .program-buttons { display:flex; gap:1rem; flex-wrap:wrap; }
+    .program-btn {
+      display:flex;
+      align-items:center;
+      gap:0.9rem;
+      background:#fff;
+      border:1.5px solid rgba(61,43,107,0.12);
+      border-radius:14px;
+      padding:1rem 1.3rem;
+      min-width:220px;
+      font:inherit;
+      text-align:left;
+      cursor:pointer;
+      transition: all 0.25s;
+      box-shadow: 0 4px 14px rgba(61,43,107,0.06);
+    }
+    .program-btn:hover {
+      border-color: var(--sky);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(124,92,252,0.18);
+    }
+    .program-btn-icon { font-size:1.6rem; flex-shrink:0; }
+    .program-btn-text { display:flex; flex-direction:column; gap:0.15rem; }
+    .program-btn-text strong { font-family:'Manrope',sans-serif; font-size:0.95rem; color:var(--navy); }
+    .program-btn-text small { font-size:0.78rem; color:var(--muted); }
+    .program-btn-arrow { margin-left:auto; color:var(--sky); font-weight:700; transition:transform 0.25s; }
+    .program-btn:hover .program-btn-arrow { transform: translateX(3px); }
+    .program-btn.soon .program-btn-text small { color: var(--gold); font-weight:600; }
 
     /* ===== BUTTONS ===== */
     .btn-primary {
@@ -1232,7 +1277,7 @@
     <li><a href="#preise">Preis Detail</a></li>
     <li><a href="#testen">Kostenlos testen</a></li>
     <li><a href="#kontakt" class="nav-cta">Kontakt</a></li>
-    <li><a href="#" style="display:flex;align-items:center;gap:0.4rem;color:var(--gold);font-weight:600;border:1px solid rgba(94,201,194,0.4);padding:0.35rem 0.9rem;border-radius:6px;transition:all 0.2s;" onmouseover="this.style.background='var(--gold)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--gold)'">&#10024; Unsere Apps</a></li>
+    <li><a href="#hero-programs" style="display:flex;align-items:center;gap:0.4rem;color:var(--gold);font-weight:600;border:1px solid rgba(94,201,194,0.4);padding:0.35rem 0.9rem;border-radius:6px;transition:all 0.2s;" onmouseover="this.style.background='var(--gold)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--gold)'">&#10024; Unsere Apps</a></li>
   </ul>
   <div class="nav-actions">
     <button id="theme-toggle" onclick="toggleTheme()" aria-label="Theme umschalten">&#127769;</button>
@@ -1259,10 +1304,26 @@
     <div class="hero-badge">SmartOrdi OG &middot; Linz, Österreich</div>
     <p class="hero-tagline">Innovation. Präzision. Patientennähe.</p>
     <h1>Wir digitalisieren <em>Arztordinationen</em><br>in Österreich</h1>
-    <p class="hero-sub">SmartOrdi OG entwickelt maßgeschneiderte digitale Lösungen für Arztordinationen – von der mehrsprachigen Patientenanamnese bis zum intelligenten Terminmanagement. Damit Ärzte mehr Zeit für das Wesentliche haben.</p>
-    <div class="hero-actions">
-      <a href="https://smartordi.eu" target="_blank" rel="noopener noreferrer" class="btn-primary">Kostenlos starten →</a>
-      <a href="#das-produkt" class="btn-secondary">Smart Ordi kennenlernen →</a>
+    <p class="hero-sub">SmartOrdi OG ist ein Softwarehaus aus Linz. Wir entwickeln eine wachsende Familie digitaler Programme für Arztordinationen in Österreich – jedes mit einem klaren Fokus auf ein konkretes Problem im Ordinationsalltag.</p>
+    <div class="program-buttons-wrap" id="hero-programs">
+      <div class="program-buttons-label">Unsere Programme</div>
+      <div class="program-buttons">
+        <button type="button" class="program-btn" onclick="showProgramSmartordi()">
+          <span class="program-btn-icon">🩺</span>
+          <span class="program-btn-text"><strong>Smart Ordi</strong><small>Digitale Patientenanamnese</small></span>
+          <span class="program-btn-arrow">→</span>
+        </button>
+        <button type="button" class="program-btn soon" onclick="showProgram2()">
+          <span class="program-btn-icon">⚙️</span>
+          <span class="program-btn-text"><strong>Programm 2</strong><small>Demnächst</small></span>
+          <span class="program-btn-arrow">→</span>
+        </button>
+        <button type="button" class="program-btn soon" onclick="showProgram3()">
+          <span class="program-btn-icon">⚙️</span>
+          <span class="program-btn-text"><strong>Programm 3</strong><small>Demnächst</small></span>
+          <span class="program-btn-arrow">→</span>
+        </button>
+      </div>
     </div>
   </div>
 
@@ -1746,6 +1807,73 @@
 </footer>
 
 </div><!-- end main-content -->
+
+<!-- PROGRAMM: SMART ORDI -->
+<div id="programm-smartordi-page" style="display:none;background:var(--cream);min-height:100vh;">
+  <div style="position:sticky;top:0;z-index:10;background:rgba(250,250,252,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(61,43,107,0.08);padding:1.2rem 4rem;display:flex;align-items:center;justify-content:space-between;">
+    <div style="display:flex;align-items:center;gap:0.75rem;">
+      <div class="logo-img"></div><span class="logo-text"><span>Smartordi</span> OG</span>
+    </div>
+    <button onclick="hideProgramSmartordi()" style="display:flex;align-items:center;gap:0.5rem;background:var(--frost);border:1px solid rgba(61,43,107,0.12);color:var(--navy);padding:0.55rem 1.2rem;border-radius:8px;font-size:0.88rem;font-weight:500;cursor:pointer;transition:all 0.2s;">← Zurück</button>
+  </div>
+
+  <div style="background:var(--navy);padding:4rem;text-align:center;position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 50%, rgba(124,92,252,0.15) 0%, transparent 70%);"></div>
+    <div style="position:relative;">
+      <div style="font-size:0.75rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--sky);margin-bottom:1rem;">Unser Programm</div>
+      <h1 style="font-family:'Manrope',sans-serif;font-size:2.5rem;font-weight:900;color:#fff;margin-bottom:0.75rem;">🩺 Smart Ordi</h1>
+      <p style="color:rgba(255,255,255,0.6);font-size:1rem;max-width:560px;margin:0 auto;">Digitale Patientenanamnese für Arztordinationen – mehrsprachig, automatisch übersetzt, DSGVO-konform.</p>
+    </div>
+  </div>
+
+  <div style="max-width:860px;margin:0 auto;padding:3rem 2rem 6rem;">
+    <div class="agb-card" style="background:#fff;border-radius:16px;border:1px solid rgba(61,43,107,0.08);padding:1.8rem;margin-bottom:1.2rem;">
+      <h3 style="font-family:'Manrope',sans-serif;font-size:1.1rem;color:var(--navy);margin-bottom:0.6rem;">Mehrsprachige Anamnese</h3>
+      <p style="font-size:0.92rem;color:var(--muted);line-height:1.8;">Patient:innen füllen ihre Anamnese in ihrer eigenen Sprache aus – SmartOrdi übersetzt automatisch ins Deutsche, sodass Sprachbarrieren in der Ordination keine Rolle mehr spielen.</p>
+    </div>
+    <div class="agb-card" style="background:#fff;border-radius:16px;border:1px solid rgba(61,43,107,0.08);padding:1.8rem;margin-bottom:1.2rem;">
+      <h3 style="font-family:'Manrope',sans-serif;font-size:1.1rem;color:var(--navy);margin-bottom:0.6rem;">Online-Terminbuchung</h3>
+      <p style="font-size:0.92rem;color:var(--muted);line-height:1.8;">Patient:innen buchen Termine direkt online, das Praxisteam wird entlastet und Terminausfälle werden reduziert.</p>
+    </div>
+    <div class="agb-card" style="background:#fff;border-radius:16px;border:1px solid rgba(61,43,107,0.08);padding:1.8rem;margin-bottom:2rem;">
+      <h3 style="font-family:'Manrope',sans-serif;font-size:1.1rem;color:var(--navy);margin-bottom:0.6rem;">DSGVO-konformes Dashboard</h3>
+      <p style="font-size:0.92rem;color:var(--muted);line-height:1.8;">Alle Daten verschlüsselt und EU-konform gespeichert, übersichtlich verwaltet in einem zentralen Dashboard für die Ordination.</p>
+    </div>
+    <div style="text-align:center;">
+      <a href="https://smartordi.eu" target="_blank" rel="noopener noreferrer" class="btn-primary">Kostenlos testen →</a>
+    </div>
+  </div>
+</div>
+
+<!-- PROGRAMM 2 (Platzhalter) -->
+<div id="programm-2-page" style="display:none;background:var(--cream);min-height:100vh;">
+  <div style="position:sticky;top:0;z-index:10;background:rgba(250,250,252,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(61,43,107,0.08);padding:1.2rem 4rem;display:flex;align-items:center;justify-content:space-between;">
+    <div style="display:flex;align-items:center;gap:0.75rem;">
+      <div class="logo-img"></div><span class="logo-text"><span>Smartordi</span> OG</span>
+    </div>
+    <button onclick="hideProgram2()" style="display:flex;align-items:center;gap:0.5rem;background:var(--frost);border:1px solid rgba(61,43,107,0.12);color:var(--navy);padding:0.55rem 1.2rem;border-radius:8px;font-size:0.88rem;font-weight:500;cursor:pointer;transition:all 0.2s;">← Zurück</button>
+  </div>
+  <div style="max-width:640px;margin:0 auto;padding:6rem 2rem;text-align:center;">
+    <div style="font-size:2.5rem;margin-bottom:1rem;">⚙️</div>
+    <h1 style="font-family:'Manrope',sans-serif;font-size:1.8rem;color:var(--navy);margin-bottom:0.75rem;">Programm 2</h1>
+    <p style="font-size:1rem;color:var(--muted);line-height:1.8;">Dieses Programm befindet sich gerade in Entwicklung. Bald erfahren Sie hier mehr darüber.</p>
+  </div>
+</div>
+
+<!-- PROGRAMM 3 (Platzhalter) -->
+<div id="programm-3-page" style="display:none;background:var(--cream);min-height:100vh;">
+  <div style="position:sticky;top:0;z-index:10;background:rgba(250,250,252,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(61,43,107,0.08);padding:1.2rem 4rem;display:flex;align-items:center;justify-content:space-between;">
+    <div style="display:flex;align-items:center;gap:0.75rem;">
+      <div class="logo-img"></div><span class="logo-text"><span>Smartordi</span> OG</span>
+    </div>
+    <button onclick="hideProgram3()" style="display:flex;align-items:center;gap:0.5rem;background:var(--frost);border:1px solid rgba(61,43,107,0.12);color:var(--navy);padding:0.55rem 1.2rem;border-radius:8px;font-size:0.88rem;font-weight:500;cursor:pointer;transition:all 0.2s;">← Zurück</button>
+  </div>
+  <div style="max-width:640px;margin:0 auto;padding:6rem 2rem;text-align:center;">
+    <div style="font-size:2.5rem;margin-bottom:1rem;">⚙️</div>
+    <h1 style="font-family:'Manrope',sans-serif;font-size:1.8rem;color:var(--navy);margin-bottom:0.75rem;">Programm 3</h1>
+    <p style="font-size:1rem;color:var(--muted);line-height:1.8;">Dieses Programm befindet sich gerade in Entwicklung. Bald erfahren Sie hier mehr darüber.</p>
+  </div>
+</div>
 
 <!-- AGB PAGE -->
 <div id="agb-page" style="display:none;background:var(--cream);min-height:100vh;">
@@ -2292,23 +2420,49 @@
       setTimeout(() => to.classList.remove('page-enter'), 350);
     }, 200);
   }
+  const OVERLAY_PAGES = ['agb-page', 'datenschutz-page', 'programm-smartordi-page', 'programm-2-page', 'programm-3-page'];
+  function _hideOtherOverlays(exceptId) {
+    OVERLAY_PAGES.forEach(id => {
+      if (id !== exceptId) {
+        const el = document.getElementById(id);
+        if (el && el.style.display === 'block') el.style.display = 'none';
+      }
+    });
+  }
   function showDatenschutz() {
-    if (document.getElementById('agb-page').style.display === 'block') {
-      document.getElementById('agb-page').style.display = 'none';
-    }
+    _hideOtherOverlays('datenschutz-page');
     _pageSwitch('main-content', 'datenschutz-page');
   }
   function hideDatenschutz() {
     _pageSwitch('datenschutz-page', 'main-content');
   }
   function showAgb() {
-    if (document.getElementById('datenschutz-page').style.display === 'block') {
-      document.getElementById('datenschutz-page').style.display = 'none';
-    }
+    _hideOtherOverlays('agb-page');
     _pageSwitch('main-content', 'agb-page');
   }
   function hideAgb() {
     _pageSwitch('agb-page', 'main-content');
+  }
+  function showProgramSmartordi() {
+    _hideOtherOverlays('programm-smartordi-page');
+    _pageSwitch('main-content', 'programm-smartordi-page');
+  }
+  function hideProgramSmartordi() {
+    _pageSwitch('programm-smartordi-page', 'main-content');
+  }
+  function showProgram2() {
+    _hideOtherOverlays('programm-2-page');
+    _pageSwitch('main-content', 'programm-2-page');
+  }
+  function hideProgram2() {
+    _pageSwitch('programm-2-page', 'main-content');
+  }
+  function showProgram3() {
+    _hideOtherOverlays('programm-3-page');
+    _pageSwitch('main-content', 'programm-3-page');
+  }
+  function hideProgram3() {
+    _pageSwitch('programm-3-page', 'main-content');
   }
   function toggleAgb(btn) {
     const answer = btn.nextElementSibling;
