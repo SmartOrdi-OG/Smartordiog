@@ -1,52 +1,59 @@
 # SmartOrdi OG – Marketing Website
 
-الموقع التسويقي الرسمي لشركة **SmartOrdi OG** (شركة IT مقرها لينز، النمسا)، متاح على [www.smartordiog.eu](https://www.smartordiog.eu).
+The official marketing website of **SmartOrdi OG** (an IT company based in Linz, Austria), live at [www.smartordiog.eu](https://www.smartordiog.eu).
 
-## طبيعة المشروع
+## Project nature
 
-الموقع عبارة عن **ملف واحد فقط**: `index.html`. مفيش build step ولا framework — كل حاجة (HTML + CSS + JavaScript) موجودة في نفس الملف، عشان يبقى سهل النشر والتعديل مباشرة.
+The site is a **single file**: `index.html`. There's no build step and no framework — everything (HTML + CSS + JavaScript) lives in that one file, so it's easy to deploy and edit directly.
 
-النشر بيتم تلقائيًا عن طريق **Netlify**، متربط بالـ branch `main` في الريبو، فأي push على `main` بيعمل deploy تلقائي للموقع اللايف.
+Deployment happens automatically via **Netlify**, connected to the `main` branch of the repo — any push to `main` triggers an automatic deploy of the live site.
 
-## هيكل الصفحة
+## Page structure
 
-الصفحة مبنية بفكرة "الصفحات المتراكبة" (overlay pages): كل الصفحات موجودة كـ `<div>` جنب بعض في نفس الملف، وبيتم إظهار واحدة وإخفاء الباقي عن طريق JavaScript (`display:none` / `block`) بدل ما يكون في تنقل حقيقي بين صفحات منفصلة.
+The page is built around an "overlay pages" pattern: every page exists as a `<div>` alongside the others in the same file, and one is shown while the rest are hidden via JavaScript (`display:none` / `block`), instead of real navigation between separate pages.
 
-الصفحات الموجودة حاليًا:
+Current pages:
 
-| الصفحة | الوصف |
+| Page | Description |
 |---|---|
-| **الرئيسية (Hero)** | تعريف عام بالشركة + صف أزرار للبرامج/المنتجات المختلفة + قسم Kontakt (تواصل) + Footer |
-| **Smartordi.chat** (`#programm-smartordi-page`) | صفحة تفصيلية عن منتج Smartordi.chat (نظام إدارة عيادات وبوابة مرضى) — إحصائيات، ميزات، لغات مدعومة، خطوات الاشتراك، أسعار، أسئلة شائعة، فورم تواصل |
-| **Programm 2 / Programm 3** | صفحات placeholder لمنتجات مستقبلية (لسه "Demnächst" / قريبًا) |
-| **AGB** (`#agb-page`) | الشروط والأحكام |
-| **Datenschutz** (`#datenschutz-page`) | سياسة الخصوصية |
-| **Impressum** (`#impressum-page`) | البيانات القانونية للشركة (حسب § 5 ECG و § 25 MedienG) |
+| **Home (Hero)** | General company introduction + a row of buttons for the different programs/products + a Kontakt (contact) section + Footer |
+| **Smartordi.chat** (`#programm-smartordi-page`) | Detailed page about the Smartordi.chat product (a practice management system and patient portal) — stats, features, supported languages, onboarding steps, pricing, FAQ, contact form |
+| **SmartAc** (`#programm-2-page`) | Detailed page about SmartAc, a bookkeeping/accounting app for freelancers and small businesses in Austria — features, supported languages, industry profiles, contact form. Pricing is marked "Pilot phase / coming soon" since it's still in a real pilot with no live pricing yet |
+| **Lamsa (لمستي)** (`#programm-3-page`) | Detailed page about Lamsa, an AI interior-design app — features, supported languages (8 languages, including Arabic RTL), live Stripe-based credit pricing, contact form |
+| **AGB** (`#agb-page`) | Terms and conditions |
+| **Datenschutz** (`#datenschutz-page`) | Privacy policy |
+| **Impressum** (`#impressum-page`) | Legal company data (per § 5 ECG and § 25 MedienG) |
 
-## الثيمات (الألوان)
+## Language toggle (DE / EN)
 
-- **الموقع بشكل عام** (الهيدر، الفوتر، الهيرو، اسم الشركة، صفحات AGB/Datenschutz/Impressum): ثيم **دهبي (Gold)** مأخوذ من لوجو الشركة.
-- **صفحة Smartordi.chat تحديدًا**: ثيم **تيل فاتح (Light Teal)** خاص بيها، مطابق للهوية البصرية الحقيقية للتطبيق نفسه (نفس الألوان والشعار الموجودين في [smartordi-chat-app](https://github.com/SmartOrdi-OG/smartordi-chat-app))، بخلفيات فاتحة (أبيض/نعناعي) ونص تيل غامق.
-- **الوضع الليلي (Dark Mode) دائم وثابت** على كل الموقع — تم إلغاء وضع اللايت مود بالكامل ومفيش زرار تبديل ثيم.
+The whole site — home page, all three legal pages, and all three program pages — supports a DE/EN language toggle. It's a simple "DE / EN" text button that lives in the header nav, in each page's own sticky header, and in the mobile nav dropdown. Switching languages updates all text instantly (no page reload) via `data-de`/`data-en` (and `-html`/`-placeholder`/`-aria` variant) attributes read by a small `applyLang()` function, and the choice is persisted in `localStorage`. German is the default language.
 
-⚠️ **ملاحظة مهمة عند التعديل**: متغيرات CSS زي `--navy`, `--muted`, `--sky`, `--text`, `--frost`, `--cream`, `--warm` بتتغير قيمتها بين اللايت والدارك مود — وبما إن الدارك مود دايمًا شغال، فاستخدام أي من المتغيرات دي كخلفية (background) على أي عنصر لازم يتحقق الأول إن قيمتها في الدارك مود مناسبة، وإلا هتتلخبط الألوان. المتغير `--gold` (`#5EC9C2`) بس هو الثابت في الوضعين.
+## Themes (colors)
 
-## المحتوى الحقيقي (Smartordi.chat)
+- **The site in general** (header, footer, hero, company name, AGB/Datenschutz/Impressum pages): a **gold** theme taken from the company logo.
+- **The Smartordi.chat page specifically**: its own **light teal** theme, matching the real visual identity of the app itself (same colors and logo as [smartordi-chat-app](https://github.com/SmartOrdi-OG/smartordi-chat-app)), with light backgrounds (white/mint) and dark teal text.
+- **The SmartAc page specifically**: its own **blue** theme (`#1a7fd4`), matching the real product's UI.
+- **The Lamsa page specifically**: its own **dark + gold** theme, matching the real product's branding (close to the site's general theme already).
+- **Dark mode is permanent** across the whole site — light mode has been fully removed and there is no theme-toggle button.
 
-كل المعلومات في صفحة Smartordi.chat (الأسعار، مدة التجربة المجانية، اللغات المدعومة، طريقة عمل الترجمة) اتأخدت من الكود الفعلي لمنتج [smartordi-chat-app](https://github.com/SmartOrdi-OG/smartordi-chat-app) عشان تكون دقيقة 100% ومفيش فيها أي معلومة مش حقيقية.
+⚠️ **Important note when editing**: CSS variables like `--navy`, `--muted`, `--sky`, `--text`, `--frost`, `--cream`, `--warm` used to have different values between light and dark mode — and since dark mode is now always on, using any of these as a background on an element must first be checked against its dark-mode value, or colors will look wrong. Only `--gold` (`#5EC9C2`) is stable across both.
 
-## التطوير المحلي
+## Real content policy
 
-مفيش أي build tools مطلوبة — يكفي تفتح `index.html` في المتصفح مباشرة، أو تشغل سيرفر بسيط:
+All facts on the program pages (pricing, free-trial length, supported languages, features) are taken from the actual product codebases — [smartordi-chat-app](https://github.com/SmartOrdi-OG/smartordi-chat-app), `smartac`, and `Lamsa` — so nothing is invented or guessed.
+
+## Local development
+
+No build tools required — just open `index.html` directly in a browser, or run a simple server:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-وبعدين تفتح `http://localhost:8000`.
+then open `http://localhost:8000`.
 
-## الـ Deployment
+## Deployment
 
-- الاستضافة: **Netlify**
-- الدومين: `www.smartordiog.eu`
-- أي `push` على `main` بيعمل نشر تلقائي مباشرة.
+- Hosting: **Netlify**
+- Domain: `www.smartordiog.eu`
+- Any `push` to `main` triggers an immediate automatic deploy.
