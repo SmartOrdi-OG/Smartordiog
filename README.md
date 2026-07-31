@@ -6,7 +6,7 @@ The official marketing website of **SmartOrdi OG** (an IT company based in Linz,
 
 The site is a **single file**: `index.html`. There's no build step and no framework — everything (HTML + CSS + JavaScript) lives in that one file, so it's easy to deploy and edit directly.
 
-Deployment happens automatically via **Netlify**, connected to the `main` branch of the repo — any push to `main` triggers an automatic deploy of the live site.
+Deployment happens automatically via **Vercel**, connected to the `main` branch of the repo — any push to `main` triggers an automatic deploy of the live site.
 
 ## Page structure
 
@@ -54,6 +54,6 @@ then open `http://localhost:8000`.
 
 ## Deployment
 
-- Hosting: **Netlify**
+- Hosting: **Vercel**
 - Domain: `www.smartordiog.eu`
 - Any `push` to `main` triggers an immediate automatic deploy.
