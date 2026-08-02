@@ -30,6 +30,7 @@ A list of everything that's been done and what's still needed on the site, based
 - [x] Made the company logo (header, footer, and every sub-page header) more vivid — brighter, more saturated gold text with a subtle glow, plus a slight saturation/contrast boost on the icon itself
 - [x] Enlarged the program-icon grid and removed the white tile background behind each icon — switched to each program's real transparent-background logo (higher-resolution versions pulled from the product repos) with a soft drop-shadow so every icon stays clearly visible directly against the dark page background
 - [x] Swapped Brifo's icon in that grid back to its real, established navy/gold interlocking-rings logo (its original PNG had an opaque white background baked in, so it's now background-removed into a clean transparent PNG) instead of the app's newer, less-established vector mark used briefly before
+- [x] Brightened Brifo's icon further to better match its true brand colors/silver highlight — the official product asset's own rendering was noticeably darker/duller than the real logo, and every screenshot the project owner could provide as an alternative source turned out to have its transparency baked in as a checkerboard pattern indistinguishable from the silver highlight for automated background removal. The icon now used is an AI-recreated version of the same navy/gold/silver design, confirmed against the real logo to closely match its colors and cleanly background-removed
 
 ## 🔲 Still needed
 
