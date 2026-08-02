@@ -25,6 +25,9 @@ A list of everything that's been done and what's still needed on the site, based
 - [x] Migrated hosting and the `smartordiog.eu` / `www.smartordiog.eu` domain from Netlify to Vercel (Netlify required a paid plan upgrade to keep going)
 - [x] Fixed a pre-existing double-encoding bug in the Smartordi.chat pricing cards where "&" showed up literally as "&amp;" after switching languages (found while adding Brifo's own button, which had the same mistake)
 - [x] **Programm 4 is now Brifo (بريفو)** (an app that helps Arabic-speaking parents in Austria understand their children's school letters), with 100% real data from the actual product code: name, logo, description, features (AI analysis of a photographed school letter — summary, deadlines, and payments extracted in Arabic — German reply-letter generator, appointment calendar with push reminders, multiple child profiles, and a 12-article guide to the Austrian school system), supported languages (Arabic RTL as the app language, German for generated replies), and real, live pricing (7-day free trial, then €2.90/month or €20/year via Stripe). Used a blue/purple theme matching the app's real UI accent colors. The CTA buttons link to the real, live app
+- [x] Removed "Kontakt" and "✨ Unsere Apps" links from the header nav and mobile menu (both now only show the DE/EN toggle)
+- [x] Redesigned the program buttons into their own dedicated section below the Hero, styled like a home-screen app-icon grid — each program's real logo on a white icon tile with the program name underneath, instead of the old horizontal row of description buttons inside the Hero
+- [x] Made the company logo (header, footer, and every sub-page header) more vivid — brighter, more saturated gold text with a subtle glow, plus a slight saturation/contrast boost on the icon itself
 
 ## 🔲 Still needed
 
