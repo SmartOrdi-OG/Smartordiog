@@ -43,6 +43,7 @@ A list of everything that's been done and what's still needed on the site, based
 - [x] Replaced the site logo icon entirely with a new gold flame-in-ring design the project owner provided (still applied sitewide via the single shared `.logo-img` class — nav, footer, every sub-page header). This source photo separated from its background cleanly with no checkerboard/highlight ambiguity, and was verified to have no white-halo artifacts at both real icon size and large zoom before replacing the old design
 - [x] Reverted the logo icon back to the original gold ring with the "S" swirl inside — the flame design wasn't what was wanted. Restored the exact previously-cleaned-up asset (white-background-bleed fix + highlight warming already applied)
 - [x] Replaced the logo icon again with a new flat, thin-outline gold ring + S/flame design (nav, footer, every sub-page header, via the shared `.logo-img` class), swapping out the previous thick 3D chrome/gold tube style. Separated cleanly from its navy fabric background using color (gold vs. navy hue), verified with no artifacts at real icon size and large zoom
+- [x] Replaced the logo icon once more with a glossy single-stroke gold ring + S/flame design, sourced from an app-icon mockup on a navy rounded-square background. Separated cleanly by color (gold vs. navy hue), verified with no artifacts at real icon size and large zoom
 
 ## 🔲 Still needed
 
