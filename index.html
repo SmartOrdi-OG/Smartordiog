@@ -411,7 +411,9 @@
       mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);
     }
     .app-icons-grid { display: flex; flex-wrap: nowrap; width: max-content; gap: 3rem; animation: appIconsMarquee 22s linear infinite; }
-    .app-icons-viewport:hover .app-icons-grid { animation-play-state: paused; }
+    @media (hover: hover) and (pointer: fine) {
+      .app-icons-viewport:hover .app-icons-grid { animation-play-state: paused; }
+    }
     @keyframes appIconsMarquee {
       from { transform: translateX(0); }
       to { transform: translateX(-50%); }

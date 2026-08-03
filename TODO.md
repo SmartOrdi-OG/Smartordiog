@@ -34,6 +34,7 @@ A list of everything that's been done and what's still needed on the site, based
 - [x] Switched Brifo's icon back to its actual real logo photo (project owner's own reference image) on a plain white tile, replacing the AI-recreated version — the AI recreation didn't look right, and cleanly separating that photo's real transparency from its background wasn't reliably possible (see above), so this icon alone keeps a small white backing tile while the other three stay background-free
 - [x] Replaced Brifo's icon once more with the project owner's preferred reference photo (brushed-metal background), used as-is per their explicit request rather than attempting any further background processing
 - [x] Turned the program-icon grid into a continuously auto-scrolling horizontal marquee — icons drift sideways in a seamless loop, fading in/out at the edges of the row, pausing on hover so they stay clickable
+- [x] Fixed a mobile "double-tap" bug on the marquee icons — on touch devices, the first tap only triggered the hover-pause CSS instead of the click, requiring a second tap to open the page. The hover-pause now only applies on real mouse/trackpad devices (`@media (hover: hover) and (pointer: fine)`), so a single tap opens the program page immediately on phones/tablets
 
 ## 🔲 Still needed
 
