@@ -33,6 +33,7 @@ A list of everything that's been done and what's still needed on the site, based
 - [x] Brightened Brifo's icon further to better match its true brand colors/silver highlight — the official product asset's own rendering was noticeably darker/duller than the real logo, and every screenshot the project owner could provide as an alternative source turned out to have its transparency baked in as a checkerboard pattern indistinguishable from the silver highlight for automated background removal. The icon now used is an AI-recreated version of the same navy/gold/silver design, confirmed against the real logo to closely match its colors and cleanly background-removed
 - [x] Switched Brifo's icon back to its actual real logo photo (project owner's own reference image) on a plain white tile, replacing the AI-recreated version — the AI recreation didn't look right, and cleanly separating that photo's real transparency from its background wasn't reliably possible (see above), so this icon alone keeps a small white backing tile while the other three stay background-free
 - [x] Replaced Brifo's icon once more with the project owner's preferred reference photo (brushed-metal background), used as-is per their explicit request rather than attempting any further background processing
+- [x] Turned the program-icon grid into a continuously auto-scrolling horizontal marquee — icons drift sideways in a seamless loop, fading in/out at the edges of the row, pausing on hover so they stay clickable
 
 ## 🔲 Still needed
 
