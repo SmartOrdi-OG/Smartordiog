@@ -54,6 +54,7 @@ A list of everything that's been done and what's still needed on the site, based
 - [x] Removed the Hero card's dark boxed background — its content (company summary + 3 feature rows) now sits directly on the Hero's own animated background, with each piece animating in individually (fading in while sliding down) staggered one after another, instead of one static dark panel. Scoped narrowly so the same card class reused on the Smartordi.chat page keeps its own normal boxed look
 - [x] Enlarged the Hero card's text/icons for better legibility now that it's unboxed, and synced the Hero's left column (badge, tagline, h1 + its emphasized phrase and underline) to shift through the same theme-color cycle as the nav instead of staying a fixed gold
 - [x] The header logo icon now shifts color with the theme cycle too — 4 pixel-recolored versions of the icon (teal/blue/gold/purple) crossfade into each other in sync with the rest of the nav. A CSS hue-rotate filter was tried first but left shadow areas gray; recoloring each variant directly gave a clean, uniform result instead. Scoped to the nav only — footer/sub-page icons keep the original static gold version
+- [x] Removed the drop-shadow from the logo icon's filter (both the static footer/sub-page version and the nav's crossfading version)
 
 ## 🔲 Still needed
 
