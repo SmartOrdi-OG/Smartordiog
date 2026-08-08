@@ -276,9 +276,14 @@
     .page-enter { animation: pageEnter 0.3s ease forwards; }
 
     /* ===== HERO ===== */
+    /* Cycles through each program's own theme color (Smartordi.chat teal →
+       Trabis blue → Lamsa gold → Brifo blue/purple → back to teal), as a
+       soft light tint so the hero's text stays readable throughout. */
     @keyframes heroGradient {
-      0%,100% { background-position: 0% 50%; }
-      50%      { background-position: 100% 50%; }
+      0%, 100% { background: linear-gradient(135deg,#CFDFDD 0%,#FFFCF4 35%,#E7F7F6 65%,#CFDFDD 100%); }
+      25%      { background: linear-gradient(135deg,#D1E5F6 0%,#FFFCF4 35%,#E6F2FC 65%,#D1E5F6 100%); }
+      50%      { background: linear-gradient(135deg,#F4EEDB 0%,#FFFCF4 35%,#FCF7EB 65%,#F4EEDB 100%); }
+      75%      { background: linear-gradient(135deg,#D8E6FD 0%,#FFFCF4 35%,#EEE7FE 65%,#D8E6FD 100%); }
     }
     .hero {
       min-height: 100vh;
@@ -290,8 +295,7 @@
       position: relative;
       overflow: hidden;
       background: linear-gradient(135deg,#FBF0D9 0%,#FFFCF4 35%,#F6E4BC 65%,#FBF0D9 100%);
-      background-size: 300% 300%;
-      animation: heroGradient 14s ease infinite;
+      animation: heroGradient 28s ease-in-out infinite;
     }
     .hero-content { min-width: 0; }
     .hero-badge {
