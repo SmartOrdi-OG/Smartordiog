@@ -47,6 +47,7 @@ A list of everything that's been done and what's still needed on the site, based
 - [x] Re-processed that same logo source through Higgsfield's AI background remover instead of the manual pipeline, then cleaned up a faint residual corner-shadow artifact the AI pass left behind. Same design, verified with genuine alpha transparency and no artifacts at real icon size and large zoom
 - [x] Fixed the real cause behind repeated "the S looks different/simplified" reports: every extraction pass had been keeping only the single largest connected gold blob from the source photo, which silently dropped one of the design's three nested S/flame strokes (it doesn't touch the rest of the shape, so it looked like disconnected noise). Re-extracted using the complete gold mask (all three strokes), confirmed pixel-for-pixel against the original source image
 - [x] Renamed "SmartAc" to "Trabis" across the whole site (program grid, page title/hero, features, pricing note, CTAs, contact section, contact form + its JS payload) in both German and English. The live demo URL itself was left unchanged since it's a real external link, not display text
+- [x] The Hero section's background now slowly cycles through a soft tint of each program's real theme color in turn (Smartordi.chat teal → Trabis blue → Lamsa gold → Brifo blue/purple), instead of staying on one static cream/gold gradient — colors derived directly from each program's actual accent hex values, kept light enough that the Hero's text stays readable through the whole cycle
 
 ## 🔲 Still needed
 
