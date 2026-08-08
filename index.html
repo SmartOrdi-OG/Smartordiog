@@ -545,6 +545,16 @@
       border: 1px solid rgba(14,94,86,0.12);
       position: relative;
     }
+    /* The home page's hero card specifically loses its boxed look — its
+       content sits directly on the Hero background and animates in piece
+       by piece instead (see .reveal-down). Other .hero-card usages
+       (e.g. the Smartordi.chat page) keep the normal boxed card look. */
+    .hero .hero-visual .hero-card {
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+    }
     .card-header {
       display: flex;
       align-items: center;
@@ -1301,6 +1311,16 @@
       opacity: 1;
       transform: translateY(0);
     }
+    /* Same reveal system, but slides down from above instead of up */
+    .reveal-down {
+      opacity: 0;
+      transform: translateY(-16px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal-down.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
     /* ===== AGB / DATENSCHUTZ PAGE WRAPPERS ===== */
     .legal-nav {
@@ -1742,8 +1762,8 @@
   </div>
 
   <div class="hero-visual">
-    <div class="hero-card scroll-reveal">
-      <div class="card-header" style="margin-bottom:1.8rem;">
+    <div class="hero-card">
+      <div class="card-header reveal-down scroll-reveal" style="margin-bottom:1.8rem;">
         <div class="card-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9962C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
@@ -1756,21 +1776,21 @@
         <span class="free-badge" style="background:linear-gradient(135deg,#E8B94D,#8A6A1E);" data-de="Linz · AT" data-en="Linz · Austria">Linz · AT</span>
       </div>
       <div style="display:flex;flex-direction:column;gap:1.1rem;">
-        <div style="display:flex;align-items:flex-start;gap:0.9rem;padding:1rem;background:#FBF0D9;border-radius:12px;">
+        <div class="reveal-down scroll-reveal" style="display:flex;align-items:flex-start;gap:0.9rem;">
           <span style="font-size:1.6rem;flex-shrink:0;">&#127919;</span>
           <div>
             <strong style="font-family:'Manrope',sans-serif;font-size:0.9rem;color:#6B4A17;display:block;margin-bottom:0.2rem;" data-de="Maßgeschneiderte Lösungen" data-en="Tailored solutions">Maßgeschneiderte Lösungen</strong>
             <span style="font-size:0.82rem;color:#8A7250;" data-de="Jedes Programm wird individuell auf die Anforderungen unserer Kunden zugeschnitten." data-en="Every program is custom-tailored to our customers' needs.">Jedes Programm wird individuell auf die Anforderungen unserer Kunden zugeschnitten.</span>
           </div>
         </div>
-        <div style="display:flex;align-items:flex-start;gap:0.9rem;padding:1rem;background:#FBF0D9;border-radius:12px;">
+        <div class="reveal-down scroll-reveal" style="display:flex;align-items:flex-start;gap:0.9rem;">
           <span style="font-size:1.6rem;flex-shrink:0;">&#127760;</span>
           <div>
             <strong style="font-family:'Manrope',sans-serif;font-size:0.9rem;color:#6B4A17;display:block;margin-bottom:0.2rem;" data-de="Mehrsprachige Kompetenz" data-en="Multilingual expertise">Mehrsprachige Kompetenz</strong>
             <span style="font-size:0.82rem;color:#8A7250;" data-de="Überbrückung von Sprachbarrieren zwischen Kunden und Nutzern durch smarte Technologie." data-en="Bridging language barriers between customers and users through smart technology.">Überbrückung von Sprachbarrieren zwischen Kunden und Nutzern durch smarte Technologie.</span>
           </div>
         </div>
-        <div style="display:flex;align-items:flex-start;gap:0.9rem;padding:1rem;background:#FBF0D9;border-radius:12px;">
+        <div class="reveal-down scroll-reveal" style="display:flex;align-items:flex-start;gap:0.9rem;">
           <span style="font-size:1.6rem;flex-shrink:0;">&#128274;</span>
           <div>
             <strong style="font-family:'Manrope',sans-serif;font-size:0.9rem;color:#6B4A17;display:block;margin-bottom:0.2rem;" data-de="DSGVO-Sicherheit" data-en="GDPR security">DSGVO-Sicherheit</strong>
