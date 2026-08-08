@@ -49,6 +49,7 @@ A list of everything that's been done and what's still needed on the site, based
 - [x] Renamed "SmartAc" to "Trabis" across the whole site (program grid, page title/hero, features, pricing note, CTAs, contact section, contact form + its JS payload) in both German and English. The live demo URL itself was left unchanged since it's a real external link, not display text
 - [x] The Hero section's background now slowly cycles through a soft tint of each program's real theme color in turn (Smartordi.chat teal → Trabis blue → Lamsa gold → Brifo blue/purple), instead of staying on one static cream/gold gradient — colors derived directly from each program's actual accent hex values, kept light enough that the Hero's text stays readable through the whole cycle
 - [x] The header nav on the home page no longer stays fixed/sticky while scrolling — it now sits in normal page flow directly above the Hero and scrolls away with the page, sharing the same animated theme-color-cycling background as the Hero so the two blend into one continuous panel
+- [x] The company name and nav links now shift through each program's own deep accent color (teal/blue/bronze-gold/purple) in sync with the nav's animated background cycle, instead of staying a fixed gold that nearly blended in during the Lamsa (gold) phase — contrast-checked against every background tint. Also added a subtle drop-shadow to the logo icon for the same reason, and moved the language toggle to be the true rightmost element in the nav's top-right corner
 
 ## 🔲 Still needed
 
