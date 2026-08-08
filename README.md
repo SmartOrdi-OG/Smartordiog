@@ -18,7 +18,7 @@ Current pages:
 |---|---|
 | **Home (Hero)** | General company introduction + a row of buttons for the different programs/products + a Kontakt (contact) section + Footer |
 | **Smartordi.chat** (`#programm-smartordi-page`) | Detailed page about the Smartordi.chat product (a practice management system and patient portal) — stats, features, supported languages, onboarding steps, pricing, FAQ, contact form |
-| **SmartAc** (`#programm-2-page`) | Detailed page about SmartAc, a bookkeeping/accounting app for freelancers and small businesses in Austria — features, supported languages, industry profiles, contact form. Pricing is marked "Pilot phase / coming soon" since it's still in a real pilot with no live pricing yet |
+| **Trabis** (`#programm-2-page`) | Detailed page about Trabis, a bookkeeping/accounting app for freelancers and small businesses in Austria — features, supported languages, industry profiles, contact form. Pricing is marked "Pilot phase / coming soon" since it's still in a real pilot with no live pricing yet |
 | **Lamsa (لمستي)** (`#programm-3-page`) | Detailed page about Lamsa, an AI interior-design app — features, supported languages (8 languages, including Arabic RTL), live Stripe-based credit pricing, contact form |
 | **Brifo (بريفو)** (`#programm-4-page`) | Detailed page about Brifo, an app that helps Arabic-speaking parents in Austria understand their children's school letters — features (AI analysis in Arabic, German reply-letter generator, appointment reminders, child profiles, school-system guide), supported languages (Arabic RTL as the app language, German for generated replies), live Stripe-based subscription pricing, contact form |
 | **AGB** (`#agb-page`) | Terms and conditions |
@@ -33,7 +33,7 @@ The whole site — home page, all three legal pages, and all four program pages 
 
 - **The site in general** (header, footer, hero, company name, AGB/Datenschutz/Impressum pages): a **gold** theme taken from the company logo.
 - **The Smartordi.chat page specifically**: its own **light teal** theme, matching the real visual identity of the app itself (same colors and logo as [smartordi-chat-app](https://github.com/SmartOrdi-OG/smartordi-chat-app)), with light backgrounds (white/mint) and dark teal text.
-- **The SmartAc page specifically**: its own **blue** theme (`#1a7fd4`), matching the real product's UI.
+- **The Trabis page specifically**: its own **blue** theme (`#1a7fd4`), matching the real product's UI.
 - **The Lamsa page specifically**: its own **dark + gold** theme, matching the real product's branding (close to the site's general theme already).
 - **The Brifo page specifically**: its own **light blue/purple** theme, matching the real app's UI accent colors (`#3b82f6` / `#8b5cf6`) on its default light background.
 - **Dark mode is permanent** across the whole site — light mode has been fully removed and there is no theme-toggle button.
