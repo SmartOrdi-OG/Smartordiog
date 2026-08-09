@@ -55,10 +55,11 @@ A list of everything that's been done and what's still needed on the site, based
 - [x] Enlarged the Hero card's text/icons for better legibility now that it's unboxed, and synced the Hero's left column (badge, tagline, h1 + its emphasized phrase and underline) to shift through the same theme-color cycle as the nav instead of staying a fixed gold
 - [x] The header logo icon now shifts color with the theme cycle too — 4 pixel-recolored versions of the icon (teal/blue/gold/purple) crossfade into each other in sync with the rest of the nav. A CSS hue-rotate filter was tried first but left shadow areas gray; recoloring each variant directly gave a clean, uniform result instead. Scoped to the nav only — footer/sub-page icons keep the original static gold version
 - [x] Removed the drop-shadow from the logo icon's filter (both the static footer/sub-page version and the nav's crossfading version)
+- [x] Updated Trabis's "Demo ansehen"/"Watch demo" buttons to its new live pilot domain (`app.trabis.eu`), replacing the old placeholder demo URL
 
 ## 🔲 Still needed
 
-- [ ] **SmartAc** – once the pilot phase ends and real pricing is set, the pricing section on its page needs to be updated (currently just labeled "coming soon")
+- [ ] **Trabis** – once the pilot phase ends and real pricing is set, the pricing section on its page needs to be updated (currently just labeled "coming soon")
 
 ### Possible general improvements (not explicitly requested yet, but worth considering)
 - [ ] No CI/CD or automated tests on the repo — could be useful if the site grows further
