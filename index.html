@@ -70,7 +70,6 @@
     body.dark .step-card,
     body.dark .faq-item,
     body.dark .pricing-card:not(.featured),
-    body.dark .agb-card,
     body.dark .program-btn {
       background: #1C1535 !important;
       border-color: rgba(255,255,255,0.07) !important;
@@ -92,14 +91,6 @@
     body.dark #programm-smartordi-page .step-card.featured {
       background: #0E5E56 !important;
       border-color: #0E5E56 !important;
-    }
-    body.dark .agb-card,
-    body.dark #agb-page .agb-card,
-    body.dark #datenschutz-page .agb-card,
-    body.dark #impressum-page .agb-card,
-    body.dark #programm-smartordi-page .agb-card {
-      background: #1C1535 !important;
-      border-color: rgba(255,255,255,0.07) !important;
     }
     body.dark #agb-page > div:first-child,
     body.dark #datenschutz-page > div:first-child,
@@ -131,10 +122,14 @@
       color: #6B7480;
       text-shadow: none;
     }
-    #agb-page [style*="color:var(--navy)"],
-    #datenschutz-page [style*="color:var(--navy)"],
-    #impressum-page [style*="color:var(--navy)"] {
-      color: #E0B04D !important;
+    /* Legal pages (Impressum/AGB/Datenschutz): white body theme matching the home page */
+    #agb-page, #datenschutz-page, #impressum-page {
+      --navy: #1B4965;
+      --sky: #2F7DC0;
+      --frost: #EAF5FD;
+      --cream: #ffffff;
+      --muted: #5B7185;
+      --blue: #8A6A1E;
     }
 
     /* ===== RESET ===== */
@@ -226,56 +221,6 @@
     nav .lang-toggle { background:rgba(255,255,255,0.1); border-color:rgba(255,255,255,0.3); }
     nav .lang-toggle button { color:#FFFFFF; }
     nav .lang-toggle button.active { background:#E8C879; color:#0F3460; }
-
-    /* ===== HAMBURGER ===== */
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 24px; height: 18px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 0;
-    }
-    .hamburger span {
-      display: block;
-      height: 2px;
-      background: #FFFFFF;
-      border-radius: 2px;
-      transition: all 0.3s;
-      transform-origin: center;
-    }
-    body.dark .hamburger span { background: #FFFFFF; }
-    .hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-    .hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
-
-    /* ===== MOBILE NAV ===== */
-    .mobile-nav {
-      position: fixed;
-      top: 70px; left: 0; right: 0;
-      background: #0F3460;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      padding: 1.5rem 2rem;
-      z-index: 99;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      transform: translateY(-20px);
-      opacity: 0;
-      pointer-events: none;
-      transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-    .mobile-nav.open { transform: translateY(0); opacity: 1; pointer-events: all; }
-    .mobile-nav a {
-      text-decoration: none;
-      color: #FFFFFF;
-      font-size: 1rem;
-      font-weight: 500;
-      padding: 0.5rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.12);
-    }
 
     /* ===== PAGE TRANSITIONS ===== */
     @keyframes pageExit {
@@ -1387,8 +1332,6 @@
     @media (max-width: 900px) {
       nav { padding: 1rem 1.5rem; }
       .nav-links { display: none; }
-      .hamburger { display: flex; }
-      nav .nav-actions > .lang-toggle { display: none; }
       .sub-page-header { padding: 1rem 1.5rem; }
       .hero { padding: 3rem 1.5rem 4rem; }
       .hero-sub { max-width: 100%; }
@@ -1723,23 +1666,12 @@
     <span class="logo-text"><span>Smartordi</span> OG</span>
   </a>
   <div class="nav-actions">
-    <button class="hamburger" id="hamburger" onclick="toggleMobileNav()" aria-label="Menü öffnen" data-de-aria="Menü öffnen" data-en-aria="Open menu">
-      <span></span><span></span><span></span>
-    </button>
     <div class="lang-toggle">
       <button type="button" class="active" data-setlang="de" onclick="setSiteLang('de')">DE</button>
       <button type="button" data-setlang="en" onclick="setSiteLang('en')">EN</button>
     </div>
   </div>
 </nav>
-
-<!-- MOBILE NAV -->
-<div class="mobile-nav" id="mobile-nav">
-  <div class="lang-toggle" style="margin-top:0.5rem;">
-    <button type="button" class="active" data-setlang="de" onclick="setSiteLang('de')">DE</button>
-    <button type="button" data-setlang="en" onclick="setSiteLang('en')">EN</button>
-  </div>
-</div>
 
 <!-- ① HERO -->
 <section class="hero">
@@ -4314,27 +4246,6 @@
   }, { threshold: 0.5 });
 
   document.querySelectorAll('.stats-row').forEach(el => counterObserver.observe(el));
-
-  // Mobile Nav
-  function toggleMobileNav() {
-    const nav = document.getElementById('mobile-nav');
-    const btn = document.getElementById('hamburger');
-    const isOpen = nav.classList.toggle('open');
-    btn.classList.toggle('open', isOpen);
-    btn.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
-  }
-  function closeMobileNav() {
-    document.getElementById('mobile-nav').classList.remove('open');
-    document.getElementById('hamburger').classList.remove('open');
-  }
-  // Close on outside click
-  document.addEventListener('click', function(e) {
-    const nav = document.getElementById('mobile-nav');
-    const btn = document.getElementById('hamburger');
-    if (nav.classList.contains('open') && !nav.contains(e.target) && !btn.contains(e.target)) {
-      closeMobileNav();
-    }
-  });
 
   // Scroll Reveal
   const observer = new IntersectionObserver((entries) => {
