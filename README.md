@@ -12,6 +12,8 @@ Deployment happens automatically via **Vercel**, connected to the `main` branch 
 
 The page is built around an "overlay pages" pattern: every page exists as a `<div>` alongside the others in the same file, and one is shown while the rest are hidden via JavaScript (`display:none` / `block`), instead of real navigation between separate pages.
 
+Each overlay page still gets its own URL hash (`#smartordi-chat`, `#trabis`, `#lamsa`, `#brifo`, `#agb`, `#datenschutz`, `#impressum`; the home page has none) via the History API, so the browser's back/forward buttons move between pages, a refresh stays on the current page (and scroll position), and pages can be linked to directly. The in-page "Zurück" buttons behave like the browser back button, falling back to the home page when a page was opened directly.
+
 Current pages:
 
 | Page | Description |

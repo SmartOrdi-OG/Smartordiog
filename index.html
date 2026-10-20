@@ -3941,77 +3941,104 @@
 </script>
 <script>
 
-  function _pageSwitch(hideId, showId) {
+  const PAGE_ROUTES = {
+    'datenschutz-page': 'datenschutz',
+    'agb-page': 'agb',
+    'impressum-page': 'impressum',
+    'programm-smartordi-page': 'smartordi-chat',
+    'programm-2-page': 'trabis',
+    'programm-3-page': 'lamsa',
+    'programm-4-page': 'brifo'
+  };
+  const ALL_PAGES = ['main-content'].concat(Object.keys(PAGE_ROUTES));
+  let _activePage = 'main-content';
+
+  function _pageSwitch(hideId, showId, scrollY) {
     const from = document.getElementById(hideId);
     const to   = document.getElementById(showId);
     from.classList.add('page-exit');
     setTimeout(() => {
-      from.style.display = 'none';
+      // Hide everything but the target, so rapid back/forward clicks can't leave two pages visible
+      ALL_PAGES.forEach(id => { if (id !== showId) document.getElementById(id).style.display = 'none'; });
       from.classList.remove('page-exit');
       to.style.display   = 'block';
       to.classList.add('page-enter');
-      window.scrollTo(0, 0);
+      window.scrollTo({ top: scrollY || 0, behavior: 'instant' });
       setTimeout(() => to.classList.remove('page-enter'), 350);
     }, 200);
   }
-  const OVERLAY_PAGES = ['agb-page', 'datenschutz-page', 'impressum-page', 'programm-smartordi-page', 'programm-2-page', 'programm-3-page', 'programm-4-page'];
-  function _hideOtherOverlays(exceptId) {
-    OVERLAY_PAGES.forEach(id => {
-      if (id !== exceptId) {
-        const el = document.getElementById(id);
-        if (el && el.style.display === 'block') el.style.display = 'none';
-      }
-    });
+  function _pageFromHash() {
+    const slug = decodeURIComponent(location.hash.slice(1));
+    return Object.keys(PAGE_ROUTES).find(id => PAGE_ROUTES[id] === slug) || 'main-content';
   }
-  function showDatenschutz() {
-    _hideOtherOverlays('datenschutz-page');
-    _pageSwitch('main-content', 'datenschutz-page');
+  function _urlFor(pageId) {
+    return pageId === 'main-content' ? location.pathname + location.search : '#' + PAGE_ROUTES[pageId];
   }
-  function hideDatenschutz() {
-    _pageSwitch('datenschutz-page', 'main-content');
+  function _showPage(pageId, scrollY) {
+    if (pageId === _activePage) return;
+    const from = _activePage;
+    _activePage = pageId;
+    _pageSwitch(from, pageId, scrollY);
   }
-  function showAgb() {
-    _hideOtherOverlays('agb-page');
-    _pageSwitch('main-content', 'agb-page');
+  function _navigate(pageId) {
+    if (pageId === _activePage) return;
+    clearTimeout(_scrollSaveTimer);
+    history.replaceState(Object.assign({}, history.state, { page: _activePage, scrollY: window.scrollY }), '');
+    history.pushState({ page: pageId, inSite: true }, '', _urlFor(pageId));
+    _showPage(pageId, 0);
   }
-  function hideAgb() {
-    _pageSwitch('agb-page', 'main-content');
+  // "Zurück" behaves like the browser back button; if the page was opened directly (no in-site history), it goes home instead of leaving the site
+  function _goBack() {
+    if (history.state && history.state.inSite) {
+      history.back();
+    } else {
+      history.replaceState({ page: 'main-content' }, '', _urlFor('main-content'));
+      _showPage('main-content', 0);
+    }
   }
-  function showImpressum() {
-    _hideOtherOverlays('impressum-page');
-    _pageSwitch('main-content', 'impressum-page');
-  }
-  function hideImpressum() {
-    _pageSwitch('impressum-page', 'main-content');
-  }
-  function showProgramSmartordi() {
-    _hideOtherOverlays('programm-smartordi-page');
-    _pageSwitch('main-content', 'programm-smartordi-page');
-  }
-  function hideProgramSmartordi() {
-    _pageSwitch('programm-smartordi-page', 'main-content');
-  }
-  function showProgram2() {
-    _hideOtherOverlays('programm-2-page');
-    _pageSwitch('main-content', 'programm-2-page');
-  }
-  function hideProgram2() {
-    _pageSwitch('programm-2-page', 'main-content');
-  }
-  function showProgram3() {
-    _hideOtherOverlays('programm-3-page');
-    _pageSwitch('main-content', 'programm-3-page');
-  }
-  function hideProgram3() {
-    _pageSwitch('programm-3-page', 'main-content');
-  }
-  function showProgram4() {
-    _hideOtherOverlays('programm-4-page');
-    _pageSwitch('main-content', 'programm-4-page');
-  }
-  function hideProgram4() {
-    _pageSwitch('programm-4-page', 'main-content');
-  }
+  window.addEventListener('popstate', function(e) {
+    clearTimeout(_scrollSaveTimer);
+    const y = (e.state && typeof e.state.scrollY === 'number') ? e.state.scrollY : 0;
+    _showPage(_pageFromHash(), y);
+  });
+  // Keep the current history entry's scroll position up to date, so back/forward and reload return to the same spot
+  let _scrollSaveTimer;
+  window.addEventListener('scroll', function() {
+    clearTimeout(_scrollSaveTimer);
+    _scrollSaveTimer = setTimeout(() => {
+      history.replaceState(Object.assign({}, history.state, { scrollY: window.scrollY }), '');
+    }, 150);
+  }, { passive: true });
+  (function _initRoute() {
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    const pageId = _pageFromHash();
+    if (pageId !== 'main-content') {
+      document.getElementById('main-content').style.display = 'none';
+      document.getElementById(pageId).style.display = 'block';
+      _activePage = pageId;
+    }
+    const st = history.state || {};
+    history.replaceState(Object.assign({}, st, { page: pageId }), '');
+    if (typeof st.scrollY === 'number') {
+      window.scrollTo({ top: st.scrollY, behavior: 'instant' });
+      window.addEventListener('load', () => window.scrollTo({ top: st.scrollY, behavior: 'instant' }));
+    }
+  })();
+
+  function showDatenschutz()      { _navigate('datenschutz-page'); }
+  function hideDatenschutz()      { _goBack(); }
+  function showAgb()              { _navigate('agb-page'); }
+  function hideAgb()              { _goBack(); }
+  function showImpressum()        { _navigate('impressum-page'); }
+  function hideImpressum()        { _goBack(); }
+  function showProgramSmartordi() { _navigate('programm-smartordi-page'); }
+  function hideProgramSmartordi() { _goBack(); }
+  function showProgram2()         { _navigate('programm-2-page'); }
+  function hideProgram2()         { _goBack(); }
+  function showProgram3()         { _navigate('programm-3-page'); }
+  function hideProgram3()         { _goBack(); }
+  function showProgram4()         { _navigate('programm-4-page'); }
+  function hideProgram4()         { _goBack(); }
   function toggleAgb(btn) {
     const answer = btn.nextElementSibling;
     const icon = btn.querySelector('.agb-icon');
