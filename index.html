@@ -1307,9 +1307,9 @@
       overflow: hidden;
       box-shadow: 0 16px 48px rgba(124,92,252,0.16);
       border: 1px solid rgba(124,92,252,0.12);
-      aspect-ratio: 9/16;
+      aspect-ratio: 16/9;
       width: 100%;
-      max-width: 300px;
+      max-width: 560px;
       position: relative;
       background: var(--frost);
     }
@@ -1322,7 +1322,7 @@
     }
     @media (max-width: 900px) {
       .produkt-grid { grid-template-columns: 1fr; }
-      .video-wrapper { max-width: 280px; margin: 0 auto; }
+      .video-wrapper { max-width: 420px; margin: 0 auto; }
     }
     /* ===== RESPONSIVE ===== */
     @media (max-width: 1024px) {
@@ -1905,15 +1905,12 @@
         </div>
       </div>
 
-      <!-- YouTube Short Einführungsvideo -->
+      <!-- Produkt-Einführungsvideo -->
       <div class="video-col scroll-reveal">
         <div class="video-wrapper">
-          <iframe
-            src="https://www.youtube.com/embed/FuBxnTLz30s"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
+          <video controls preload="metadata" poster="assets/smartordi-chat-demo-poster.jpg" playsinline>
+            <source src="assets/smartordi-chat-demo.mp4" type="video/mp4">
+          </video>
         </div>
       </div>
 
