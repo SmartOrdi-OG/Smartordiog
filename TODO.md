@@ -92,6 +92,7 @@ A list of everything that's been done and what's still needed on the site, based
 ### Possible general improvements (not explicitly requested yet, but worth considering)
 - [ ] No CI/CD or automated tests on the repo — could be useful if the site grows further
 - [ ] The whole site is one HTML file (~250KB+) — as more programs are added this could become harder to maintain, so splitting it up might be worth considering in the future (but that's an architectural decision that needs explicit approval before implementation)
+- [x] **Corrected the company email to `team@smartordi.eu`** in all 72 places it appears (contact section, JS form-error alerts, Impressum, AGB, Datenschutzerklärung — including the `mailto:` links and the DE/EN `data-*-html` copies). The earlier domain fix above had also turned the email into `team@smartordiog.eu`, which doesn't exist; only the website domain is `smartordiog.eu` (its 39 `www.smartordiog.eu` references and the canonical/og:url tags are unchanged)
 - [ ] No visitor/performance tracking (Analytics) system on the site currently
 
 ---
