@@ -943,7 +943,7 @@
       color: rgba(10,74,68,0.55);
       font-weight: 500;
     }
-    .month-dot span {
+    .month-dot span:first-child {
       width: 40px; height: 40px;
       background: #EAF4F1;
       border-radius: 50%;
@@ -954,7 +954,7 @@
       color: rgba(10,74,68,0.5);
       border: 2px solid rgba(14,94,86,0.15);
     }
-    .month-dot.active span {
+    .month-dot.active span:first-child {
       background: #5EC9C2;
       color: #0A4A44;
       border-color: #5EC9C2;
@@ -1852,7 +1852,7 @@
 <!-- ② STATS -->
 <div class="stats-row">
   <div class="stat-item">
-    <div class="stat-num"><span class="counter" data-target="3" data-suffix="Monate">0</span><span class="gold" data-de="Monate" data-en="months">Monate</span></div>
+    <div class="stat-num"><span class="counter" data-target="90" data-suffix="Tage">0</span><span class="gold" data-de="Tage" data-en="days">Tage</span></div>
     <div class="stat-label" data-de="Kostenlos als Pilotpraxis" data-en="Free as a pilot practice">Kostenlos als Pilotpraxis</div>
   </div>
   <div class="stat-item">
@@ -2079,7 +2079,7 @@
 <section class="section" id="preise">
   <div class="section-label" data-de="Preis Detail" data-en="Pricing Details">Preis Detail</div>
   <h2 class="section-title" data-de-html="Transparente Preise,&lt;br&gt;keine Überraschungen" data-en-html="Transparent pricing,&lt;br&gt;no surprises">Transparente Preise,<br>keine Überraschungen</h2>
-  <p class="section-desc" data-de="Keine Einrichtungsgebühr – wählen Sie einfach Ihr monatliches Paket. Als Pilotpraxis 2–3 Monate kostenlos testen, ohne Vertrag." data-en="No setup fee – simply choose your monthly plan. As a pilot practice, try it free for 2–3 months, no contract.">Keine Einrichtungsgebühr – wählen Sie einfach Ihr monatliches Paket. Als Pilotpraxis 2–3 Monate kostenlos testen, ohne Vertrag.</p>
+  <p class="section-desc" data-de="Keine Einrichtungsgebühr – wählen Sie einfach Ihr monatliches Paket. Als Pilotpraxis 90 Tage kostenlos testen, ohne Vertrag." data-en="No setup fee – simply choose your monthly plan. As a pilot practice, try it free for 90 days, no contract.">Keine Einrichtungsgebühr – wählen Sie einfach Ihr monatliches Paket. Als Pilotpraxis 90 Tage kostenlos testen, ohne Vertrag.</p>
 
   <div class="pricing-badge"><span style="display:inline-flex;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> <span data-de-html="Unbegrenzte Nutzer – Arzt &amp;amp; Sekretariat ohne Aufpreis" data-en-html="Unlimited users – doctor &amp;amp; front desk at no extra cost">Unbegrenzte Nutzer – Arzt &amp; Sekretariat ohne Aufpreis</span></div>
 
@@ -2142,7 +2142,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <p data-de-html="Es gibt &lt;strong&gt;keine Einrichtungsgebühr&lt;/strong&gt;. Sie zahlen je nach Paket 149€ oder 349€ pro Monat (oder 3.490€ jährlich im Enterprise-Paket, mit 2 Monaten gratis). Als &lt;strong&gt;Pilotpraxis&lt;/strong&gt; testen Sie das System die ersten &lt;strong&gt;2–3 Monate&lt;/strong&gt; vollständig kostenlos und ohne Vertrag." data-en-html="There is &lt;strong&gt;no setup fee&lt;/strong&gt;. Depending on the plan, you pay €149 or €349 per month (or €3,490 annually for the Enterprise plan, with 2 months free). As a &lt;strong&gt;pilot practice&lt;/strong&gt;, you try the system completely free and without a contract for the first &lt;strong&gt;2–3 months&lt;/strong&gt;.">Es gibt <strong>keine Einrichtungsgebühr</strong>. Sie zahlen je nach Paket 149€ oder 349€ pro Monat (oder 3.490€ jährlich im Enterprise-Paket, mit 2 Monaten gratis). Als <strong>Pilotpraxis</strong> testen Sie das System die ersten <strong>2–3 Monate</strong> vollständig kostenlos und ohne Vertrag.</p>
+          <p data-de-html="Es gibt &lt;strong&gt;keine Einrichtungsgebühr&lt;/strong&gt;. Sie zahlen je nach Paket 149€ oder 349€ pro Monat (oder 3.490€ jährlich im Enterprise-Paket, mit 2 Monaten gratis). Als &lt;strong&gt;Pilotpraxis&lt;/strong&gt; testen Sie das System die ersten &lt;strong&gt;90 Tage&lt;/strong&gt; vollständig kostenlos und ohne Vertrag." data-en-html="There is &lt;strong&gt;no setup fee&lt;/strong&gt;. Depending on the plan, you pay €149 or €349 per month (or €3,490 annually for the Enterprise plan, with 2 months free). As a &lt;strong&gt;pilot practice&lt;/strong&gt;, you try the system completely free and without a contract for the first &lt;strong&gt;90 days&lt;/strong&gt;.">Es gibt <strong>keine Einrichtungsgebühr</strong>. Sie zahlen je nach Paket 149€ oder 349€ pro Monat (oder 3.490€ jährlich im Enterprise-Paket, mit 2 Monaten gratis). Als <strong>Pilotpraxis</strong> testen Sie das System die ersten <strong>90 Tage</strong> vollständig kostenlos und ohne Vertrag.</p>
         </div>
       </div>
       <div class="faq-item scroll-reveal">
@@ -2190,7 +2190,7 @@
 <section class="trial-section" id="testen">
   <div style="position:relative;z-index:1;">
     <span class="trial-badge" data-de="Werden Sie Pilotpraxis" data-en="Become a pilot practice">Werden Sie Pilotpraxis</span>
-    <h2 class="section-title" data-de-html="2–3 Monate&lt;br&gt;kostenlos, ohne Vertrag" data-en-html="2–3 months&lt;br&gt;free, no contract">2–3 Monate<br>kostenlos, ohne Vertrag</h2>
+    <h2 class="section-title" data-de-html="90 Tage&lt;br&gt;kostenlos, ohne Vertrag" data-en-html="90 days&lt;br&gt;free, no contract">90 Tage<br>kostenlos, ohne Vertrag</h2>
     <p class="section-desc" data-de="Kein Risiko, keine Verpflichtung. Überzeugen Sie sich selbst von den Möglichkeiten digitaler Ordinationsführung." data-en="No risk, no obligation. See for yourself what digital practice management can do.">Kein Risiko, keine Verpflichtung. Überzeugen Sie sich selbst von den Möglichkeiten digitaler Ordinationsführung.</p>
     <a href="https://chat.smartordiog.eu/login.html" class="btn-primary" target="_blank" rel="noopener noreferrer" style="background:#fff;color:#0A4A44;" onmouseover="this.style.background='#EAF4F1'" onmouseout="this.style.background='#fff'" data-de="Jetzt entdecken →" data-en="Discover it now →">Jetzt entdecken →</a>
   </div>
@@ -2200,7 +2200,7 @@
       <h3 data-de="Ihre Pilotphase" data-en="Your pilot phase">Ihre Pilotphase</h3>
       <p data-de="Vollständiger Zugriff – ohne Vertrag" data-en="Full access – no contract">Vollständiger Zugriff – ohne Vertrag</p>
       <div class="trial-months">
-        <div class="month-dot active"><span>3</span><span data-de="Monate" data-en="months">Monate</span></div>
+        <div class="month-dot active"><span>90</span><span data-de="Tage" data-en="days">Tage</span></div>
       </div>
     </div>
     <div class="guarantee-card">
